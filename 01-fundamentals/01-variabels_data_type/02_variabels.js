@@ -16,3 +16,8 @@ haveGirlFriend = "Yess"
 console.log(haveGirlFriend)
 // Output:
 // Yess
+
+// ==== TRY SIMPLE FUNCTION IN THE BROWSER ENVIRONMENT ====
+
+let Name = prompt("Whats your name? ")
+alert(`Heloo ${Name}`)
