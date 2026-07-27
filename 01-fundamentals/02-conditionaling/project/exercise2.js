@@ -1,4 +1,6 @@
-// ========= EXERCISE 3: Age Validator (Comparison + Nullish Coalescing) ==========
+// ========= EXERCISE 2, Actually 3 haha 
+// 
+// : Age Validator (Comparison + Nullish Coalescing) ==========
 
 let age = 14;
 
