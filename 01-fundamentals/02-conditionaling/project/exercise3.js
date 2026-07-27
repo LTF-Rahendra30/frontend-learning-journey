@@ -33,3 +33,4 @@ function Discount(price,isMember){
 }
 
 console.log(Discount(10000,true));
+// Output: 9000
