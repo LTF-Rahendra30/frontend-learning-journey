@@ -3,9 +3,9 @@
 // Data Input Object
 
 const userData = {
-    name : "Boby Charley",
+    name : "Boby Secthell",
     email : "boby123@gmail.com",
-    age : 15,
+    age : 14,
 }
 // Validator
 const isValidName = userData.name !== "" && userData.name.length >= 3;
@@ -49,7 +49,7 @@ let htmlOutput = `
           </span></p>
 
           <p>Umur: <span class="${isValidAge ? 'valid' : 'invalid'}">
-            ${isValidAge ? '✅ Valid' : '❌ Invalid (13-120 tahun)'}
+            ${isValidAge ? '✅ Valid' : '❌ Invalid (13-100 tahun)'}
           </span></p>
         </div>
 
@@ -64,3 +64,48 @@ let htmlOutput = `
 `;
 
 console.log(htmlOutput);
+// Output:
+/* 
+    <html>
+      <head>
+        <title>Form Validator</title>
+        <style>
+          body { font-family: Arial; margin: 20px; }
+          .valid { color: green; font-weight: bold; }
+          .invalid { color: red; font-weight: bold; }
+        </style>
+      </head>
+      <body>
+        <h1>Form Validation Result</h1>
+
+        <!-- Display input data -->
+        <div class="input-section">
+          <p><strong>Nama:</strong> Boby Secthell</p>
+          <p><strong>Email:</strong> boby123@gmail.com</p>
+          <p><strong>Umur:</strong> 14</p>
+        </div>
+
+        <!-- Display validation results -->
+        <div class="validation-section">
+          <h2>Hasil Validasi</h2>
+          <p>Nama: <span class="valid">
+            ✅ Valid
+          </span></p>
+
+          <p>Email: <span class="valid">
+            ✅ Valid
+          </span></p>
+
+          <p>Umur: <span class="valid">
+            ✅ Valid
+          </span></p>
+        </div>
+
+        <!-- Overall status -->
+        <div class="status-section">
+          <h2 style="color: green;">✅ Form Ready for Submit!</h2>
+        </div>
+      </body>
+    </html>
+
+*/
