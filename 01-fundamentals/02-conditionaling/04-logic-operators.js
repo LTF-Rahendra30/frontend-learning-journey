@@ -15,3 +15,10 @@ let name2 = true;
 const andOperator = name1 === true && name2 === true;
 console.log(andOperator);
 // Ture
+
+//  -------- NOT -------
+
+let isClose = true;
+const isOpen = !isClose;
+console.log(isOpen);
+// false
