@@ -7,3 +7,11 @@ const result = name ?? false;
 
 console.log(result);
 // Flase
+
+
+// ======= Manual, not Sugar sytax
+
+let age = null;
+const result2 = (age !== null && age !== undefined) ? age : false;
+console.log(result2);
+// false
