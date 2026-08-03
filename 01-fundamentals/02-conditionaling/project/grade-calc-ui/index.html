@@ -64,22 +64,21 @@
     </style>
 </head>
 <body>
-    <h2>Grade Calculator</h2>
+    <h2>Say Hello</h2>
     <div class="form-container">
 
         <form action="" id="form-container">
             <div class="form-item">
-                <label for="name-input">Name:</label>
+                <label for="name-input" id="name">Name:</label>
                 <input type="text" name="name-input" id="name-input" placeholder="Plase enter your name.....">
             </div>
             
-            <div class="form-item">
-                <label for="grade-input">Your Grade:</label>
-                <input type="number" name="grade-input" id="grade-input" placeholder="Enter your grade..." max="100" min="1">
-            </div>
-        
             <button type="submit">Send</button>
         </form>
     </div>
+
+    <span id="result"></span>
+
+    <script src="script.js"></script>
 </body>
 </html>
