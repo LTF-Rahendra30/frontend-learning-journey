@@ -1,14 +1,16 @@
 // ============ INPUT GRADE FROM USER =======
 
 let gradeValue = prompt("Enter your GPA: ");
-gradeValue = gradeValue ?? "";
+
+// Set default input
+gradeValue = gradeValue ?? 0;
 
 if (gradeValue >= 90){
     alert("Your Valid");
-} else if (gradeValue < 90 && gradeValue > 20){
+} else if (gradeValue < 90 && gradeValue >= 20){
     alert("Great");
-}else if(gradeValue <= 20 && gradeValue >= 0){
-    alert("Remedial!");
+} else if (gradeValue >=0){
+    alert("Remedial");
 }else {
     alert("Enter something!");
 }
