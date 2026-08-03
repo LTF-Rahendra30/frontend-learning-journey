@@ -1,6 +1,6 @@
-let data = Number(1);
+let data = Number("");
 console.log(data);
 
-if (isNaN(data)){
+if (!isNaN(data)){
     console.log("This NaN");
 }

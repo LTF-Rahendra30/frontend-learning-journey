@@ -2,14 +2,17 @@
 
 let gradeValue = prompt("Enter your GPA: ");
 
+// Convert & Checking Input
+gradeValue = gradeValue && !isNaN(gradeValue) ? Number(gradeValue) : null;
+
 // Set default input
-gradeValue = gradeValue ?? 0;
+gradeValue = gradeValue ?? "";
 
 if (gradeValue >= 90){
     alert("Your Valid");
 } else if (gradeValue < 90 && gradeValue >= 20){
     alert("Great");
-} else if (gradeValue >=0){
+} else if (gradeValue >0){
     alert("Remedial");
 }else {
     alert("Enter something!");
