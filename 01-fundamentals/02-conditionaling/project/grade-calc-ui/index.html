@@ -4,21 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Calculator</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            font-family: sans-serif;
+            background-color: #e8e8e8;
+        }
+
+        h2{
+            text-align: center;
+            margin: 40px;
+        }
+
+        .form-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        form{
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-item{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label{
+            font-weight: 700;
+        }
+        input{
+            padding: 8px;
+            border-radius: 8px;
+            outline: none;
+            border: 1.4px solid rgb(132, 136, 254);
+            background-color: #f7fbfe;
+        }
+        button{
+            cursor: pointer;
+            color: #fff;
+            border-radius: 16px;
+            padding: 8px;
+            font-weight: bold;
+            border: none;
+            background-color: rgb(53, 127, 245);
+        }
+    </style>
 </head>
 <body>
     <h2>Grade Calculator</h2>
-    <form action="" id="form-container">
-        <div class="form-item">
-            <label for="name-input">Name:</label>
-            <input type="text" name="name-input" id="name-input" placeholder="Plase enter your name.....">
-        </div>
-            
-        <div class="form-item">
-            <label for="grade-input">Your Grade:</label>
-            <input type="number" name="grade-input" id="grade-input" placeholder="Enter your grade..." max="100" min="1">
-        </div>
+    <div class="form-container">
 
-        <button type="submit">Send</button>
-    </form>
+        <form action="" id="form-container">
+            <div class="form-item">
+                <label for="name-input">Name:</label>
+                <input type="text" name="name-input" id="name-input" placeholder="Plase enter your name.....">
+            </div>
+            
+            <div class="form-item">
+                <label for="grade-input">Your Grade:</label>
+                <input type="number" name="grade-input" id="grade-input" placeholder="Enter your grade..." max="100" min="1">
+            </div>
+        
+            <button type="submit">Send</button>
+        </form>
+    </div>
 </body>
 </html>
