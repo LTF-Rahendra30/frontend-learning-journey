@@ -5,7 +5,9 @@ form.addEventListener('submit', function(event){
 
     
     // get result id
-    const result = document.getElementById("result");
+    const resultContainer = document.getElementById("result");
+    const result = document.getElementById("result-text");
+    resultContainer.classList.remove("result-container"); // remove
     result.classList.remove("final-result"); // remove
     
     // --- Process
@@ -15,5 +17,6 @@ form.addEventListener('submit', function(event){
 
     // --- Set text & Style
     result.textContent = `Hello, ${userName}` // add text by input
-    result.classList.add("final-result"); // add style
+    result.classList.add("final-result") // add style
+    resultContainer.classList.add("result-container");
 });

@@ -62,11 +62,19 @@
             background-color: rgb(53, 127, 245);
         }
 
+        /* output */
+        .result-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            
+        }
         .final-result{
-            background-color: #95f4ba;
-            padding: 10px;
             font-weight: bold;
             border-radius: 10px;
+            max-width: 150px;
+            padding: 10px;
+            background-color: #95f4ba;
         }
     </style>
 </head>
@@ -84,7 +92,9 @@
         </form>
     </div>
 
-    <span id="result"></span>
+    <div id="result">
+        <p id="result-text"></p>
+    </div>
 
     <script src="script.js"></script>
 </body>
