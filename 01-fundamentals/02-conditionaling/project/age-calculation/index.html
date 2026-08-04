@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            font-family: sans-serif;
+            background-color: #fefbf6;
+        }
+
+        h2{
+            text-align: center;
+            margin: 40px;
+        }
+
+        .form-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        form{
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background-color: #fceee2;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+        .form-item{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label{
+            font-weight: 700;
+        }
+        input{
+            padding: 8px;
+            border-radius: 8px;
+            outline: none;
+            border: 1.4px solid rgb(252, 146, 93);
+            background-color: #fef7f7;
+        }
+        button{
+            cursor: pointer;
+            color: #fff;
+            border-radius: 16px;
+            padding: 8px;
+            font-weight: bold;
+            border: none;
+            background-color: rgb(253, 143, 75);
+        }
+
+        /* output */
+        .result-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            
+        }
+        .final-result{
+            font-weight: bold;
+            border-radius: 10px;
+            max-width: 150px;
+            padding: 10px;
+            background-color: #95f4ba;
+        }
+    </style>
+</head>
+<body>
+    <h2>Say Hello</h2>
+    <div class="form-container">
+
+        <form action="" id="form-container">
+            <div class="form-item">
+                <label for="name-input" id="name">Name:</label>
+                <input type="text" name="name-input" id="name-input" placeholder="Plase enter your name.....">
+            </div>
+            
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <div id="result">
+        <p id="result-text"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
