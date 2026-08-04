@@ -19,4 +19,10 @@ form.addEventListener('submit', function(event){
     const ageInput = document.getElementById("age-input");
     const userAge = ageInput.valueAsNumber;
     
+
+    if (userAge >= 17){
+        result.textContent = `✅ ${userName}, ${userAge} yo, You're Eligible!`;
+    }else{
+        result.textContent = `❌ You're not Eligible!`
+    }
 });
