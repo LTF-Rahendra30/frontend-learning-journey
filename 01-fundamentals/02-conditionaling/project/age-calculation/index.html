@@ -30,7 +30,7 @@
             min-width: 300px;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px;
             background-color: #fceee2;
             padding: 30px;
             border-radius: 16px;
@@ -39,7 +39,7 @@
         .form-item{
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 8px;
         }
 
         label{
@@ -88,6 +88,11 @@
                 <input type="text" name="name-input" id="name-input" placeholder="Plase enter your name.....">
             </div>
             
+            <div class="form-item">
+                <label for="age-input" id="age">Age:</label>
+                <input type="number" name="age-input" id="age-input" placeholder="Plase enter your age..." min="1" max="100">
+            </div>
+
             <button type="submit">Send</button>
         </form>
     </div>
