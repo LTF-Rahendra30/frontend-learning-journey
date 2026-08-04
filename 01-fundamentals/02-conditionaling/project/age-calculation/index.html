@@ -16,14 +16,16 @@
             background-color: #fefbf6;
         }
 
-        h2{
-            text-align: center;
-            margin: 40px;
+        /* --- Header Form --- */
+        header{
+            padding-bottom: 20px;
+            border-bottom: 1px solid black;
         }
 
         .form-container{
             display: flex;
             justify-content: center;
+            margin-top: 50px;
         }
 
         form{
@@ -79,10 +81,12 @@
     </style>
 </head>
 <body>
-    <h2>Say Hello</h2>
     <div class="form-container">
-
         <form action="" id="form-container">
+            <header class="head-form">
+                <h2>Legals Age Validator</h2>
+            </header>
+
             <div class="form-item">
                 <label for="name-input" id="name">Name:</label>
                 <input type="text" name="name-input" id="name-input" placeholder="Plase enter your name.....">
