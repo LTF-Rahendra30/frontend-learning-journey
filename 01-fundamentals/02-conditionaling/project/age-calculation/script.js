@@ -10,8 +10,9 @@ form.addEventListener('submit', function(event){
     // ----- ROW CONTENT -----
     const nameRowContent = document.getElementById("name-row");
     const ageRowContent = document.getElementById("age-row");
-    
-    // ---- Remove ----
+
+     
+    // ========== REMOVE ========
     result.classList.remove("result-content-valid");
     result.classList.remove("result-content-invalid");
     resultContainer.classList.remove("result-container");
@@ -28,7 +29,12 @@ form.addEventListener('submit', function(event){
     // --- Age ---
     const ageInput = document.getElementById("age-input");
     const userAge = ageInput.valueAsNumber;
+
+    // ----- Row Value ----
+    const nameValue = document.getElementById("name-value");
+    const ageValue = document.getElementById("age-value");
     
+
     // ==== Output Pop-up & AGE VALIDATOR ====
     if (userAge >= 17){
         // ==== Container ====
@@ -37,7 +43,11 @@ form.addEventListener('submit', function(event){
         // ==== Row Content ====
         nameRowContent.classList.add("row-atribute");
         ageRowContent.classList.add("row-atribute");
-        
+
+        // --- Row Information Content ---
+        nameValue.textContent = `${userName}`;
+        ageValue.textContent = `${userAge}`;
+
         result.textContent = `✅ ${userName}, ${userAge} yo, You're Eligible!`;
         result.classList.add("result-content");
         result.classList.add("result-content-valid");
@@ -49,6 +59,10 @@ form.addEventListener('submit', function(event){
         // ==== Row Content ====
         nameRowContent.classList.add("row-atribute");
         ageRowContent.classList.add("row-atribute");
+
+        // --- Row Information Content ---
+        nameValue.textContent = `${userName}`;
+        ageValue.textContent = `${userAge}`;
 
         result.textContent = `❌ You're not Eligible!`
         result.classList.add("result-content");
