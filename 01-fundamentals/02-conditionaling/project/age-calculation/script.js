@@ -2,8 +2,9 @@ const form = document.getElementById("form-container");
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
-
+    
     // ==== GET RESULT ====
+    const closeButton = document.getElementById("x-button");
     const resultContainer = document.getElementById("result-container");
     const result = document.getElementById("result-text");
 
@@ -20,6 +21,8 @@ form.addEventListener('submit', function(event){
     // -- Remove Content Row ---
     nameRowContent.classList.remove("name-row");
     ageRowContent.classList.remove("age-row");
+
+    // --- remove Close Button ---
 
     // ==== Process ====
     // --- Username ---
@@ -68,4 +71,13 @@ form.addEventListener('submit', function(event){
         result.classList.add("result-content");
         result.classList.add("result-content-invalid");
     }
+
+    closeButton.addEventListener('click',function(){
+        
+        // result.classList.remove("result-content-valid");
+        // result.classList.remove("result-content-invalid");
+        resultContainer.style.display = "none";
+        closeButton.style.display  = "none"
+
+    });
 });

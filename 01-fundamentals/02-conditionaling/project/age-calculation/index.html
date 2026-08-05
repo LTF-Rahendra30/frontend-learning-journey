@@ -72,14 +72,14 @@
             align-items: center;
             gap: 20px;
 
-            position: fixed;
+            position: absolute;
             width: 400px;
             padding: 40px;
             background-color: #ffffff;
             border-radius: 14px;
             top: 50%;
             left: 50%;
-            z-index: 99999;
+            z-index: 99;
             transform: translate(-50%, -50%);
         }
         .result-content{
@@ -100,6 +100,18 @@
             padding: 20px;
             border-radius: 14px;
             background-color: #eae9e8;
+        }
+
+        .x-button{
+            padding: 6px 10px;
+            position: fixed;
+            right: 10px;
+            top: 10px;
+            z-index: 999;
+            background-color: #f23c3c;
+        }
+        .x-button:hover{
+            background-color: #ee0202;
         }
     </style>
 </head>
@@ -126,7 +138,7 @@
 
         <!-- result -->
     <article id="result-container">
-        <!-- <button type="button" id="x-button">X</button> -->
+        <button class="x-button" id="x-button">&times;</button>
         <p id="name-row"> <span id="name-value"></span></p>
 
         <p id="age-row"> <span id="age-value"></span></p>
