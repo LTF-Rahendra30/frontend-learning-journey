@@ -1,4 +1,3 @@
-
 const form = document.getElementById("form-container");
 
 form.addEventListener('submit', function(event){
@@ -7,13 +6,19 @@ form.addEventListener('submit', function(event){
     // ==== GET RESULT ====
     const resultContainer = document.getElementById("result-container");
     const result = document.getElementById("result-text");
-    const resultContent = document.getElementById("result-atribute");
 
+    // ----- ROW CONTENT -----
+    const nameRowContent = document.getElementById("name-row");
+    const ageRowContent = document.getElementById("age-row");
+    
     // ---- Remove ----
-    result.classList.remove("result-content-valid") && result.classList.remove("result-content-invalid");
+    result.classList.remove("result-content-valid");
+    result.classList.remove("result-content-invalid");
     resultContainer.classList.remove("result-container");
 
-    resultContent.classList.remove("result-atribute");
+    // -- Remove Content Row ---
+    nameRowContent.classList.remove("name-row");
+    ageRowContent.classList.remove("age-row");
 
     // ==== Process ====
     // --- Username ---
@@ -26,16 +31,24 @@ form.addEventListener('submit', function(event){
     
     // ==== Output Pop-up & AGE VALIDATOR ====
     if (userAge >= 17){
-        resultContent.classList.add("result-atribute");
+        // ==== Container ====
         resultContainer.classList.add("result-container");
+        
+        // ==== Row Content ====
+        nameRowContent.classList.add("row-atribute");
+        ageRowContent.classList.add("row-atribute");
         
         result.textContent = `✅ ${userName}, ${userAge} yo, You're Eligible!`;
         result.classList.add("result-content");
         result.classList.add("result-content-valid");
         
     }else{
-        resultContent.classList.add("result-atribute");
+        // ==== Container ====
         resultContainer.classList.add("result-container");
+        
+        // ==== Row Content ====
+        nameRowContent.classList.add("row-atribute");
+        ageRowContent.classList.add("row-atribute");
 
         result.textContent = `❌ You're not Eligible!`
         result.classList.add("result-content");
