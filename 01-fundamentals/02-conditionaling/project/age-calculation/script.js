@@ -45,8 +45,8 @@ form.addEventListener('submit', function(event){
         ageRowContent.classList.add("row-atribute");
 
         // --- Row Information Content ---
-        nameValue.textContent = `${userName}`;
-        ageValue.textContent = `${userAge}`;
+        nameValue.textContent = `Name: ${userName}`;
+        ageValue.textContent = `Age: ${userAge}`;
 
         result.textContent = `✅ ${userName}, ${userAge} yo, You're Eligible!`;
         result.classList.add("result-content");
@@ -61,8 +61,8 @@ form.addEventListener('submit', function(event){
         ageRowContent.classList.add("row-atribute");
 
         // --- Row Information Content ---
-        nameValue.textContent = `${userName}`;
-        ageValue.textContent = `${userAge}`;
+        nameValue.textContent = `Name: ${userName}`;
+        ageValue.textContent = `Age: ${userAge}`;
 
         result.textContent = `❌ You're not Eligible!`
         result.classList.add("result-content");
