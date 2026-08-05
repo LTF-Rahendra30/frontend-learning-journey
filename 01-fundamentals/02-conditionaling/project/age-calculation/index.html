@@ -68,13 +68,20 @@
         /* output */
         .result-container{
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            margin-top: 40px;
             
+            position: fixed;
+            width: 400px;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 14px;
+            top: 50%;
+            left: 50%;
+            z-index: 99999;
+            transform: translate(-50%, -50%);
         }
         .result-content{
-            width: 300px;
             font-weight: bold;
             border-radius: 10px;
             max-width: 150px;
@@ -110,9 +117,10 @@
     </div>
 
         <!-- result -->
-    <div id="result">
+    <article id="result-container">
+        <!-- <button type="button" id="x-button">X</button> -->
         <p id="result-text"></p>
-    </div>
+    </article>
 
     <script src="script.js"></script>
 </body>

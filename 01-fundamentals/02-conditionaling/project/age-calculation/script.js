@@ -5,7 +5,7 @@ form.addEventListener('submit', function(event){
     event.preventDefault();
 
     // ==== GET RESULT ====
-    const resultContainer = document.getElementById("result");
+    const resultContainer = document.getElementById("result-container");
     const result = document.getElementById("result-text");
 
     // ---- Remove
