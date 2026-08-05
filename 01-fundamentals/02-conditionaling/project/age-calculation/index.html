@@ -19,7 +19,7 @@
         /* --- Header Form --- */
         header{
             padding-bottom: 20px;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid rgba(108, 107, 107, 0.459);
         }
 
         .container{
@@ -51,8 +51,11 @@
             padding: 8px;
             border-radius: 8px;
             outline: none;
-            border: 1.4px solid rgb(252, 146, 93);
+            border: 1.4px solid rgb(251, 196, 169);
             background-color: #fef7f7;
+        }
+        input:focus{
+            border: 1.4px solid rgb(254, 122, 85);
         }
         button{
             cursor: pointer;
@@ -63,7 +66,9 @@
             border: none;
             background-color: rgb(253, 143, 75);
         }
-
+        button:hover{
+            background-color: rgb(253, 122, 75);
+        }
         /* output */
         .result-container{
             display: flex;
