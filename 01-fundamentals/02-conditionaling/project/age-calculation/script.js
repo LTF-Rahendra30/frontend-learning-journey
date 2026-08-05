@@ -7,10 +7,13 @@ form.addEventListener('submit', function(event){
     // ==== GET RESULT ====
     const resultContainer = document.getElementById("result-container");
     const result = document.getElementById("result-text");
+    const resultContent = document.getElementById("result-atribute");
 
-    // ---- Remove
+    // ---- Remove ----
     result.classList.remove("result-content-valid") && result.classList.remove("result-content-invalid");
     resultContainer.classList.remove("result-container");
+
+    resultContent.classList.remove("result-atribute");
 
     // ==== Process ====
     // --- Username ---
@@ -23,14 +26,19 @@ form.addEventListener('submit', function(event){
     
     // ==== Output Pop-up & AGE VALIDATOR ====
     if (userAge >= 17){
+        resultContent.classList.add("result-atribute");
+        resultContainer.classList.add("result-container");
+        
         result.textContent = `✅ ${userName}, ${userAge} yo, You're Eligible!`;
         result.classList.add("result-content");
         result.classList.add("result-content-valid");
-        resultContainer.classList.add("result-container");
+        
     }else{
+        resultContent.classList.add("result-atribute");
+        resultContainer.classList.add("result-container");
+
         result.textContent = `❌ You're not Eligible!`
         result.classList.add("result-content");
         result.classList.add("result-content-invalid");
-        resultContainer.classList.add("result-container");
     }
 });
