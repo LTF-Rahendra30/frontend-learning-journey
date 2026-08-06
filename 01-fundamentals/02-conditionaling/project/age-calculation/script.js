@@ -5,6 +5,7 @@ form.addEventListener('submit', function(event){
     
     // ==== GET RESULT ====
     const closeButton = document.getElementById("x-button");
+    
     const resultContainer = document.getElementById("result-container");
     const result = document.getElementById("result-text");
 
@@ -42,6 +43,9 @@ form.addEventListener('submit', function(event){
     if (userAge >= 17){
         // ==== Container ====
         resultContainer.classList.add("result-container");
+
+        // ==== Close Button ===
+        closeButton.style.display = "block";
         
         // ==== Row Content ====
         nameRowContent.classList.add("row-atribute");
@@ -58,6 +62,9 @@ form.addEventListener('submit', function(event){
     }else{
         // ==== Container ====
         resultContainer.classList.add("result-container");
+
+        // ==== Close Button ===
+        closeButton.style.display = "block";
         
         // ==== Row Content ====
         nameRowContent.classList.add("row-atribute");
@@ -72,12 +79,9 @@ form.addEventListener('submit', function(event){
         result.classList.add("result-content-invalid");
     }
 
-    closeButton.addEventListener('click',function(){
-        
-        // result.classList.remove("result-content-valid");
-        // result.classList.remove("result-content-invalid");
+    
+    closeButton.addEventListener('click',() => {
         resultContainer.style.display = "none";
-        closeButton.style.display  = "none"
 
     });
 });
