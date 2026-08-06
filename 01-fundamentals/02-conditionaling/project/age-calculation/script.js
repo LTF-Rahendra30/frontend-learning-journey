@@ -1,18 +1,32 @@
 const form = document.getElementById("form-container");
+const closeButton = document.getElementById("x-button");
 
-form.addEventListener('submit', function(event){
+// ==== GET RESULT ====
+const resultContainer = document.getElementById("result-container");
+const result = document.getElementById("result-text");
+
+// ----- ROW CONTENT -----
+const nameRowContent = document.getElementById("name-row");
+const ageRowContent = document.getElementById("age-row");
+
+// ----- Row Value ----
+const nameValue = document.getElementById("name-value");
+const ageValue = document.getElementById("age-value");
+
+const nameInput = document.getElementById("name-input");
+const ageInput = document.getElementById("age-input");
+// ================ Process ====================
+    
+closeButton.addEventListener('click',() => {
+    resultContainer.style.display = "none";
+
+});
+form.addEventListener('submit',(event) => {
     event.preventDefault();
-    
-    // ==== GET RESULT ====
-    const closeButton = document.getElementById("x-button");
-    
-    const resultContainer = document.getElementById("result-container");
-    const result = document.getElementById("result-text");
-
-    // ----- ROW CONTENT -----
-    const nameRowContent = document.getElementById("name-row");
-    const ageRowContent = document.getElementById("age-row");
-
+    // --- Username ---
+    const userName = nameInput.value;
+    // --- Age ---
+    const userAge = ageInput.valueAsNumber;
      
     // ========== REMOVE ========
     result.classList.remove("result-content-valid");
@@ -23,21 +37,6 @@ form.addEventListener('submit', function(event){
     nameRowContent.classList.remove("name-row");
     ageRowContent.classList.remove("age-row");
 
-    // --- remove Close Button ---
-
-    // ==== Process ====
-    // --- Username ---
-    const nameInput = document.getElementById("name-input");
-    const userName = nameInput.value;
-
-    // --- Age ---
-    const ageInput = document.getElementById("age-input");
-    const userAge = ageInput.valueAsNumber;
-
-    // ----- Row Value ----
-    const nameValue = document.getElementById("name-value");
-    const ageValue = document.getElementById("age-value");
-    
 
     // ==== Output Pop-up & AGE VALIDATOR ====
     if (userAge >= 17){
@@ -78,10 +77,5 @@ form.addEventListener('submit', function(event){
         result.classList.add("result-content");
         result.classList.add("result-content-invalid");
     }
-
     
-    closeButton.addEventListener('click',() => {
-        resultContainer.style.display = "none";
-
-    });
 });
