@@ -16,11 +16,7 @@ const ageValue = document.getElementById("age-value");
 const nameInput = document.getElementById("name-input");
 const ageInput = document.getElementById("age-input");
 // ================ Process ====================
-    
-closeButton.addEventListener('click',() => {
-    resultContainer.style.display = "none";
 
-});
 form.addEventListener('submit',(event) => {
     event.preventDefault();
     // --- Username ---
@@ -37,45 +33,47 @@ form.addEventListener('submit',(event) => {
     nameRowContent.classList.remove("name-row");
     ageRowContent.classList.remove("age-row");
 
-
     // ==== Output Pop-up & AGE VALIDATOR ====
     if (userAge >= 17){
-        // ==== Container ====
-        resultContainer.classList.add("result-container");
-
-        // ==== Close Button ===
-        closeButton.style.display = "block";
-        
         // ==== Row Content ====
         nameRowContent.classList.add("row-atribute");
         ageRowContent.classList.add("row-atribute");
-
+        
         // --- Row Information Content ---
         nameValue.textContent = `Name: ${userName}`;
         ageValue.textContent = `Age: ${userAge}`;
-
+        
         result.textContent = `✅ ${userName}, ${userAge} yo, You're Eligible!`;
         result.classList.add("result-content");
         result.classList.add("result-content-valid");
         
-    }else{
         // ==== Container ====
+        document.body.classList.add("popup-active");
         resultContainer.classList.add("result-container");
-
-        // ==== Close Button ===
-        closeButton.style.display = "block";
+        
+    }else{
         
         // ==== Row Content ====
         nameRowContent.classList.add("row-atribute");
         ageRowContent.classList.add("row-atribute");
-
+        
         // --- Row Information Content ---
         nameValue.textContent = `Name: ${userName}`;
         ageValue.textContent = `Age: ${userAge}`;
-
+        
         result.textContent = `❌ You're not Eligible!`
         result.classList.add("result-content");
         result.classList.add("result-content-invalid");
+        
+        // ==== Container ====
+        document.body.classList.add("popup-active");
+        resultContainer.classList.add("result-container");
     }
     
+});
+
+
+closeButton.addEventListener('click',() => {
+    resultContainer.style.display = "none";
+    document.body.classList.remove("popup-active");
 });

@@ -65,13 +65,18 @@
         button:hover{
             background-color: rgb(253, 122, 75);
         }
-        /* output */
+
+        /* ============== POPUP OUTPUT =========== */
         .result-container{
+            display: none;
+        }
+        
+        .popup-active .result-container{
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 20px;
-
+            
             position: absolute;
             width: 400px;
             padding: 40px;
@@ -82,6 +87,7 @@
             z-index: 99;
             transform: translate(-50%, -50%);
         }
+
         .result-content{
             font-weight: bold;
             border-radius: 10px;
@@ -103,13 +109,17 @@
         }
 
         .x-button{
+            display: none;
+        }
+        
+        .popup-active .x-button{
             padding: 6px 10px;
             position: fixed;
             right: 10px;
             top: 10px;
             z-index: 999;
             background-color: #f23c3c;
-            display: none;
+            display: block;
         }
         .x-button:hover{
             background-color: #ee0202;
