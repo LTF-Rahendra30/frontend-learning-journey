@@ -27,7 +27,6 @@ form.addEventListener('submit',(event) => {
     // ========== REMOVE ========
     result.classList.remove("result-content-valid");
     result.classList.remove("result-content-invalid");
-    resultContainer.classList.remove("result-container");
 
     // -- Remove Content Row ---
     nameRowContent.classList.remove("name-row");
@@ -60,6 +59,5 @@ form.addEventListener('submit',(event) => {
 
 
 closeButton.addEventListener('click',() => {
-    resultContainer.style.display = "none";
     document.body.classList.remove("popup-active");
 });
