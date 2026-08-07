@@ -14,3 +14,10 @@ console.log(user.isMarry);
 
 
 // ==== With Loop ===
+for (const key in user){
+    console.log(user[key]);
+    // bob
+    // 12
+    // false
+    
+}
