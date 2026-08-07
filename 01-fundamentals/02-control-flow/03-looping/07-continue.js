@@ -10,3 +10,37 @@ for(let i = 0; i<10; i++){
     7
     9 */
 }
+//  ===== Array ====
+const fruits = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape"];
+
+for (let fruit of fruits){
+    if(fruit === "elderberry"){  // Skipp
+        continue; 
+    }
+    console.log(fruit);
+    // apple
+    // banana
+    // cherry
+    // date
+    // fig
+    // grape
+}
+
+// ===== Object =====
+const simpleObject = {
+    name: "Alice",
+    age: 30,
+    isStudent: false,
+    hobbies: ["reading", "coding"]
+};
+
+for (let key in simpleObject){
+    if(key === "isStudent"){
+        continue;
+    }
+    console.log(simpleObject[key]);
+    // Alice
+    // 30
+    // [ 'reading', 'coding' ]
+    
+}
