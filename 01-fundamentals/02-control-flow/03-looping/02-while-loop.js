@@ -13,3 +13,15 @@ while(index < numbers.length){
     7
     8 */
 }
+
+// While loop with True stetment (To solved infinity Loop)
+
+let sum = 0;
+while(true){
+    console.log("this loop");
+    sum++;
+
+    if (sum === 5)
+        break;
+    
+}
