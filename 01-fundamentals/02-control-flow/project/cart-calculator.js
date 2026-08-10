@@ -36,4 +36,25 @@ function calculateChartPrice(cart){
 }
 
 
+// ==== example 1 =====
 console.log(calculateChartPrice(carts));
+// { subTotal: 7000, discount: 1400, total: 5600 }
+
+
+// ============ Example 2 ==========
+const carts2 = [
+    { name: "Keyboard", price: 2000, qty: 1 },
+    { name: "Mouse", price: 1000, qty: 2 }
+]
+console.log(calculateChartPrice(carts2));
+// { subTotal: 4000, discount: 400, total: 3600 }
+
+
+
+// ============ Example 3 ==========
+const carts3 = [
+    { name: "Keyboard", price: 1000, qty: 1 },
+    { name: "Mouse", price: 500, qty: 2 }
+]
+console.log(calculateChartPrice(carts3));
+// { subTotal: 2000, discount: 0, total: 2000 }
