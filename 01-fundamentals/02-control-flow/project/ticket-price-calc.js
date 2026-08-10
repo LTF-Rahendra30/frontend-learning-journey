@@ -9,16 +9,18 @@ Elderly: -20%
 
 function calculateTicket(age,isWeekend){
     let price = 50000;
-
+    let discountRate = 0;
     // Adjust Weekend
-    if (isWeekend){
-        price += (price * 0.25);
+    if (isWeekend) price *= 1.25;
+    
+    // Apply age discount
+    if (age < 12 || age >= 60){
+        if (age < 12) discountRate = 0.3;
+        else discountRate = 0.2;
     }
-    if (age < 12){
-        price -= (price * 0.3);
-    }else if(age >= 60){
-        price -= (price * 0.2);
-    }
+
+    price -= price * discountRate;
+    
     return price;
 }
 console.log(calculateTicket(13,true)); // ===> 62500
