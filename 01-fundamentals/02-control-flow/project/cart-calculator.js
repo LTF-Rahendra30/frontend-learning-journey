@@ -4,16 +4,16 @@ If total >= 2k, get discount 15% */
 
 // Example Cart
 const carts = [
-  { name: "Keyboard", price: 500, qty: 1 },
-  { name: "Mouse", price: 100, qty: 2 },
+  { name: "Keyboard", price: 5000, qty: 1 },
+  { name: "Mouse", price: 1000, qty: 2 },
   { name: "Monitor", price: 0, qty: 1 }  // Invalid, skip
 ];
 
 function calculateChartPrice(cart){
     let subTotal = 0;
 
-    for (let i = 0; i < carts.lenght; i++){
-        const item = carts[i];
+    for (let i = 0; i < cart.length; i++){
+        const item = cart[i];
 
         // validation valid chart item & price
         if (item.qty >= 1 && item.price > 0){
@@ -23,10 +23,10 @@ function calculateChartPrice(cart){
 
     // Calculate Discount 
     let discountRete = 0;
-    if(subTotal >= 1000){
+    if(subTotal >= 5000){
+        discountRete = 0.2;
+    } else if (subTotal >= 3000){
         discountRete = 0.1;
-    } else if (subTotal >= 2000){
-        discountRete = 0.15;
     }
 
     const discount = subTotal * discountRete;
