@@ -11,19 +11,17 @@ function calculateTicket(age,isWeekend){
     let price = 50000;
 
     // Adjust Weekend
-    if (isWeekend === true){
+    if (isWeekend){
         price += (price * 0.25);
     }
     if (age < 12){
         price -= (price * 0.3);
-    }
-    if(age >= 60){
+    }else if(age >= 60){
         price -= (price * 0.2);
     }
-
     return price;
 }
 console.log(
-calculateTicket(98,true));
+calculateTicket(99,true));
 
  
