@@ -22,3 +22,12 @@ function findStudentGrade(name){
 
     return "Not Found";
 }
+
+const a = findStudentGrade("Citra");  // Output: "A"
+const b = findStudentGrade("Budi");   // Output: "B"
+const c = findStudentGrade("Dina");   // Output: "C"
+const d = findStudentGrade("Eka");    // Output: "Not found"
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
