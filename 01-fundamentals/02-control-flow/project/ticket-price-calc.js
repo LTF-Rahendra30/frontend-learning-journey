@@ -21,7 +21,9 @@ function calculateTicket(age,isWeekend){
     }
     return price;
 }
-console.log(
-calculateTicket(99,true));
-
- 
+console.log(calculateTicket(13,true)); // ===> 62500
+console.log(calculateTicket(13,false)); // ===> 50000
+console.log(calculateTicket(10,true)); // ===> 43750
+console.log(calculateTicket(10,false)); // ===> 35000
+console.log(calculateTicket(65,true)); // ===> 50000
+console.log(calculateTicket(65,false)); // ===> 40000
