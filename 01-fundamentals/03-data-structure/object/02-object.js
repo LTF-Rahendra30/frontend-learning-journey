@@ -20,5 +20,6 @@ function getCat(name,breed,age,){
         },
         bark() {
             console.log("Meow");
+        }
     }
 }
