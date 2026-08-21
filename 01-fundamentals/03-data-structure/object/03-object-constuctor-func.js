@@ -17,4 +17,9 @@ function Dog(name,weight,age){
         console.log(this.nam + 'Whoof');
         
     }
+
+    // return this;
 }
+
+const anotherDog = new Dog("Agy",10,3);
+console.log(anotherDog);
