@@ -10,7 +10,7 @@ const cat = {
     }
 }
 
-function getCat(name,breed,age,){
+function getCat(name,breed,age){
     return {
         name: name,
         breed: breed,
@@ -23,3 +23,5 @@ function getCat(name,breed,age,){
         }
     }
 }
+
+cat.name;
