@@ -27,4 +27,4 @@ function getCat(name,breed,age){
 cat.name;
 
 const anotherCat = getCat("Bob","Perisan",3);
-console.log(anotherCat);
+console.log(anotherCat.eat(), anotherCat.bark);
