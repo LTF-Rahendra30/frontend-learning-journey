@@ -21,3 +21,18 @@ person.eat = function(){
 }
 person.eat();
 // Start Eat
+
+// ========== Name of Property are Dynamic ======
+
+const properties = "age";
+
+const user = {
+    name: "Chloe",
+    age: 18
+};
+
+console.log(user[properties]);
+// 18
+
+// Actually JS running : 
+console.log(user["age"]);
