@@ -13,3 +13,11 @@ console.log(person);
 delete person.isMerried;
 console.log(person);
 // { name: 'Bob', favoriteFood: 'Noodels' }
+
+// ---- Function Anonim ----
+person.eat = function(){
+    console.log("Start Eat");
+    
+}
+person.eat();
+// Start Eat
