@@ -25,3 +25,18 @@ console.log(a);
 console.log(b);
 // { value: 10 }
 // { value: 20 }
+
+
+// === Spread Operators ====
+
+let c = {value : 10};
+let d = {...c};
+
+d.value = 100;
+console.log(c);
+console.log(d);
+
+/* 
+{ value: 10 }
+{ value: 100 }
+  */
