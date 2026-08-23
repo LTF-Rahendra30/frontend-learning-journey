@@ -31,3 +31,16 @@ console.log(values);
 const entries = Object.entries(cat);
 console.log(entries);
 // [ [ 'name', 'Bob' ], [ 'age', 3 ] ]
+
+
+// ======= Other Syntax to Enumerate property Object =======
+
+for (const key of Object.keys(cat)){
+    console.log(key);
+}
+for (const key of Object.values(cat)){
+    console.log(key);
+}
+for (const key of Object.entries(cat)){
+    console.log(key);
+}
