@@ -28,3 +28,10 @@ console.log(user);
   city: 'Tokyo'
 }
  */
+
+// ===== Delete Property =====
+delete user.isStudent;
+console.log(user);
+/* 
+{ name: 'Bob', age: 12, hobby: 'Drawing', city: 'Tokyo' }
+ */
