@@ -18,7 +18,7 @@ for (const key in cat){
     // 3
 }
 
-// With Method
+// ========== With Method ========
 const keys = Object.keys(cat);
 console.log(keys);
 // [ 'name', 'age' ]
@@ -27,3 +27,7 @@ console.log(keys);
 const values = Object.values(cat);
 console.log(values);
 // [ 'Bob', 3 ]
+
+const entries = Object.entries(cat);
+console.log(entries);
+// [ [ 'name', 'Bob' ], [ 'age', 3 ] ]
