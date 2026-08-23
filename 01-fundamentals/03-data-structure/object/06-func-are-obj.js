@@ -8,3 +8,7 @@ const n = add;
 
 console.log(n (2,2));
 // 4
+
+// Try display parameter in function
+console.log(add.length);
+// 2 parameters
