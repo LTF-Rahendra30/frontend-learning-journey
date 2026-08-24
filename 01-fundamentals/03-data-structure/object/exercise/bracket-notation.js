@@ -14,3 +14,20 @@ updateSetting("tema", "light");
 
 console.log(settings);
 // { tema: 'light', bahasa: 'id', notifikasi: true }
+
+
+// ========= Function Update Property Of Object (Two) ==========
+const user = {
+    name: "Bob",
+    age: 12,
+    isStudent: false
+}
+
+function updateUser(keyName,newValue){
+    user[keyName] = newValue;
+}
+
+// Usage
+updateUser("isStudent",true);
+console.log(user);
+// { name: 'Bob', age: 12, isStudent: true }
