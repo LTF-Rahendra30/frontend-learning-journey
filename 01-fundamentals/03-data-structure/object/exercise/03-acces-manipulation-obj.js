@@ -8,9 +8,22 @@ const product = {
     rating: 4.8,
 };
 
-// Access property Object
+// ---- Access property Object -----
 console.log(product.name);
 console.log(product.price);
 /* Laptop
 10000
  */
+
+// ---- Change Value of property object ----
+product.stock = 5;
+
+
+// ---- Update new Property ----
+product.discount = 2000;
+
+
+// --- final Price ----
+const finalPrice = product.price - product.discount;
+console.log(finalPrice);
+// 80000
