@@ -26,4 +26,4 @@ product.discount = 2000;
 // --- final Price ----
 const finalPrice = product.price - product.discount;
 console.log(finalPrice);
-// 80000
+// 8000
