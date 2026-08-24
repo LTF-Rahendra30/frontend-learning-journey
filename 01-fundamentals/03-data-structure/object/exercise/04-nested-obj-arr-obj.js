@@ -16,7 +16,7 @@ const order ={
     ]
 };
 
-// Acess data nested:
+// =========== Acess data nested ==============:
 //    - Who's customer name?
 //    - who's first nae product?
 //    - How much is the price of the second product??
@@ -31,3 +31,19 @@ console.log(order.items[0].name);
 
 // ------ Price of the Second Price -----
 console.log(order.items[1].price);
+// 500
+
+// ===== Chaange Data ====
+// - Customer changes address → update property address
+// - Quantity of the third product changes → update quantity
+
+// -------- Change Address ---------
+order.customer.address = "Tokyo";
+console.log(order.customer);
+// { name: 'Bob', email: 'bob123@gmail.com', address: 'Tokyo' }
+
+
+// -------- Quantity Trid product change --------
+order.items[2].qty = 5;
+console.log(order.items[2]);
+// { id: 1, name: 'Mouse', price: 200, qty: 5 }
