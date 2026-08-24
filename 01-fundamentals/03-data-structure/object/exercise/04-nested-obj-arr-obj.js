@@ -14,4 +14,20 @@ const order ={
         {   id:1, name: "Keyboard", price: 500, qty: 2   },
         {   id:1, name: "Mouse", price: 200, qty: 1   }
     ]
-}
+};
+
+// Acess data nested:
+//    - Who's customer name?
+//    - who's first nae product?
+//    - How much is the price of the second product??
+
+// ---- Customer Name ----
+console.log(order.customer.name);
+// Bob
+
+// ----- First name product ----
+console.log(order.items[0].name);
+// Laptop
+
+// ------ Price of the Second Price -----
+console.log(order.items[1].price);
