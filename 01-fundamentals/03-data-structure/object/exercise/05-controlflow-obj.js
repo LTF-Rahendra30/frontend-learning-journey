@@ -39,7 +39,7 @@ console.log(totalInventoryValue);
 // 18500
 
 
-// ----------- TASK C Search product that has low stock (> 5) ----------
+// ----------- TASK C Search product that has low stock (< 5) ----------
 for (let i = 0; i < products.length; i ++){
     let product = products[i];
     
