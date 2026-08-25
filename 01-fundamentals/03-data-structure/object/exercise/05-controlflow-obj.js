@@ -33,6 +33,10 @@ function isAvailableStock(product){
     return product.stock > 0;
 }
 
+// ============ 4. CALCULATE PRODUCT VALUE WITH FUNCTION =================
+function calculateProductValue(product){
+    return product.stock * product.price;
+}
 
 
 
@@ -47,10 +51,7 @@ for (let i = 0; i < products.length; i++){
 // --------- TODO B: Calculate all of value Inventory-------------
 let totalInventoryValue = 0;
 for (let i = 0; i < products.length; i++){
-    let product = products[i];
-    let productvalue = product.price * product.stock;
-    
-    totalInventoryValue += productvalue
+    totalInventoryValue = calculateProductValue(products[i]);
 }
 console.log(totalInventoryValue);
 // 20370
