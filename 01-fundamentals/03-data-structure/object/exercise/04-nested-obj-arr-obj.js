@@ -11,8 +11,8 @@ const order ={
     },
     items: [
         {   id:1, name: "Laptop", price: 1000, qty: 2   },
-        {   id:1, name: "Keyboard", price: 500, qty: 2   },
-        {   id:1, name: "Mouse", price: 200, qty: 1   }
+        {   id:2, name: "Keyboard", price: 500, qty: 2   },
+        {   id:3, name: "Mouse", price: 200, qty: 1   }
     ]
 };
 
@@ -56,8 +56,8 @@ console.log(order);
 //   customer: { name: 'Bob', email: 'bob123@gmail.com', address: 'Tokyo' },
 //   items: [
 //     { id: 1, name: 'Laptop', price: 1000, qty: 2 },
-//     { id: 1, name: 'Keyboard', price: 500, qty: 2 },
-//     { id: 1, name: 'Mouse', price: 200, qty: 5 }
+//     { id: 2, name: 'Keyboard', price: 500, qty: 2 },
+//     { id: 3, name: 'Mouse', price: 200, qty: 5 }
 //   ]
 // }
 
