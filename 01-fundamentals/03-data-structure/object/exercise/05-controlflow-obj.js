@@ -49,4 +49,14 @@ for (let i = 0; i < products.length; i ++){
 }
 
 
-// ------------ TASK D : 
+// ------------ TASK D : Calculate Available Product (stock > 0) --------------
+
+let availableProduct = 0;
+for (let i =0; i < products.length; i++){
+    let product = products[i];
+
+    if (product.stock > 0){
+        availableProduct++;
+    }
+}
+console.log(`There are ${availableProduct} available product (stock > 0) `);
