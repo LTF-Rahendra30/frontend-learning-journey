@@ -15,14 +15,17 @@ const products = [
     { id: 9, name: "T-Shirt", price: 50, stock: 0, category: "Fashion" },
     { id: 10, name: "Backpack", price: 70, stock: 3, category: "Fashion" }
 ];
+// ============ REFACTOR DISPLAY INVENTORY: DRY PRINCIPLE WITH FUNCTION =================
+
+function displayInventory(product){
+    console.log( `Product ${product.id} | ${product.name} | Price: ${product.price} | Stock: ${product.stock} | Category: ${product.category}`);
+}
+
 
 // ---------------- TASK A : Loop all product and Display info the product -------------
 
 for (let i = 0; i < products.length; i++){
-    let product = products[i];
-    console.log(
-        `Product ${product.id} | ${product.name} | Price: ${product.price} | Stock: ${product.stock} | Category: ${product.category}`
-    );
+    displayInventory(products[i]);
     
 }
 
@@ -32,19 +35,17 @@ let totalInventoryValue = 0;
 for (let i = 0; i < products.length; i++){
     let product = products[i];
     let productvalue = product.price * product.stock;
-
+    
     totalInventoryValue += productvalue
 }
 console.log(totalInventoryValue);
-// 18500
+// 20370
 
 
 // ----------- TASK C Search product that has low stock (< 5) ----------
 for (let i = 0; i < products.length; i ++){
-    let product = products[i];
-    
-    if (product.stock < 5){
-        console.log(`Product ${product.id} | ${product.name} | Price: ${product.price} | Stock: ${product.stock} | Category: ${product.category}` );      
+    if (products.stock < 5){
+        displayInventory(products[i]);
     }
 }
 
@@ -54,7 +55,7 @@ for (let i = 0; i < products.length; i ++){
 let availableProduct = 0;
 for (let i =0; i < products.length; i++){
     let product = products[i];
-
+    
     if (product.stock > 0){
         availableProduct++;
     }
