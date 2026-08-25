@@ -2,7 +2,6 @@
 
 // ============= SIMPLE INVENTORY MANAGEMENT ==============
 
-
 const products = [
     { id: 1, name: "Laptop", price: 1500, stock: 3, category: "Electronics" },
     { id: 2, name: "Book", price: 100, stock: 10, category: "Hoby" },
