@@ -11,7 +11,7 @@ const products = [
     { id: 5, name: "Jacket", price: 500, stock: 10, category: "Fashion"},
 ];
 
-// TASK A : Loop all product and Display info the product
+// ---------------- TASK A : Loop all product and Display info the product -------------
 
 for (let i = 0; i < products.length; i++){
     let product = products[i];
@@ -22,7 +22,7 @@ for (let i = 0; i < products.length; i++){
 }
 
 
-// TODO B: Calculate all of value Inventory
+// --------- TODO B: Calculate all of value Inventory-------------
 let totalInventoryValue = 0;
 for (let i = 0; i < products.length; i++){
     let product = products[i];
@@ -32,3 +32,15 @@ for (let i = 0; i < products.length; i++){
 }
 console.log(totalInventoryValue);
 // 18500
+
+
+// ----------- TASK C Search product that has low stock (> 5) ----------
+for (let i = 0; i < products.length; i ++){
+    let product = products[i];
+    
+    if (product.stock < 5){
+        console.log(`Product ${product.id} | ${product.name} | Price: ${product.price} | Stock: ${product.stock} | Category: ${product.category}` );      
+    }
+}
+
+
