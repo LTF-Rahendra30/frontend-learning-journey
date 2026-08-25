@@ -10,3 +10,13 @@ const products = [
     { id: 4, name: "Shoes", price: 200, stock: 15, category: "Fashion"},
     { id: 5, name: "Jacket", price: 500, stock: 10, category: "Fashion"},
 ];
+
+// TASK A : Loop all product and Display info the product
+
+for (let i = 0; i < products.length; i++){
+    let product = products[i];
+    console.log(
+        `Product ${product.id} | ${product.name} | Price: ${product.price} | Stock: ${product.stock} | Category: ${product.category}`
+    );
+    
+}
