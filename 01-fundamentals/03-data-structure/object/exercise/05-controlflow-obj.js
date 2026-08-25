@@ -15,12 +15,17 @@ const products = [
     { id: 9, name: "T-Shirt", price: 50, stock: 0, category: "Fashion" },
     { id: 10, name: "Backpack", price: 70, stock: 3, category: "Fashion" }
 ];
-// ============ REFACTOR DISPLAY INVENTORY: DRY PRINCIPLE WITH FUNCTION =================
+// ============ 1. REFACTOR DISPLAY INVENTORY: DRY PRINCIPLE WITH FUNCTION =================
 
 function displayInventory(product){
     console.log( `Product ${product.id} | ${product.name} | Price: ${product.price} | Stock: ${product.stock} | Category: ${product.category}`);
 }
 
+// ============ 2. REFACTOR CHECK LOW STOCK WITH FUNCTION =================
+
+function isLowstock(product){
+    return product.stock < 5;
+}
 
 // ---------------- TASK A : Loop all product and Display info the product -------------
 
@@ -44,7 +49,7 @@ console.log(totalInventoryValue);
 
 // ----------- TASK C Search product that has low stock (< 5) ----------
 for (let i = 0; i < products.length; i ++){
-    if (products.stock < 5){
+    if (isLowstock(products[i])){
         displayInventory(products[i]);
     }
 }
