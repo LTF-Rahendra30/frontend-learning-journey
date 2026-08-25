@@ -27,6 +27,15 @@ function isLowstock(product){
     return product.stock < 5;
 }
 
+// ============ 3. REFACTOR AVAILABLE STOCK WITH FUNCTION =================
+
+function isAvailableStock(product){
+    return product.stock > 0;
+}
+
+
+
+
 // ---------------- TASK A : Loop all product and Display info the product -------------
 
 for (let i = 0; i < products.length; i++){
@@ -59,9 +68,8 @@ for (let i = 0; i < products.length; i ++){
 
 let availableProduct = 0;
 for (let i =0; i < products.length; i++){
-    let product = products[i];
     
-    if (product.stock > 0){
+    if (isAvailableStock(product[i])){
         availableProduct++;
     }
 }
