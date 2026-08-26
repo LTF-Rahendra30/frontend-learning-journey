@@ -14,3 +14,13 @@ const products = [
     { id: 9, name: "T-Shirt", price: 50, stock: 0, category: "Fashion" },
     { id: 10, name: "Backpack", price: 70, stock: 3, category: "Fashion" }
 ];
+
+
+// ----- Cart ----
+const chart = {
+    items: [],
+    subTotal: 0,
+    discount:0,
+    tax:0,
+    finalTotal:0
+}
