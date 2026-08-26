@@ -24,3 +24,24 @@ const chart = {
     tax:0,
     finalTotal:0
 }
+
+// -------- Add chart function ----------
+function addToCart(productId, qty){
+    if (qty <= 0){
+        console.log("Quantity must be >= 0");
+        return;
+    }
+
+    let product = null;
+    for(let i = 0; i < products.length; i++){
+        if (products[i] === productId){
+            product = products[i];
+            break;
+        }
+    }
+
+    if(!product){
+        console.log("Product not found");
+        return;
+    }
+}
