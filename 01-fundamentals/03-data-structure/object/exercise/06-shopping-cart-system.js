@@ -85,6 +85,6 @@ function addToCart(productId, qty){
     }
     // ===== RECALCULATE TOTAL =====
     updateCartTotal();
-    console.log(`${foundProduct.name} Added in cart`);
+    console.log(`${product.name} Added in cart`);
     
 }
