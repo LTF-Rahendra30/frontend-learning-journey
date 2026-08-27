@@ -55,7 +55,7 @@ function addToCart(productId, qty){
     }
 
     // ----- Validate stock ------
-    if (product.stock > qty){
+    if (product.stock < qty){
         return console.log("Stock not enough");
     }
 
