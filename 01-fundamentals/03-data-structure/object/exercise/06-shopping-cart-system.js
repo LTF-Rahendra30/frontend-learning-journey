@@ -84,7 +84,24 @@ function addToCart(productId, qty){
         cart.items.push(newItem);
     }
     // ===== RECALCULATE TOTAL =====
-    updateCartTotal();
+    // updateCartTotal();
     console.log(`${product.name} Added in cart`);
     
+}
+
+addToCart(11,4);
+console.log(cart);
+
+
+// ========= REMOVE FROM CART LOGIC ============
+
+function removeFromCart(productId){
+
+    // ==== Find Catalog product ====
+    let indexToRemove = -1;
+    for (let i = 0; i < cart.items.length; i++){
+        if(cart.items[i].id === productId){
+            indexToRemove = i;
+        }
+    }
 }
