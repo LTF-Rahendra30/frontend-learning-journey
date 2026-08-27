@@ -1,5 +1,13 @@
 // ============ SHOPPING CART SYSTEM 🛒 ==============
+/* 
+---------------- RULES ----------------
+1. Add/remove produk
+2. alculate subtotal
+3. Apply discount
+4. Calculate tax
+5. Final total
 
+*/
 
 // ------ Catalog Product -----
 const products = [
@@ -17,7 +25,7 @@ const products = [
 
 
 // ----- Cart ----
-const chart = {
+const cart = {
     items: [],
     subTotal: 0,
     discount:0,
@@ -25,13 +33,13 @@ const chart = {
     finalTotal:0
 }
 
-// -------- Add chart function ----------
+// -------- Add cart function ----------
 function addToCart(productId, qty){
-    if (qty <= 0){
-        console.log("Quantity must be >= 0");
-        return;
+    if (qty <= 0){   
+        return console.log("Quantity must be >= 0");;
     }
 
+    // ----- Search Product in catalog ----
     let product = null;
     for(let i = 0; i < products.length; i++){
         if (products[i] === productId){
@@ -40,8 +48,25 @@ function addToCart(productId, qty){
         }
     }
 
+    // ---- If not found product in catalog -----
     if(!product){
-        console.log("Product not found");
-        return;
+        return console.log("Product not found"); 
     }
+
+    // ----- Validate stock ------
+    if (product.stock > qty){
+        return console.log("Stock not enough");
+    }
+
+    // ----- Check product in catalog that added -----
+    let itemInChart = null;
+    for (let i = 0; i < cart.items.length; i++){
+        if(cart.items[i] === productId){
+            itemInChart = cart.items;
+            break;
+        }
+    }
+
+
+    
 }

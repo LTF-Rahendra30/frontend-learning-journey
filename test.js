@@ -11,3 +11,9 @@ function hello(name){
 }
 
 console.log(hello("WOWO"));
+
+function getHello(name){
+    return console.log('Hello ' + name);
+}
+
+getHello("Joko")
