@@ -35,11 +35,12 @@ const cart = {
 
 // -------- Add cart function ----------
 function addToCart(productId, qty){
+    // ==== VALIDATE QUANTITY ====
     if (qty <= 0){   
         return console.log("Quantity must be >= 0");;
     }
 
-    // ----- Search Product in catalog ----
+    // ==== Find Product in catalog ====
     let product = null;
     for(let i = 0; i < products.length; i++){
         if (products[i] === productId){
@@ -58,15 +59,19 @@ function addToCart(productId, qty){
         return console.log("Stock not enough");
     }
 
-    // ----- Check product in catalog that added -----
-    let itemInChart = null;
+    // ----- Check if the product is already in the cart -----
+    let itemInCart;
     for (let i = 0; i < cart.items.length; i++){
         if(cart.items[i] === productId){
-            itemInChart = cart.items;
+            itemInCart = cart.items;
             break;
         }
     }
 
+    // ----- If Product is alredy. Update QTY ----
+    if (itemInCart){
+        itemInCart.stock += qty;
+        itemInCart.itemTotal = itemInCart.price * itemInCart.stock;
+    }
 
-    
 }
