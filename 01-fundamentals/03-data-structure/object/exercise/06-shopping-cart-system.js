@@ -43,7 +43,7 @@ function addToCart(productId, qty){
     // ==== Find Product in catalog ====
     let product = null;
     for(let i = 0; i < products.length; i++){
-        if (products[i] === productId){
+        if (products[i].id === productId){
             product = products[i];
             break;
         }
