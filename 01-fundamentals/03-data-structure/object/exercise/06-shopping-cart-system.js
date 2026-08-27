@@ -62,8 +62,8 @@ function addToCart(productId, qty){
     // ----- Check if the product is already in the cart -----
     let itemInCart;
     for (let i = 0; i < cart.items.length; i++){
-        if(cart.items[i] === productId){
-            itemInCart = cart.items;
+        if(cart.items[i].id === productId){
+            itemInCart = cart.items[i];
             break;
         }
     }
