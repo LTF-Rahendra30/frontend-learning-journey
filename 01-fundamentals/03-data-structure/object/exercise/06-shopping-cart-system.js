@@ -72,6 +72,19 @@ function addToCart(productId, qty){
     if (itemInCart){
         itemInCart.stock += qty;
         itemInCart.itemTotal = itemInCart.price * itemInCart.stock;
+    } else{
+        // If product not alredy
+        let newItem = {
+            id: itemInCart.id,
+            name: itemInCart.name,
+            price: itemInCart.price,
+            stock: itemInCart.stock,
+            itemTotal: itemInCart.itemTotal
+        };
+        cart.items.push(newItem);
     }
-
+    // ===== RECALCULATE TOTAL =====
+    updateCartTotal();
+    console.log(`${foundProduct.name} Added in cart`);
+    
 }
