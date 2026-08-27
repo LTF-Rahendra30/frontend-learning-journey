@@ -70,16 +70,16 @@ function addToCart(productId, qty){
 
     // ----- If Product is alredy. Update QTY ----
     if (itemInCart){
-        itemInCart.stock += qty;
+        itemInCart.qty += qty;
         itemInCart.itemTotal = itemInCart.price * itemInCart.stock;
     } else{
         // If product not alredy
         let newItem = {
-            id: itemInCart.id,
-            name: itemInCart.name,
-            price: itemInCart.price,
-            stock: itemInCart.stock,
-            itemTotal: itemInCart.itemTotal
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            qty: qty,
+            itemTotal: product.price * qty
         };
         cart.items.push(newItem);
     }
