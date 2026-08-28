@@ -89,7 +89,8 @@ function addToCart(productId, qty){
     
 }
 
-addToCart(11,4);
+addToCart(1,3);
+// addToCart(1,2);
 console.log(cart);
 
 
@@ -102,6 +103,15 @@ function removeFromCart(productId){
     for (let i = 0; i < cart.items.length; i++){
         if(cart.items[i].id === productId){
             indexToRemove = i;
+            break;
         }
+    }
+
+    // ===== IF FOUND: DELETE =======
+    if (indexToRemove !== -1){
+        cart.items.slice(indexToRemove, 1);
+        console.log("Product Removed");
+        updateCartTotal();
+        
     }
 }
