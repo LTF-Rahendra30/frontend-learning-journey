@@ -139,12 +139,6 @@ function addToCart(productId, qty){
     
 }
 
-addToCart(1,3);
-// addToCart(1,2);
-applyDiscount(10);
-applyTax(10)
-console.log(cart);
-
 
 
 // ========= REMOVE FROM CART LOGIC ============
@@ -162,7 +156,7 @@ function removeFromCart(productId){
 
     // ===== IF FOUND: DELETE =======
     if (indexToRemove !== -1){
-        cart.items.slice(indexToRemove, 1);
+        cart.items.splice(indexToRemove, 1);
         console.log("Product Removed");
         updateCartTotal();
     } else{
@@ -175,22 +169,32 @@ function removeFromCart(productId){
 // ========= DISPLAY CART ===========
 function displayCart(){
     console.log("=====================");
-    
     // loop all items 
-    for (i = 0; i < cart.items[i]; i++){
+    for (i = 0; i < cart.items.length; i++){
         let item = cart.items[i];
         console.log(`
-            ${item.name} | ${item.qty} | ${item.price} | ${item.itemTotal}
-            `);
+Name: ${item.name}
+Quantyty: ${item.qty}
+Price: ${item.price}
+Total Item: ${item.itemTotal}
+`);
     }
     console.log("=====================");
     console.log(`
-        "Subtotal: ${cart.subTotal}\n
-         Discount: ${cart.discount}\n
-         Tax: ${cart.tax}\n
-         Final Total: ${cart.finalTotal}\n
-
-        `);
-    
+"Subtotal: ${cart.subTotal}
+Discount: ${cart.discount}
+Tax: ${cart.tax}
+Final Total: ${cart.finalTotal}
+`);
     
 }
+
+
+
+
+// ============= TESTING AREA ==========
+addToCart(1,3);
+applyDiscount(10);
+applyTax(10)
+displayCart()
+console.log(cart);
