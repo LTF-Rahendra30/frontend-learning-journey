@@ -69,11 +69,17 @@ function applyTax(percentage){
 }
 
 
+// ============= Calculate final ==========
+function calculateFinalTotal(){
+    let subTotal = calculateSubtotal();
+    return (subTotal - cart.discount) + cart.tax;
+}
+
 // ========== Helper Function: Update Total cart ========
 
 function updateCartTotal(){
     cart.subTotal = calculateSubtotal();
-    // cart.finalTotal = calculateFinalTotal();
+    cart.finalTotal = calculateFinalTotal();
 }
 
 
