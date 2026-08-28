@@ -43,22 +43,25 @@ function calculateSubtotal(){
 }
 
 // ============ APPLY DISCOUNT ========
-function applyDiscount(discount){
-    if (discount < 0 && discount > 100){
+function applyDiscount(percentage){
+    if (percentage < 0 || percentage > 100){
         return console.log("Range Discount 0-100%");
     }
 
     // --- CALCULATE DISCOUNT ----
     let subTotal = calculateSubtotal();
-    cart.discount = (subTotal * discount) / 100;
+    cart.discount = (subTotal * percentage) / 100;
 
     return updateCartTotal();
 }
+applyDiscount(-1);
+// ============ APPLY TAX =========
+// function applyTax(percentage)
 // ========== Helper Function: Update Total cart ========
 
 function updateCartTotal(){
     cart.subTotal = calculateSubtotal();
-    cart.finalTotal = calculateFinalTotal();
+    // cart.finalTotal = calculateFinalTotal();
 }
 
 
