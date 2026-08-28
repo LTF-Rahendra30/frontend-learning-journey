@@ -93,6 +93,15 @@ addToCart(1,3);
 // addToCart(1,2);
 console.log(cart);
 
+// ======== CALCULATE SUBTOTAL ========
+function calculateSubtotal(){
+    let subTotal = 0;
+    for (let i = 0; i < cart.items.length; i++){
+        subTotal += cart.items[i].price * cart.items[i].qty;
+    }
+    return subTotal;
+}
+
 
 // ========= REMOVE FROM CART LOGIC ============
 
