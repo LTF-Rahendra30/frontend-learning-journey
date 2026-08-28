@@ -83,7 +83,6 @@ function updateCartTotal(){
 }
 
 
-
 // -------- Add cart function ----------
 function addToCart(productId, qty){
     // ==== VALIDATE QUANTITY ====
@@ -142,6 +141,8 @@ function addToCart(productId, qty){
 
 addToCart(1,3);
 // addToCart(1,2);
+applyDiscount(10);
+applyTax(10)
 console.log(cart);
 
 
@@ -168,4 +169,28 @@ function removeFromCart(productId){
         console.log("Product not found");
         
     }
+}
+
+
+// ========= DISPLAY CART ===========
+function displayCart(){
+    console.log("=====================");
+    
+    // loop all items 
+    for (i = 0; i < cart.items[i]; i++){
+        let item = cart.items[i];
+        console.log(`
+            ${item.name} | ${item.qty} | ${item.price} | ${item.itemTotal}
+            `);
+    }
+    console.log("=====================");
+    console.log(`
+        "Subtotal: ${cart.subTotal}\n
+         Discount: ${cart.discount}\n
+         Tax: ${cart.tax}\n
+         Final Total: ${cart.finalTotal}\n
+
+        `);
+    
+    
 }
