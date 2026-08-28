@@ -47,16 +47,28 @@ function applyDiscount(percentage){
     if (percentage < 0 || percentage > 100){
         return console.log("Range Discount 0-100%");
     }
-
+    
     // --- CALCULATE DISCOUNT ----
     let subTotal = calculateSubtotal();
     cart.discount = (subTotal * percentage) / 100;
+    
+    return updateCartTotal();
+}
+
+// ============ APPLY TAX =========
+function applyTax(percentage){
+    if (percentage < 0 || percentage > 100){
+        return console.log("Range Tax 0-100%");
+    }
+
+    // ----- CALCULATE TAX ---- 
+    let subTotalAfterDiscount = calculateSubtotal() - cart.discount;
+    cart.tax = (subTotalAfterDiscount * percentage) /100;
 
     return updateCartTotal();
 }
-applyDiscount(-1);
-// ============ APPLY TAX =========
-// function applyTax(percentage)
+
+
 // ========== Helper Function: Update Total cart ========
 
 function updateCartTotal(){
