@@ -33,6 +33,24 @@ const cart = {
     finalTotal:0
 }
 
+// ======== CALCULATE SUBTOTAL ========
+function calculateSubtotal(){
+    let subTotal = 0;
+    for (let i = 0; i < cart.items.length; i++){
+        subTotal += cart.items[i].price * cart.items[i].qty;
+    }
+    return ;
+}
+
+// ========== Helper Function: Update Total cart ========
+
+function updateCartTotal(){
+    cart.subTotal = calculateSubtotal();
+    cart.finalTotal = calculateFinalTotal();
+}
+
+
+
 // -------- Add cart function ----------
 function addToCart(productId, qty){
     // ==== VALIDATE QUANTITY ====
@@ -84,7 +102,7 @@ function addToCart(productId, qty){
         cart.items.push(newItem);
     }
     // ===== RECALCULATE TOTAL =====
-    // updateCartTotal();
+    updateCartTotal();
     console.log(`${product.name} Added in cart`);
     
 }
@@ -93,14 +111,6 @@ addToCart(1,3);
 // addToCart(1,2);
 console.log(cart);
 
-// ======== CALCULATE SUBTOTAL ========
-function calculateSubtotal(){
-    let subTotal = 0;
-    for (let i = 0; i < cart.items.length; i++){
-        subTotal += cart.items[i].price * cart.items[i].qty;
-    }
-    return subTotal;
-}
 
 
 // ========= REMOVE FROM CART LOGIC ============
