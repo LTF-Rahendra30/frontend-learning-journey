@@ -121,7 +121,7 @@ function addToCart(productId, qty){
     // ----- If Product is alredy. Update QTY ----
     if (itemInCart){
         itemInCart.qty += qty;
-        itemInCart.itemTotal = itemInCart.price * itemInCart.stock;
+        itemInCart.itemTotal = itemInCart.price * itemInCart.qty;
     } else{
         // If product not alredy
         let newItem = {
@@ -176,8 +176,7 @@ function displayCart(){
 Name: ${item.name}
 Quantyty: ${item.qty}
 Price: ${item.price}
-Total Item: ${item.itemTotal}
-`);
+Total Item: ${item.itemTotal}`);
     }
     console.log("=====================");
     console.log(`
