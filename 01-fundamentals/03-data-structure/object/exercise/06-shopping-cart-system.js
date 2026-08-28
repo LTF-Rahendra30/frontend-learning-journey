@@ -121,6 +121,8 @@ function removeFromCart(productId){
         cart.items.slice(indexToRemove, 1);
         console.log("Product Removed");
         updateCartTotal();
+    } else{
+        console.log("Product not found");
         
     }
 }
