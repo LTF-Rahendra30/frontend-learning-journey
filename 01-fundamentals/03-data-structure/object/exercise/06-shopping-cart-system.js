@@ -39,14 +39,14 @@ function calculateSubtotal(){
     for (let i = 0; i < cart.items.length; i++){
         subTotal += cart.items[i].price * cart.items[i].qty;
     }
-    return ;
+    return subTotal;
 }
 
 // ========== Helper Function: Update Total cart ========
 
 function updateCartTotal(){
     cart.subTotal = calculateSubtotal();
-    cart.finalTotal = calculateFinalTotal();
+    // cart.finalTotal = calculateFinalTotal();
 }
 
 
