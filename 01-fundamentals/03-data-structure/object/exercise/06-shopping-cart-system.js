@@ -160,8 +160,7 @@ function removeFromCart(productId){
         console.log("Product Removed");
         updateCartTotal();
     } else{
-        console.log("Product not found");
-        
+        console.log("Product not found");  
     }
 }
 
@@ -174,13 +173,13 @@ function displayCart(){
         let item = cart.items[i];
         console.log(`
 Name: ${item.name}
-Quantyty: ${item.qty}
+Quantity: ${item.qty}
 Price: ${item.price}
 Total Item: ${item.itemTotal}`);
     }
     console.log("=====================");
     console.log(`
-"Subtotal: ${cart.subTotal}
+Subtotal: ${cart.subTotal}
 Discount: ${cart.discount}
 Tax: ${cart.tax}
 Final Total: ${cart.finalTotal}
@@ -193,7 +192,15 @@ Final Total: ${cart.finalTotal}
 
 // ============= TESTING AREA ==========
 addToCart(1,3);
+addToCart(2,10);
+addToCart(3,5);
+displayCart()
+// ==== REMOVE CART BY ID: 3 ====
+removeFromCart(3);
+
+// ===== APPLY DISCOUNT AND TAX ====
 applyDiscount(10);
 applyTax(10)
+
 displayCart()
 console.log(cart);
