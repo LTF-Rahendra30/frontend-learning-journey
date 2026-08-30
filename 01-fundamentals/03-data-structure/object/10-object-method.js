@@ -17,3 +17,21 @@ console.log(Object.entries(user));
   [ 'job', 'Developer' ], 
     [ 'region', 'Jakarta' ] 
 ] */
+
+
+// ======== ASSIGIN OBJECT ===========
+const publicData = {name: "Bob", email: "Bob123@mail.com", isRegister: true};
+const privateData = {IP_Address: "192.100.10.169", privateChookie: true};
+
+const COMPLATE_DATA = Object.assign({},privateData,publicData);
+
+console.log(COMPLATE_DATA);
+/* 
+{
+  IP_Address: '192.100.10.169',
+  privateChookie: true,
+  name: 'Bob',
+  email: 'Bob123@mail.com',
+  isRegister: true
+}
+ */
