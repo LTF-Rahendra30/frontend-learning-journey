@@ -15,3 +15,14 @@ console.log(included); // True
 // ----- Start with method ------
 const startWith = word.startsWith('T');
 console.log(startWith); // true
+
+// ----- End with method ------
+
+const endWith = word.endsWith("d");
+console.log(endWith); // true
+
+
+// ------ Update string method ----
+let updateWord = word.replace("The", "Main");
+console.log(updateWord);
+// Main desentralized
