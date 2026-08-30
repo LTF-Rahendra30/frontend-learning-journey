@@ -17,6 +17,9 @@ console.log(number);
 
 // ----------- SPLICE ---------
 // delete,change and added new element in array
+
+
+// ------ Delete --------
 const buah = ["Apel", "Pisang", "Jeruk", "Mangga"];
 console.log(buah);
 // [ 'Apel', 'Pisang', 'Jeruk', 'Mangga' ]
@@ -24,3 +27,23 @@ console.log(buah);
 buah.splice(1,1); // delete form index 1, amount index that delete is 1
 console.log(buah);
 // [ 'Apel', 'Jeruk', 'Mangga' ]
+
+// ------- Add New element ---
+const language = ["HTML", "CSS", "JS"];
+console.log(language);
+
+// from index 2, delete 0, then added :
+language.splice(2,0, "Python", "PHP");
+console.log(language);
+// [ 'HTML', 'CSS', 'Python', 'PHP', 'JS' ]
+
+
+// -------- Edit Element ---------
+
+const color = ['red','green','blue'];
+console.log(color);
+// [ 'red', 'green', 'blue' ]
+
+color.splice(1,1, "White");
+console.log(color);
+// [ 'red', 'White', 'blue' 
