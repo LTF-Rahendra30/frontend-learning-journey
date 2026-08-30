@@ -157,7 +157,7 @@ function removeFromCart(productId){
     // ===== IF FOUND: DELETE =======
     if (indexToRemove !== -1){
         cart.items.splice(indexToRemove, 1);
-        console.log("Product Removed");
+        console.log(`Product by id: ${productId} has Removed`);
         updateCartTotal();
     } else{
         console.log("Product not found");  
