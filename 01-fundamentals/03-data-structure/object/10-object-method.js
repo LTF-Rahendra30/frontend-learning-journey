@@ -54,3 +54,5 @@ console.log(configuration);
 
 
 // ---- Object has own ----
+console.log(Object.hasOwn(configuration, 'theme')); // true
+console.log(Object.hasOwn(configuration, 'filter')); // false
