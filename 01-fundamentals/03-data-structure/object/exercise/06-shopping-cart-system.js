@@ -145,7 +145,7 @@ function addToCart(productId, qty){
 
 function removeFromCart(productId){
 
-    // ==== Find Catalog product ====
+    // ==== Find Catalog product by index ====
     let indexToRemove = -1;
     for (let i = 0; i < cart.items.length; i++){
         if(cart.items[i].id === productId){
@@ -169,7 +169,7 @@ function removeFromCart(productId){
 function displayCart(){
     console.log("=====================");
     // loop all items 
-    for (i = 0; i < cart.items.length; i++){
+    for (let i = 0; i < cart.items.length; i++){
         let item = cart.items[i];
         console.log(`
 Name: ${item.name}
