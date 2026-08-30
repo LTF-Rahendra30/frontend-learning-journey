@@ -26,3 +26,20 @@ console.log(endWith); // true
 let updateWord = word.replace("The", "Main");
 console.log(updateWord);
 // Main desentralized
+
+
+// ==== SPLICE METHOD ====
+const wordInSentence = word.split(' ');
+console.log(wordInSentence);
+// [ 'The', 'desentralized' ]
+
+// ===== LOWERCASE STRING =====
+let email = "BobJerry@mali.com";
+let emailLower = email.toLowerCase();
+console.log(emailLower);
+// bobjerry@mali.com
+
+// ==== UPPER CASE ====
+let emailUpper = email.toUpperCase();
+console.log(emailUpper);
+// BOBJERRY@MALI.COM
