@@ -6,3 +6,4 @@ console.log(country);
 // With index 
 console.log(country[0],country[1]);
 // Indonesian Japan
+console.log(typeof country);
