@@ -35,3 +35,22 @@ console.log(COMPLATE_DATA);
   isRegister: true
 }
  */
+
+
+
+// ======== SECURITY DATA ==========
+const configuration = {
+  theme: "dark",
+  versi: "1.0"
+};
+
+
+// ---- Object freeze ---- (lock object, be cannot manipulation)
+Object.freeze(configuration);
+// try change value property
+configuration.theme = "light";
+console.log(configuration);
+// { theme: 'dark', versi: '1.0' }
+
+
+// ---- Object has own ----
