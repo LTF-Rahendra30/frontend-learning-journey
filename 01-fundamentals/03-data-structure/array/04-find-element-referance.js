@@ -29,11 +29,16 @@ const users = [
 
 function findUserById(id){
     const result = users.find(usr => usr.id === id);
-    return console.log(result);   
+    
+    if(!result){
+        return "User not found";
+    }
+    return result; 
 }
+console.log(findUserById(101));
+console.log(findUserById(104));
 
-findUserById(101);
-findUserById(102);
+
 /* 
 { id: 101, nama: 'Andi', peran: 'User' }
 { id: 102, nama: 'Budi', peran: 'Admin' }
