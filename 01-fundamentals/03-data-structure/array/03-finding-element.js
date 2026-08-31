@@ -33,3 +33,4 @@ if (!num.includes(6)){
     console.log("6 isn't found in the array");
 
 }
+
