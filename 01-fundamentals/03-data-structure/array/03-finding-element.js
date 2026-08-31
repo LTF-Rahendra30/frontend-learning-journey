@@ -27,4 +27,9 @@ if (indexOfSix !== -1){
     console.log("6 is not found in the array");
     
 }
- 
+//   ---- With method ----
+
+if (!num.includes(6)){
+    console.log("6 isn't found in the array");
+
+}
