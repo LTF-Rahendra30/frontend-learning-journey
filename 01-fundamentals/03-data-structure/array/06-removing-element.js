@@ -34,3 +34,13 @@ console.log(alfabet);
 alfabet.splice(4,0, 'F','G');
 console.log(alfabet);
 // [ 'C', 'D', 'E', 'F', 'G' ]
+
+
+
+// ----- DELEETE ALL ELEMENT IN ARRAY ----
+const language = ["HTML", "CSS", "JS"];
+console.log(language);
+
+const deleteAllElement = language.splice(0,language.length);
+
+console.log(`delete all element: ${deleteAllElement}`);
