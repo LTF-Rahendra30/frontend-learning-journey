@@ -24,6 +24,17 @@ const products = [
 const validStockProduct = products.filter(product => {
    return product.stock > 0;
 })
+// ----- FILTERING PRODUCT BY CATEGORIES ------
+const filterCategoryProducts = products.filter(product => product.category === 'Fashion');
 
+//  ---- Simplify by function ----
+
+function filterCategory(category){
+    const result = products.filter(product => product.category === category);
+
+    return result.length > 0 ? result: "Not found";
+}
 console.log(products);
 console.log(validStockProduct);
+console.log(filterCategory('Fashion'));
+console.log(filterCategory('Otomotive'));
