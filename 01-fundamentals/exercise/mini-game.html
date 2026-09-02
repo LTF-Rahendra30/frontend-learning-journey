@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini game</title>
+</head>
+<body>
+    <h1>Mini game Rock Paper Scissors</h1>
+
+    <script>
+        const choose = prompt("Chosee: R,P,S").toUpperCase()
+        
+        let defaultBotChoose = Math.random();
+        
+        if(defaultBotChoose < 0.4){
+            defaultBotChoose = "Rock";
+        } else if(defaultBotChoose >=4 && defaultBotChoose < 0.7){
+            defaultBotChoose = "Paper";
+        }else {
+            defaultBotChoose = "Scissors";
+        }
+        console.log(defaultBotChoose);
+        
+        let result;
+        if (choose === defaultBotChoose){
+            result = 'Nill';
+        } else if(choose === "R"){
+            // if(defaultBotChoose === "Paper"){
+            //     result = "You Lose";
+            // } else{
+            //     result = "You win";
+            // }
+            result = (defaultBotChoose === "Paper") ? "You Lose" : "You win";
+        } else if(choose === "P"){
+            result = (defaultBotChoose === "Rock") ? "You Win" : "You Lose";
+        } else if(choose === "S"){
+            result = (defaultBotChoose === "Rock") ? "You lose" : "You Win";
+        } else{
+            result = "Not Found";
+        }
+
+        alert(`Your choose: ${choose}, Your enemy: ${defaultBotChoose}
+        
+        Result: ${result}`)
+    </script>
+</body>
+</html>
