@@ -11,4 +11,4 @@ let defaultTheme = "Dark";
 let systemTheme = "Light";
 const currentTheme = userTheme || defaultTheme || systemTheme;
 console.log(currentTheme);
-// Dark
+// Darktr
