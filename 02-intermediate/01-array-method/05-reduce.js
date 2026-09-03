@@ -31,3 +31,23 @@ const sum2 = num.reduce((accumulator,n) =>{
     return accumulator + n;
 },0)
 console.log(sum2);
+/* Accumulator: 0, Current: 1
+Accumulator: 1, Current: 2
+Accumulator: 3, Current: 3
+Accumulator: 6, Current: 4
+Accumulator: 10, Current: 5
+15 */
+
+
+// ----- ACCUMULATOR OBJECT ------
+const num3 = [1,2,3];
+
+const result = num3.reduce((accumulator,n) =>{
+    console.log(`Accumulator: ${accumulator}, Current: ${n}`);
+    return {
+        sum: accumulator.sum + n,
+        count: accumulator.count + 1
+    };    
+}, {sum: 0, count: 0});
+
+console.log(result);
