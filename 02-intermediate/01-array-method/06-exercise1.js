@@ -10,3 +10,14 @@ const transactions = [
 2. Make new array
 3. calculate all amount
 */
+
+const total = transactions
+    .filter(trx => trx.status === "success")
+    .map(amnt => {
+        return amnt.amount
+    })
+    .reduce((accumulator,amountNow) =>{
+        return accumulator + amountNow
+    },0);
+
+console.log(total);
