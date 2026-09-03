@@ -19,3 +19,15 @@ const amountValidTransaction = riwayatTransaksi.filter(transaction => transactio
     },0); // <-- 0 adalah nilaiAwal (kalkulasi dimulai dari angka 0)
 
 console.log(`Valid Transaction: ${amountValidTransaction}`);
+
+
+
+// =========== REDUCE RETURN OBJECT ========
+
+const num = [1,2,3,4,5];
+
+const sum2 = num.reduce((accumulator,n) =>{
+    console.log(`Accumulator: ${accumulator}, Current: ${n}`);
+    return accumulator + n;
+},0)
+console.log(sum2);
