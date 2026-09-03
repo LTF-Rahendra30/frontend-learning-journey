@@ -17,3 +17,25 @@ const total = transactions
     .reduce((sum,amountNow) => sum + amountNow, 0);
 
 console.log(total);
+// 125000
+
+
+
+// ===== AVARAGE AMOUNT =====
+
+const avgAmount = transactions
+    .filter(trx => trx.status === "success")
+    .map(trx => {
+      return {
+        id: trx.id,
+        amount: trx.amount
+      }
+    })
+    .reduce((accumulator,currentAmount) => {
+      return {
+        total: accumulator.total + currentAmount.amount,
+        count: accumulator.count + 1
+      }
+    }, {total: 0, count:0})
+    const avarage = avgAmount.total / avgAmount.count
+console.log(avarage);
