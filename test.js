@@ -17,3 +17,8 @@ function getHello(name){
 }
 
 getHello("Joko")
+
+
+
+const testMath = Math.min(10,2,3,5);
+console.log(testMath);
