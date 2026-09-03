@@ -13,7 +13,7 @@ const transactions = [
 
 const total = transactions
     .filter(trx => trx.status === "success")
-    .map(amnt => amnt.amount)
-    .reduce((accumulator,amountNow) => accumulator + amountNow, 0);
+    .map(trx => trx.amount)
+    .reduce((sum,amountNow) => sum + amountNow, 0);
 
 console.log(total);
