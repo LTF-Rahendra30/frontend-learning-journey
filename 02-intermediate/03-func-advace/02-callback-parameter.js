@@ -12,9 +12,8 @@ prosesNama("bob", function(resultName){
 
 // ---------- arrow function ---------
 function multiply(agrs,callback){
-    const result = agrs ** 2;
-    callback(result);
-    /* ==== >  console.log(`result: ${resulr}`);
+    callback(agrs ** 2);
+    /* ==== >  console.log(`result: ${result}`);
     
     */
 
