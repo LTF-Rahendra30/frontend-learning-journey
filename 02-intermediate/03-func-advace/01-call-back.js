@@ -21,4 +21,5 @@ function Hello(){
 }
 
 // USAGE 
-jalankan(Hello)
+jalankan(Hello);
+// Hello
