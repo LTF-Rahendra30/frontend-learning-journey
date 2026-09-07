@@ -37,6 +37,11 @@ const classroom = {
             console.log(`Not found or user by ID : ${studentId}`);
             
         }
+    },
+
+    // Get Average
+    getAverage: (grades) => {
+        
     }
 }
 classroom.addStudent("Bob");
