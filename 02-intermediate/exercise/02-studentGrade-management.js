@@ -23,17 +23,21 @@ const classroom = {
 
     addGrade : (studenId,grade) => {
         if (typeof grade !== 'number' || grade < 0 || grade > 100){
-            return "Grade must be number and range 0-100"
+            return "Grade must be number and range 0-100";
         }
-        else{
-            return "Must be number";
+        // Found student
+        const student = classroom.students.find(s => s.id === studenId);
+
+        // Push Grade
+        if (student){
+            student.grades.push(grade);
         }
     }
 }
 classroom.addStudent("Bob");
 classroom.addStudent("Chloe");
+classroom.addGrade("Bob",33);
 console.log(classroom.students);
 
-console.log(classroom.addGrade("vv",33));
 
 
