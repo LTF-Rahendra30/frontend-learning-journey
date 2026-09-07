@@ -11,20 +11,18 @@ const classroom = {
     students: [],
     addStudent : (name) => {
         // Auto genetrate ID
-        for(let idSDU = 0; idSDU < students.length; idSDU++){
-            idSDU += 1;
-        }
-
+        const newId = classroom.students.length + 1;
         let newStudents =  {
-            id: idSDU,
+            id: newId,
             name: name,
-            grade: []
+            grades: []
         }
 
         classroom.students.push(newStudents)
     }
 }
 classroom.addStudent("Bob");
+classroom.addStudent("Chloe");
 console.log(classroom.students);
 
 
