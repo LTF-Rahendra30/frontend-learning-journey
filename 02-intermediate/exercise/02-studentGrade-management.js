@@ -19,10 +19,21 @@ const classroom = {
         }
 
         classroom.students.push(newStudents)
+    },
+
+    addGrade : (studenId,grade) => {
+        if (typeof grade !== 'number' || grade < 0 || grade > 100){
+            return "Grade must be number and range 0-100"
+        }
+        else{
+            return "Must be number";
+        }
     }
 }
 classroom.addStudent("Bob");
 classroom.addStudent("Chloe");
 console.log(classroom.students);
+
+console.log(classroom.addGrade("vv",33));
 
 
