@@ -9,8 +9,22 @@ RULSES:
 
 const classroom = {
     students: [],
-    addSomething : (name) => classroom.students.push("Bob")
-}
+    addStudent : (name) => {
+        // Auto genetrate ID
+        for(let idSDU = 0; idSDU < students.length; idSDU++){
+            idSDU += 1;
+        }
 
-classroom.addSomething("Bob");
+        let newStudents =  {
+            id: idSDU,
+            name: name,
+            grade: []
+        }
+
+        classroom.students.push(newStudents)
+    }
+}
+classroom.addStudent("Bob");
 console.log(classroom.students);
+
+
