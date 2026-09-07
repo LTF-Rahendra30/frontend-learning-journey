@@ -41,7 +41,12 @@ const classroom = {
 
     // Get Average
     getAverage: (grades) => {
-        
+        // Sum All grade in the array
+        const sum = grades.reduce((acc,val) => {
+            return acc + val
+        },0)
+
+        return sum / grades.length;
     }
 }
 classroom.addStudent("Bob");
@@ -49,6 +54,10 @@ classroom.addStudent("Chloe");
 classroom.addGrade(1,33);
 classroom.addGrade(1,33);
 console.log(classroom.students);
+
+let sumGradeArray = [100,100,100];
+console.log(classroom.getAverage(sumGradeArray));
+
 
 
 
