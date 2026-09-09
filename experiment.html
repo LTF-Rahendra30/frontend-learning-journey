@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Mobile Navigation</title>
+    <style>
+        /* --- General Reset & Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        /* --- Navbar Container --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 20px;
+            color: white;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* --- Navigation Links --- */
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #00bcd4;
+        }
+
+        /* --- Hamburger Menu Icon (Hidden on Desktop) --- */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        /* --- Responsive Mobile Styles (Screens under 768px) --- */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex; /* Show hamburger icon */
+            }
+
+            .nav-links {
+                display: none; /* Hide links by default on mobile */
+                flex-direction: column;
+                width: 100%;
+                background-color: #333;
+                position: absolute;
+                top: 100%; /* Drop right below the navbar */
+                left: 0;
+                padding: 10px 0;
+            }
+
+            .nav-links li {
+                text-align: center;
+                margin: 15px 0;
+            }
+
+            /* This utility class will be toggled by JavaScript */
+            .nav-links.active {
+                display: flex; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="nav-links-container">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Simple JavaScript -->
+    <script>
+        // 1. Select the DOM elements
+        const hamburger = document.getElementById('hamburger-btn');
+        const navLinks = document.getElementById('nav-links-container');
+
+        // 2. Add click event listener to the hamburger button
+        hamburger.addEventListener('click', () => {
+            // 3. Toggle the "active" class on the navigation links list
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
