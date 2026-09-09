@@ -60,7 +60,7 @@ const classroom = {
         let maxAvg  = 0;
 
         classroom.students.forEach(student => {
-            const average = this.getAverage(student.grades)
+            const average = classroom.getAverage(student.grades)
             if(average > maxAvg){
                 maxAvg = average;
                 topStudent = student;
@@ -70,15 +70,31 @@ const classroom = {
         return {...topStudent,average:maxAvg};
     }
 }
+
+// ------ ADD STUDENT ------
 classroom.addStudent("Bob");
 classroom.addStudent("Chloe");
+classroom.addStudent("Andrew");
+
+// ------- ADD GRADE -------
 classroom.addGrade(1,false);
 classroom.addGrade(1,77);
 classroom.addGrade(1,33);
+classroom.addGrade(1,88);
+
+classroom.addGrade(2,88);
+classroom.addGrade(2,88);
+classroom.addGrade(2,88);
+
+classroom.addGrade(3,48);
+classroom.addGrade(3,78);
+classroom.addGrade(3,38);
+
+
 console.log(classroom.students);
 
-let sumGradeArray = [100,100,100];
-console.log(classroom.getAverage(sumGradeArray));
+let averageStudentGrade = classroom.getTopStudent();
+console.log(averageStudentGrade);
 
 
 
