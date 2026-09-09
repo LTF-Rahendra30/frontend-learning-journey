@@ -79,6 +79,8 @@ const classroom = {
     // ==== FILTER BY AVERAGE ====
     filterByAverage: (minAvg) => {
         return classroom.students.filter(student => {
+            if (student.grades.length === 0) return false;
+            
             const average = classroom.getAverage(student.grades);
             return average >= minAvg;
         });
