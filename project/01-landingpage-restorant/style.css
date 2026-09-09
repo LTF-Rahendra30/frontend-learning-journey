@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /* Brand Colors & Primary Structure */
+  --color-primary-dark: #2d4a3e;       /* Header, section backgrounds, primary text */
+  --color-warm-cream: #f5ede0;         /* Accent surface, card backgrounds (inviting, natural) */
+
+  /* Accents & Actions */
+  --color-accent-terracotta: #c97a5c;  /* CTA buttons, highlights (warmth, appetite appeal) */
+  --color-accent-sage: #8b9e7d;        /* Subtle accents, decorative elements (organic feel) */
+  
+  /* Typography & Text */
+  --color-text-body: #3d3d3a;          /* Body text, secondary info (Dark Gray) */
+  --color-text-muted: #b4b2a9;         /* Footer text, tertiary info (Light Muted) */
+  
+  /* Footer & Contrast */
+  --color-bg-footer: #1a1a1a;          /* Footer background (Nearly Black) */
+}
+
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -11,10 +31,10 @@ a{
     text-decoration: none;
 }
 ul{
-    list-style-type: none;
+    list-style: none;
 }
 body{
-    background-color: #e79090;
+    background-color: #FFFFFF;
 }
 
 
