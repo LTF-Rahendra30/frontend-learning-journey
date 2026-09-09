@@ -80,7 +80,7 @@ const classroom = {
     filterByAverage: (minAvg) => {
         return classroom.students.filter(student => {
             if (student.grades.length === 0) return false;
-            
+
             const average = classroom.getAverage(student.grades);
             return average >= minAvg;
         });
@@ -91,6 +91,7 @@ const classroom = {
 classroom.addStudent("Bob");
 classroom.addStudent("Chloe");
 classroom.addStudent("Andrew");
+classroom.addStudent("Robby");
 
 // ------- ADD GRADE -------
 classroom.addGrade(1,false);
@@ -116,3 +117,27 @@ console.log(averageStudentGrade);
 // ========== FILTER AVERAGE STUDENT GRADE ===========
 let filterByAverage = classroom.filterByAverage(80);
 console.log(filterByAverage);
+
+// ======= OUTPUT ========
+/* Grade must be number and range 0-100
+
+Success added grade: 77 in Bob
+Success added grade: 33 in Bob
+Success added grade: 88 in Bob
+Success added grade: 88 in Chloe
+Success added grade: 88 in Chloe
+Success added grade: 88 in Chloe
+Success added grade: 90 in Andrew
+Success added grade: 90 in Andrew
+Success added grade: 90 in Andrew
+[
+  { id: 1, name: 'Bob', grades: [ 77, 33, 88 ] },
+  { id: 2, name: 'Chloe', grades: [ 88, 88, 88 ] },
+  { id: 3, name: 'Andrew', grades: [ 90, 90, 90 ] },
+  { id: 4, name: 'Robby', grades: [] }
+]
+{ id: 3, name: 'Andrew', grades: [ 90, 90, 90 ], average: 90 }
+[
+  { id: 2, name: 'Chloe', grades: [ 88, 88, 88 ] },
+  { id: 3, name: 'Andrew', grades: [ 90, 90, 90 ] }
+] */
