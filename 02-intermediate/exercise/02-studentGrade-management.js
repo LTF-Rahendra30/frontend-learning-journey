@@ -102,9 +102,10 @@ classroom.addGrade(3,90);
 
 console.log(classroom.students);
 
+// ========== AVERAGE STUDENT GRADE ===========
 let averageStudentGrade = classroom.getTopStudent();
 console.log(averageStudentGrade);
 
-
-
-
+// ========== FILTER AVERAGE STUDENT GRADE ===========
+let filterByAverage = classroom.filterByAverage(80);
+console.log(filterByAverage);
