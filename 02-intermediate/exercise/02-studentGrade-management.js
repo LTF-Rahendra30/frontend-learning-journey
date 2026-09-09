@@ -64,10 +64,19 @@ const classroom = {
             if(average > maxAvg){
                 maxAvg = average;
                 topStudent = student;
+                
             }
         });
 
         return {...topStudent,average:maxAvg};
+    },
+
+    // ==== FILTER BY AVERAGE ====
+    filterByAverage: (minAvg) => {
+        return classroom.students.filter(student => {
+            const average = classroom.getAverage(student.grades);
+            return average >= minAvg;
+        });
     }
 }
 
@@ -86,9 +95,9 @@ classroom.addGrade(2,88);
 classroom.addGrade(2,88);
 classroom.addGrade(2,88);
 
-classroom.addGrade(3,48);
-classroom.addGrade(3,78);
-classroom.addGrade(3,38);
+classroom.addGrade(3,90);
+classroom.addGrade(3,90);
+classroom.addGrade(3,90);
 
 
 console.log(classroom.students);
