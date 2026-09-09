@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Mobile Navigation</title>
+    <title>Mobile-First Navigation</title>
     <style>
         /* --- General Reset & Styles --- */
         * {
@@ -13,7 +13,7 @@
             font-family: sans-serif;
         }
 
-        /* --- Navbar Container --- */
+        /* --- 1. GAYA DASAR FOR MOBILE (DEFAULT) --- */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -29,26 +29,9 @@
             font-weight: bold;
         }
 
-        /* --- Navigation Links --- */
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li a {
-            color: white;
-            text-decoration: none;
-            padding: 0 15px;
-            transition: color 0.3s;
-        }
-
-        .nav-links li a:hover {
-            color: #00bcd4;
-        }
-
-        /* --- Hamburger Menu Icon (Hidden on Desktop) --- */
+        /* Tombol Hamburger (Muncul secara default di mobile) */
         .hamburger {
-            display: none;
+            display: flex;
             flex-direction: column;
             cursor: pointer;
             background: none;
@@ -63,31 +46,63 @@
             transition: 0.3s;
         }
 
-        /* --- Responsive Mobile Styles (Screens under 768px) --- */
-        @media (max-width: 768px) {
+        /* Menu Link di Mobile (Tersembunyi secara default) */
+        .nav-links {
+            display: none; 
+            flex-direction: column;
+            width: 100%;
+            background-color: #333;
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            padding: 10px 0;
+            list-style: none;
+        }
+
+        .nav-links li {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        /* Class utility yang di-toggle oleh JS untuk membuka menu */
+        .nav-links.active {
+            display: flex; 
+        }
+
+
+        /* --- 2. GAYA UNTUK LAYAR BESAR / DESKTOP (min-width) --- */
+        /* Gaya di dalam sini hanya berjalan jika lebar layar minimal 768px */
+        @media (min-width: 768px) {
             .hamburger {
-                display: flex; /* Show hamburger icon */
+                display: none; /* Sembunyikan hamburger di desktop */
             }
 
             .nav-links {
-                display: none; /* Hide links by default on mobile */
-                flex-direction: column;
-                width: 100%;
-                background-color: #333;
-                position: absolute;
-                top: 100%; /* Drop right below the navbar */
-                left: 0;
-                padding: 10px 0;
+                display: flex; /* Tampilkan menu link secara permanen */
+                flex-direction: row; /* Ubah arah menu menjadi horizontal */
+                position: static; /* Kembalikan ke posisi normal navbar */
+                width: auto;
+                padding: 0;
             }
 
             .nav-links li {
-                text-align: center;
-                margin: 15px 0;
+                margin: 0; /* Hapus margin vertikal mobile */
             }
 
-            /* This utility class will be toggled by JavaScript */
-            .nav-links.active {
-                display: flex; 
+            .nav-links li a {
+                padding: 0 15px;
+            }
+
+            .nav-links li a:hover {
+                color: #00bcd4;
             }
         }
     </style>
@@ -113,15 +128,12 @@
         </ul>
     </nav>
 
-    <!-- Simple JavaScript -->
+    <!-- JavaScript (Tetap sama & sederhana) -->
     <script>
-        // 1. Select the DOM elements
         const hamburger = document.getElementById('hamburger-btn');
         const navLinks = document.getElementById('nav-links-container');
 
-        // 2. Add click event listener to the hamburger button
         hamburger.addEventListener('click', () => {
-            // 3. Toggle the "active" class on the navigation links list
             navLinks.classList.toggle('active');
         });
     </script>
