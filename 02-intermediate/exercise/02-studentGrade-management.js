@@ -68,6 +68,11 @@ const classroom = {
             }
         });
 
+        if(!topStudent){
+            console.log("The grade dosent ready");
+            return null;
+        }
+
         return {...topStudent,average:maxAvg};
     },
 
