@@ -15,6 +15,9 @@
   
   /* Footer & Contrast */
   --color-bg-footer: #1a1a1a;          /* Footer background (Nearly Black) */
+
+  --font-body: "Poppins",sans-serif;
+  --font-heading: "Inter",sans-serif;
 }
 
 
@@ -26,6 +29,10 @@
 
 html{
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+    min-width: 100%;
+    line-height: 1.6;
+
 }
 a{
     text-decoration: none;
@@ -35,12 +42,14 @@ ul{
 }
 body{
     background-color: #FFFFFF;
+    color: var(--color-text-body);
+    font-family: var(--font-body);
 }
 
 
 /* ========== HEADER ============ */
 header{
-    background-color: #2D4A3E;
+    background-color: var(--color-primary-dark);
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -70,6 +79,16 @@ nav{
     display: none;
     flex-direction: column;
     position: absolute;
+}
+
+
+/* ============ HERO SECTION ====== */
+.hero-section{
+    background-color: var(--color-primary-dark);
+
+}
+h1{
+    font-family: var(--font-heading);
 }
 
 /* ====== Break Point Desktop ====== */
