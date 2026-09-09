@@ -10,3 +10,47 @@ html{
 a{
     text-decoration: none;
 }
+ul{
+    list-style-type: none;
+}
+body{
+    background-color: #e79090;
+}
+
+
+/* ========== HEADER ============ */
+header{
+    background-color: #2D4A3E;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+/* ------ HAMBURGER ICON ---- */
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    background: none;
+    border: none;
+}
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+nav{
+    display: none;
+}
+
+/* ====== Break Point Desktop ====== */
+@media (min-width: 64em){
+    .hamburger{
+        display: none;
+    }
+    nav{
+        display: flex;
+        gap: 20px;
+    }
+}
