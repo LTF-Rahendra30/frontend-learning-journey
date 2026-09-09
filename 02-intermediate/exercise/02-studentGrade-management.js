@@ -9,6 +9,8 @@ RULSES:
 
 const classroom = {
     students: [],
+
+
     addStudent : (name) => {
         // Auto genetrate ID
         const newId = classroom.students.length + 1;
@@ -22,10 +24,12 @@ const classroom = {
     },
 
     addGrade : (studentId,grade) => {
-        if (typeof grade !== 'number' || grade < 0 || grade > 100){
-            return "Grade must be number and range 0-100";
+        if (typeof grade !== 'number' || grade < 0 || grade > 100) {
+            console.log("Grade must be number and range 0-100\n")
+            return;
         }
-        // Found student
+        
+        // === Find Student ====
         const student = classroom.students.find(s => s.id === studentId);
 
         // Push Grade
@@ -51,12 +55,13 @@ const classroom = {
 }
 classroom.addStudent("Bob");
 classroom.addStudent("Chloe");
-classroom.addGrade(1,33);
+classroom.addGrade(1,false);
+classroom.addGrade(1,77);
 classroom.addGrade(1,33);
 console.log(classroom.students);
 
-let sumGradeArray = [100,100,100];
-console.log(classroom.getAverage(sumGradeArray));
+// let sumGradeArray = [100,100,100];
+// console.log(classroom.getAverage(sumGradeArray));
 
 
 
