@@ -124,8 +124,24 @@ h1{
     .hamburger{
         display: none;
     }
-    .nav-links{
-        display: flex;
+    .nav-container{
+        display: block;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        width: auto;
+        padding:0  1.5rem;
+    }
+
+    .nav-container ul{
         flex-direction: row;
     }
+}
+/* ==== Hover Reasponsive ==== */
+@media (hover: hover) and (pointer :fine){
+    /* ======= NABAR === */
+    .nav-container ul li a:hover{
+        color: var(--color-accent-terracotta);
+    }
+
 }
