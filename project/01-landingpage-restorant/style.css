@@ -59,6 +59,11 @@ header{
     z-index: 9999;
     top: 0;
 }
+
+.head-logo h2{
+    color: var(--color-white-primary);
+    letter-spacing: 3px;
+}
 /* ------ HAMBURGER ICON ---- */
 .hamburger{
     display: flex;
@@ -106,19 +111,44 @@ header{
 
 
 /* ----- UTILITY CLASS WHEN TOGGLLE WITH JS FOR OPEN NAVIGATION -------- */
+main{
+    max-width: 1200px;
+}
 
 .nav-container.active{
     display: block;
 }
 /* ============ HERO SECTION ====== */
-.hero-section{
-    background-color: var(--color-primary-dark);
-
-}
 h1{
     font-family: var(--font-heading);
+    color: black;
+}
+.hero-section{
+    padding: 40px 20px;
+    background-color: #365347;
+    color: var(--color-white-primary);
+
+}
+.hero-section article{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
 }
 
+/* ---- HERO BUTTON ---- */
+.hero-section article .hero-button{
+    display: flex;
+    gap: 1.2rem;
+    flex-direction: column;
+}
+.hero-section article .hero-button a{
+    background-color: var(--color-warm-cream);
+    color: var(--color-text-body);
+    border-radius: 8px;
+    padding: 6px 12px;
+}
 /* ====== Break Point Desktop ====== */
 @media (min-width: 64em){
     .hamburger{
