@@ -70,13 +70,19 @@ header{
     transition: 0.3s;
 }
 /* ---------- NAVBAR ---------*/
-.nav-links{
-    gap: 20px;
-    display: none;
-    flex-direction: column;
+.nav-container{
     position: absolute;
     top: 100%;
     left: 0;
+    width: 100%;
+    display: none;
+}
+.nav-container ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1.2rem;
 }
 
 
