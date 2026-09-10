@@ -85,7 +85,20 @@ header{
     gap: 1.2rem;
 }
 
+.nav-container ul li{
+    text-align: center;
+}
 
+.nav-container ul li a{
+    display: block;
+}
+
+
+/* ----- UTILITY CLASS WHEN TOGGLLE WITH JS FOR OPEN NAVIGATION -------- */
+
+.nav-container.active{
+    display: block;
+}
 /* ============ HERO SECTION ====== */
 .hero-section{
     background-color: var(--color-primary-dark);

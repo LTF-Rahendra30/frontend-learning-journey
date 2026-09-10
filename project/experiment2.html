@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-First Semantic Navigation</title>
+    <style>
+        /* --- General Reset & Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        /* --- 1. GAYA DASAR FOR MOBILE (DEFAULT) --- */
+        /* Header berfungsi sebagai container utama di bagian atas */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 20px;
+            color: white;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Tombol Hamburger */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        /* Nav & UL Menu di Mobile */
+        nav {
+            display: none; /* Tersembunyi secara default di mobile */
+            width: 100%;
+            background-color: #333;
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+        }
+
+        nav ul li {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        /* Class utility yang di-toggle oleh JS untuk membuka nav */
+        nav.active {
+            display: block; 
+        }
+
+
+        /* --- 2. GAYA UNTUK LAYAR BESAR / DESKTOP (min-width) --- */
+        @media (min-width: 768px) {
+            .hamburger {
+                display: none; /* Sembunyikan hamburger */
+            }
+
+            nav {
+                display: block; /* Selalu tampilkan nav di desktop */
+                position: static; /* Kembali ke posisi normal */
+                width: auto;
+                padding: 0;
+            }
+
+            nav ul {
+                flex-direction: row; /* Berjejer horizontal */
+            }
+
+            nav ul li {
+                margin: 0; 
+            }
+
+            nav ul li a {
+                padding: 0 15px;
+            }
+
+            nav ul li a:hover {
+                color: #00bcd4;
+            }
+        }
+
+        /* Style tambahan untuk konten utama (hanya pelengkap) */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Utama -->
+    <header>
+        <div class="logo">MyWebsite</div>
+        
+        <!-- Tombol Hamburger -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Tag Navigasi Semantic dengan susunan ul > li -->
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Konten Utama Web -->
+    <main>
+        <h1>Selamat Datang</h1>
+        <p>Ini adalah contoh web dengan struktur semantic HTML5 dan mobile-first design.</p>
+    </main>
+
+    <!-- JavaScript Sederhana -->
+    <script>
+        const hamburger = document.getElementById('hamburger-btn');
+        const mainNav = document.getElementById('main-nav');
+
+        hamburger.addEventListener('click', () => {
+            // Toggle class 'active' langsung pada elemen <nav>
+            mainNav.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
