@@ -46,7 +46,17 @@ body{
     font-family: var(--font-body);
 }
 
+/* ====== TYPOGRAPHY ==== */
 
+h1{
+    font-family: var(--font-heading);
+    color: black;
+}
+
+
+h2{
+    color: var(--color-primary-dark);
+}
 /* ========== HEADER ============ */
 header{
     background-color: var(--color-primary-dark);
@@ -117,17 +127,15 @@ header{
 
 
 /* ============ HERO SECTION ====== */
-h1{
-    font-family: var(--font-heading);
-    color: black;
-}
+
 .hero-section{
     padding: 40px 20px;
     background-color: #365347;
     color: var(--color-white-primary);
     /* min-height: 100vh;  */
     min-height: 100svh; 
-    width: 100%; 
+    width: 100%;
+    margin-bottom: 3rem;
 
 }
 .hero-section article{
@@ -155,6 +163,22 @@ h1{
     background-color: transparent;
     border: 2px solid var(--color-white-primary);
     color: var(--color-warm-cream);
+}
+
+
+
+/* ========= MENU SECTION ======== */
+
+.menu-section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.menu-section .menu-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 /* ====== Break Point Desktop ====== */
 @media (min-width: 64em){
