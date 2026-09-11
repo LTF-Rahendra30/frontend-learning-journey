@@ -180,10 +180,30 @@ header{
 }
 
 .menu-section .menu-grid{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
 }
+/* ----------CARD MENU ---------- */
+
+.menu-section .menu-grid .menu-card{
+    border-radius: 12px;
+    background-color: var(--color-warm-cream);
+    overflow: hidden;
+}
+.menu-section .menu-grid img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+.menu-section .menu-grid .menu-body{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
 /* ====== Break Point Desktop ====== */
 @media (min-width: 64em){
     /* ===== HEADER & NAVBAR ==== */
