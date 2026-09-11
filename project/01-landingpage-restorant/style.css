@@ -151,7 +151,7 @@ h1{
     border-radius: 8px;
     padding: 6px 12px;
 }
-.hero-section article .hero-button .first{
+.hero-section article .hero-button .second{
     background-color: transparent;
     border: 2px solid var(--color-white-primary);
     color: var(--color-warm-cream);
