@@ -111,10 +111,6 @@ header{
 
 
 /* ----- UTILITY CLASS WHEN TOGGLLE WITH JS FOR OPEN NAVIGATION -------- */
-main{
-    max-width: 1200px;
-}
-
 .nav-container.active{
     display: block;
 }
@@ -148,6 +144,11 @@ h1{
     color: var(--color-text-body);
     border-radius: 8px;
     padding: 6px 12px;
+}
+.hero-section article .hero-button .first{
+    background-color: transparent;
+    border: 2px solid var(--color-white-primary);
+    color: var(--color-warm-cream);
 }
 /* ====== Break Point Desktop ====== */
 @media (min-width: 64em){
