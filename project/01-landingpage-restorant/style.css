@@ -114,6 +114,8 @@ header{
 .nav-container.active{
     display: block;
 }
+
+
 /* ============ HERO SECTION ====== */
 h1{
     font-family: var(--font-heading);
@@ -123,6 +125,9 @@ h1{
     padding: 40px 20px;
     background-color: #365347;
     color: var(--color-white-primary);
+    /* min-height: 100vh;  */
+    min-height: 100svh; 
+    width: 100%; 
 
 }
 .hero-section article{
@@ -138,6 +143,7 @@ h1{
     display: flex;
     gap: 1.2rem;
     flex-direction: column;
+    width: 100%;
 }
 .hero-section article .hero-button a{
     background-color: var(--color-warm-cream);
@@ -173,6 +179,7 @@ h1{
     /* ====== HERO SECTON ====== */
     .hero-section article .hero-button{
         flex-direction: row;
+        width: max-content;
     }
 }
 /* ==== Hover Reasponsive ==== */
