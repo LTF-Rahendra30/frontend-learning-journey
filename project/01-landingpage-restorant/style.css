@@ -152,6 +152,7 @@ h1{
 }
 /* ====== Break Point Desktop ====== */
 @media (min-width: 64em){
+    /* ===== HEADER & NAVBAR ==== */
     .hamburger{
         display: none;
     }
@@ -165,6 +166,12 @@ h1{
     }
 
     .nav-container ul{
+        flex-direction: row;
+    }
+
+
+    /* ====== HERO SECTON ====== */
+    .hero-section article .hero-button{
         flex-direction: row;
     }
 }
