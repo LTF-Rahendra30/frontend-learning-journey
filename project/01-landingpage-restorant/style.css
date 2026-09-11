@@ -18,6 +18,8 @@
 
   --font-body: "Poppins",sans-serif;
   --font-heading: "Inter",sans-serif;
+
+  --primary-padding: 40px 20px;
 }
 
 
@@ -129,13 +131,13 @@ header{
 /* ============ HERO SECTION ====== */
 
 .hero-section{
-    padding: 40px 20px;
+    padding: var(--primary-padding);
     background-color: #365347;
     color: var(--color-white-primary);
     /* min-height: 100vh;  */
     min-height: 100svh; 
     width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 
 }
 .hero-section article{
@@ -173,6 +175,8 @@ header{
     display: flex;
     flex-direction: column;
     gap: 30px;
+    align-items: center;
+    padding: var(--primary-padding);
 }
 
 .menu-section .menu-grid{
