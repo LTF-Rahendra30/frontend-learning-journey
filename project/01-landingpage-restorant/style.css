@@ -3,7 +3,7 @@
 :root {
   /* Brand Colors & Primary Structure */
   --color-primary-dark: #2d4a3e;       /* Header, section backgrounds, primary text */
-  --color-second-dark: #059d5e;       /* Header, section backgrounds, primary text */
+  --color-second-dark: #037e4b;       /* Header, section backgrounds, primary text */
   --color-warm-cream: #f5ede0;         /* Accent surface, card backgrounds (inviting, natural) */
 
   /* Accents & Actions */
@@ -21,6 +21,7 @@
   --font-heading: "Inter",sans-serif;
 
   --primary-padding: 40px 25px;
+  --bottom-margin: 1rem;
 }
 
 
@@ -138,7 +139,7 @@ header{
     /* min-height: 100vh;  */
     min-height: 100svh; 
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: var(--bottom-margin);
 
 }
 .hero-section article{
@@ -178,6 +179,7 @@ header{
     gap: 30px;
     align-items: center;
     padding: var(--primary-padding);
+    margin-bottom: var(--bottom-margin);
 }
 
 .menu-section .menu-grid{
@@ -213,7 +215,24 @@ header{
     font-weight: bold;
     cursor: pointer;
 }
+/* ============ FOOTER ======== */
+footer{
+    background-color: var(--color-bg-footer);
+    color: var(--color-text-muted);
 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+footer .copyright-footer{
+    font-weight: bold;
+    color: var(--color-white-primary);
+}
 /* ====== Break Point tablet ====== */
 @media (min-width: 48em){
     
