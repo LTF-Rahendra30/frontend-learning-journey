@@ -3,6 +3,7 @@
 :root {
   /* Brand Colors & Primary Structure */
   --color-primary-dark: #2d4a3e;       /* Header, section backgrounds, primary text */
+  --color-second-dark: #059d5e;       /* Header, section backgrounds, primary text */
   --color-warm-cream: #f5ede0;         /* Accent surface, card backgrounds (inviting, natural) */
 
   /* Accents & Actions */
@@ -182,13 +183,13 @@ header{
 .menu-section .menu-grid{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 2rem;
 }
 /* ----------CARD MENU ---------- */
 
 .menu-section .menu-grid .menu-card{
     border-radius: 12px;
-    background-color: var(--color-warm-cream);
+    box-shadow: 0 0 4px rgba(0 0 0 / 0.3);
     overflow: hidden;
 }
 .menu-section .menu-grid img{
@@ -203,7 +204,14 @@ header{
     gap: 10px;
 }
 
-
+.menu-section .menu-grid .menu-button{
+    background-color: var(--color-second-dark);
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    color: var(--color-warm-cream);
+    font-weight: bold;
+}
 /* ====== Break Point tablet ====== */
 @media (min-width: 48em){
     
