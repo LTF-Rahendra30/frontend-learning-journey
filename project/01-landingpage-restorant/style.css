@@ -100,6 +100,7 @@ header{
 .hamburger span {
     width: 25px;
     height: 3px;
+    border-radius: 25px;
     background-color: var(--color-white-primary);
     margin: 4px 0;
     transition: 0.3s;
@@ -146,7 +147,7 @@ header{
 
 .hero-section{
     background-color: var(--color-primary-dark);
-    padding: var(--primary-padding);
+    padding: 50px 40px;
     color: var(--color-white-primary);
     min-height: 100svh; 
     width: 100%;
@@ -210,6 +211,11 @@ header{
 
     padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(1rem, 3vw, 5rem);
     font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+    transition: ease .3s;
+}
+
+.hero-section .hero-content .hero-button a:hover{
+    transform: translateY(-3px);
 }
 .hero-section .hero-content .hero-button .second{
     background-color: transparent;
