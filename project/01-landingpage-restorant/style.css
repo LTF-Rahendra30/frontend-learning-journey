@@ -65,7 +65,7 @@ h2{
     font-size: clamp(1.8rem,3vw,2rem);
 }
 
-.hero-text p, .hero-button a{
+.hero-text p{
     font-size: clamp(1rem,1.5vw, 3rem);
 }
 /* ========== HEADER ============ */
@@ -158,8 +158,7 @@ header{
 .hero-section .hero-content .hero-text{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    /* justify-content: center; */
+    gap: 2.5rem;
     align-items: center;
 }
 
@@ -203,6 +202,11 @@ header{
     color: var(--color-text-body);
     border-radius: 12px;
     padding: 6px 12px;
+    display: inline-block;
+
+    padding: clamp(0.6rem, 1.5vw, 0.8rem)
+           clamp(1rem, 3vw, 1.8rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.5rem);
 }
 .hero-section .hero-content .hero-button .second{
     background-color: transparent;
