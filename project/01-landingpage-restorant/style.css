@@ -141,7 +141,7 @@ header{
     margin-bottom: var(--bottom-margin);
 
 }
-.hero-section article{
+.hero-section .hero-content{
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -189,19 +189,19 @@ header{
     border-radius: 12px;
 }
 /* ---- HERO BUTTON ---- */
-.hero-section article .hero-button{
+.hero-section .hero-content .hero-button{
     display: flex;
     gap: 1.2rem;
     flex-direction: column;
     width: 100%;
 }
-.hero-section article .hero-button a{
+.hero-section .hero-content .hero-button a{
     background-color: var(--color-warm-cream);
     color: var(--color-text-body);
     border-radius: 8px;
     padding: 6px 12px;
 }
-.hero-section article .hero-button .second{
+.hero-section .hero-content .hero-button .second{
     background-color: transparent;
     border: 2px solid var(--color-white-primary);
     color: var(--color-warm-cream);
@@ -303,7 +303,7 @@ footer .copyright-footer{
 
 
     /* ====== HERO SECTON ====== */
-    .hero-section article .hero-button{
+    .hero-section .hero-content .hero-button{
         flex-direction: row;
         width: max-content;
     }
