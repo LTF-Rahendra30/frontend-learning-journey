@@ -148,6 +148,18 @@ header{
     align-items: center;
     text-align: center;
 }
+/* ---- HERO IMAGE ---- */
+
+.hero-section .hero-coffe-img{
+    width: clamp(325px,50vw,600px);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+
+
 
 /* ----- HERO INFO PANEL ---- */
 .hero-section .hero-info{
@@ -261,7 +273,8 @@ footer .copyright-footer{
 }
 /* ====== Break Point tablet ====== */
 @media (min-width: 48em){
-    
+   
+    /* ========= MENU SECTION ========== */
     .menu-section .menu-grid{
         grid-template-columns: repeat(2,1fr);
         gap: 1.6rem;
