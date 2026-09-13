@@ -142,35 +142,31 @@ header{
 
 }
 .hero-section .hero-content{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 2rem;
     align-items: center;
     text-align: center;
 }
+.hero-section .hero-content .hero-text{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
 /* ---- HERO IMAGE ---- */
 
 .hero-section .hero-coffe-img{
-    width: clamp(325px,50vw,600px);
+    width: clamp(300px,50vw,700px);
     height: auto;
     display: block;
     margin: 0 auto;
     object-fit: contain;
 }
 
-
-
-
-/* ----- HERO INFO PANEL ---- */
-.hero-section .hero-info{
-    display: flex;
-    justify-content: space-between;
-    padding: 12px;
-    border: 1.5px solid var(--color-warm-cream);
-    gap: 2rem;
-    border-radius: 40px;
-    background-color: #f5ede053;
-}
 
 .hero-section .hero-info .info-item{
     text-align: center;
@@ -303,6 +299,9 @@ footer .copyright-footer{
 
 
     /* ====== HERO SECTON ====== */
+    .hero-section .hero-content{
+        grid-template-columns: repeat(2,1fr);
+    }
     .hero-section .hero-content .hero-button{
         flex-direction: row;
         width: max-content;
