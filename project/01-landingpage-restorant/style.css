@@ -103,7 +103,9 @@ header{
     flex-direction: column;
     background: none;
     border: none;
+    cursor: pointer;
 }
+
 .hamburger span {
     width: 25px;
     height: 3px;
