@@ -59,8 +59,16 @@ h1{
 
 }
 
+.head-logo h2{
+    font-size: clamp(1.25rem,3vw,2rem);
+    color: var(--color-white-primary);
+    letter-spacing: 3px;
 
-h2{
+}
+.nav-container ul li a {
+    font-size: clamp(0.9rem, 1.5vw, 1.6rem);
+}
+main h2{
     color: var(--color-primary-dark);
     font-size: clamp(1.8rem,3vw,3rem);
 }
@@ -81,10 +89,7 @@ header{
     top: 0;
 }
 
-.head-logo h2{
-    color: var(--color-white-primary);
-    letter-spacing: 3px;
-}
+
 /* ------ HAMBURGER ICON ---- */
 .hamburger{
     display: flex;
@@ -114,7 +119,7 @@ header{
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
-    gap: 1.2rem;
+    gap: 1.5rem;
 }
 
 .nav-container ul li{
@@ -125,7 +130,7 @@ header{
     display: block;
     color: var(--color-white-primary);
     font-family: var(--font-heading);
-    font-weight: bold;
+    font-weight: 500;
     transition: color 0.3s;
 
 }
@@ -203,8 +208,7 @@ header{
     padding: 6px 12px;
     display: inline-block;
 
-    padding: clamp(0.6rem, 1.5vw, 0.8rem)
-           clamp(1rem, 3vw, 1.8rem);
+    padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(1rem, 3vw, 5rem);
     font-size: clamp(0.9rem, 1.5vw, 1.5rem);
 }
 .hero-section .hero-content .hero-button .second{
