@@ -50,6 +50,9 @@ body{
     font-family: var(--font-body);
 }
 
+section{
+    margin-bottom: var(--bottom-margin);
+}
 /* ====== TYPOGRAPHY ==== */
 
 h1{
@@ -155,7 +158,6 @@ header{
     color: var(--color-white-primary);
     min-height: 100svh; 
     width: 100%;
-    margin-bottom: var(--bottom-margin);
 
 }
 .hero-section .hero-content{
@@ -237,7 +239,6 @@ header{
     gap: 30px;
     align-items: center;
     padding: var(--primary-padding);
-    margin-bottom: var(--bottom-margin);
 }
 
 .menu-section .menu-grid{
