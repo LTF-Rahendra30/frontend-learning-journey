@@ -2,7 +2,7 @@
 
 :root {
   /* Brand Colors & Primary Structure */
-  --color-primary-dark: #2d4a3e;       /* Header, section backgrounds, primary text */
+  --color-primary-dark: #2F4C40;       /* Header, section backgrounds, primary text */
   --color-second-dark: #037e4b;       /* Header, section backgrounds, primary text */
   --color-warm-cream: #f5ede0;         /* Accent surface, card backgrounds (inviting, natural) */
 
@@ -54,7 +54,7 @@ body{
 
 h1{
     font-family: var(--font-heading);
-    color: black;
+    color: var(--color-white-primary);
 }
 
 
@@ -63,7 +63,7 @@ h2{
 }
 /* ========== HEADER ============ */
 header{
-    background-color: var(--color-primary-dark);
+    background-color: #2D4A3E;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -133,10 +133,9 @@ header{
 /* ============ HERO SECTION ====== */
 
 .hero-section{
+    background-color: var(--color-primary-dark);
     padding: var(--primary-padding);
-    background-color: #365347;
     color: var(--color-white-primary);
-    /* min-height: 100vh;  */
     min-height: 100svh; 
     width: 100%;
     margin-bottom: var(--bottom-margin);
@@ -145,11 +144,38 @@ header{
 .hero-section article{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
     align-items: center;
     text-align: center;
 }
 
+/* ----- HERO INFO PANEL ---- */
+.hero-section .hero-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border: 1.5px solid var(--color-warm-cream);
+    gap: 2rem;
+    border-radius: 40px;
+    background-color: #f5ede053;
+}
+
+.hero-section .hero-info .info-item{
+    text-align: center;
+}
+
+/* -------- HERO OFFER GRID ------ */
+.hero-section .hero-offerings{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
+}
+
+.hero-section .hero-offerings li{
+    padding: 6px 12px;
+    border: 1.5px solid var(--color-warm-cream);
+    border-radius: 12px;
+}
 /* ---- HERO BUTTON ---- */
 .hero-section article .hero-button{
     display: flex;
