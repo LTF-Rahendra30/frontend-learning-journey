@@ -254,12 +254,16 @@ header{
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
 }
+.menu-section .menu-grid::-webkit-scrollbar{
+    display: none;
+}
 /* ----------CARD MENU ---------- */
 
 .menu-section .menu-grid .menu-card{
     border-radius: 12px;
     box-shadow: 0 0 4px rgba(0 0 0 / 0.3);
     overflow: hidden;
+    scroll-snap-align: center;
 }
 .menu-section .menu-grid .menu-image{
     width: 100%;
