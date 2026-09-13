@@ -76,6 +76,10 @@ main h2{
 .hero-text p{
     font-size: clamp(1rem,1.5vw, 3rem);
 }
+
+footer p{
+    font-size: clamp(1rem,1.5vw,1.4rem);
+}
 /* ========== HEADER ============ */
 header{
     background-color: #2D4A3E;
