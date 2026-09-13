@@ -55,11 +55,18 @@ body{
 h1{
     font-family: var(--font-heading);
     color: var(--color-white-primary);
+    font-size: clamp(2rem,5vw + 1rem,5rem);
+
 }
 
 
 h2{
     color: var(--color-primary-dark);
+    font-size: clamp(1.8rem,3vw,2rem);
+}
+
+.hero-text p, .hero-button a{
+    font-size: clamp(1rem,1.5vw, 3rem);
 }
 /* ========== HEADER ============ */
 header{
@@ -187,14 +194,14 @@ header{
 /* ---- HERO BUTTON ---- */
 .hero-section .hero-content .hero-button{
     display: flex;
-    gap: 1.2rem;
+    gap: 1.5rem;
     flex-direction: column;
     width: 100%;
 }
 .hero-section .hero-content .hero-button a{
     background-color: var(--color-warm-cream);
     color: var(--color-text-body);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 6px 12px;
 }
 .hero-section .hero-content .hero-button .second{
