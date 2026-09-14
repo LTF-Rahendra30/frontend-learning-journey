@@ -1,4 +1,6 @@
 
+// ----- Global ----
+let x = 100;
 
 // ---- Local var ----
 function func1(){
@@ -7,10 +9,14 @@ function func1(){
     
 }
 function func2(){
-    let x = 2;
-    console.log(x);
+    let y = 2;
+    console.log(y);
+
+    // console.log(x);  this eror
+    
     
 }
 
 func1() // 1
 func2() // 2
+console.log(x); // 100
