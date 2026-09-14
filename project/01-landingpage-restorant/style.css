@@ -137,17 +137,22 @@ header{
     display: none;
     padding: 10px 0;
 }
+/* ----- UTILITY CLASS WHEN TOGGLLE WITH JS FOR OPEN NAVIGATION -------- */
+.nav-container.active{
+    display: block;
+}
+
 .nav-container ul{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
     gap: 1.5rem;
-}
+}    
 
 .nav-container ul li{
     text-align: center;
-}
+}    
 
 .nav-container ul li a{
     display: block;
@@ -156,13 +161,8 @@ header{
     font-weight: 500;
     transition: color 0.3s;
 
-}
+}    
 
-
-/* ----- UTILITY CLASS WHEN TOGGLLE WITH JS FOR OPEN NAVIGATION -------- */
-.nav-container.active{
-    display: block;
-}
 
 
 /* ============ HERO SECTION ====== */
