@@ -61,7 +61,19 @@ h1{
     font-size: clamp(2rem,5vw + 1rem,5rem);
 
 }
-
+/* ----- CARD GRID TYPOGRAPHY ----- */
+.menu-grid .menu-body h3{
+    font-size: clamp(1.2rem, 2vw,1.5rem);
+}
+.menu-grid .menu-body p{
+    font-size: clamp(1rem,2vw,1.2rem);
+}
+.menu-grid .menu-body .price{
+    font-size: clamp(1.2rem,1.5vw,1.7rem);
+}
+.menu-grid .menu-body .menu-button{
+    font-size: clamp(0.9rem,2vw,1.1rem);
+}
 .head-logo h2{
     font-size: clamp(1.25rem,3vw,2rem);
     color: var(--color-white-primary);
