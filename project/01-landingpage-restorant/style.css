@@ -74,6 +74,7 @@ h1{
 .menu-grid .menu-body .menu-button{
     font-size: clamp(0.9rem,2vw,1.1rem);
 }
+
 .head-logo h2{
     font-size: clamp(1.25rem,3vw,2rem);
     color: var(--color-white-primary);
@@ -234,9 +235,7 @@ header{
     transition: ease .3s;
 }
 
-.hero-section .hero-content .hero-button a:hover{
-    transform: translateY(-3px);
-}
+
 .hero-section .hero-content .hero-button .second{
     background-color: transparent;
     border: 2px solid var(--color-white-primary);
@@ -388,6 +387,11 @@ footer .copyright-footer{
         color: var(--color-accent-terracotta);
     }
 
+    /* ==== HERO HOVER === */
+    .hero-section .hero-content .hero-button a:hover{
+        transform: translateY(-3px);
+}
+
     /* ==== CARD GRID ==== */
     .menu-section .menu-grid .menu-card:hover{
         transform: translateY(-4px);
@@ -404,4 +408,7 @@ footer .copyright-footer{
         background-color: #049a5b;
         transform: scale(0.97);
     }
+    .hero-section .hero-content .hero-button a:active{
+    transform: scale(0.97);
+}
 }
