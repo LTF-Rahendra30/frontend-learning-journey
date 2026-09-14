@@ -275,7 +275,7 @@ header{
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .menu-section .menu-grid .menu-button{
@@ -286,6 +286,10 @@ header{
     color: var(--color-warm-cream);
     font-weight: bold;
     cursor: pointer;
+}
+.price{
+    font-weight: bold;
+    color: var(--color-accent-terracotta);
 }
 /* ============ FOOTER ======== */
 footer{
