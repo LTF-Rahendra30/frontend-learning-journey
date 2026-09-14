@@ -265,6 +265,14 @@ header{
     box-shadow: 0 0 4px rgba(0 0 0 / 0.3);
     overflow: hidden;
     scroll-snap-align: center;
+    transition: ease .3s;
+    cursor: pointer;
+}
+
+
+.menu-section .menu-grid .menu-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 0 8px var(--color-accent-sage);
 }
 .menu-section .menu-grid .menu-image{
     width: 100%;
@@ -286,6 +294,9 @@ header{
     color: var(--color-warm-cream);
     font-weight: bold;
     cursor: pointer;
+}
+.menu-section .menu-grid .menu-button:hover{
+    background-color: #049a5b;
 }
 .price{
     font-weight: bold;
