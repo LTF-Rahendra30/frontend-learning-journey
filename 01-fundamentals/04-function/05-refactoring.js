@@ -20,3 +20,10 @@ const diskonMember = 0.10; // Diskon 10%
 function calculateSubtotal(items){
     return items.reduce((total,item) => total + (item.harga * item.jumlah),0);
 }
+
+// HITUNG ONGKIR
+function calculateOngkir(city,weight){
+    const ONGKIR_JAKARTA = 10000;
+    const TARIF_LUAR = 25000;
+    return city === "Jakarta" ? weight * ONGKIR_JAKARTA : beratKg * TARIF_LUAR;
+}
