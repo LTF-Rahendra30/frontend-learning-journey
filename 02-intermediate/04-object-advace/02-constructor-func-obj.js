@@ -1,6 +1,9 @@
 // ==== Try create object with this and anonymous method =====
 
-let object = {};
+let object = {
+    name: "Bob",
+    choose: false
+};
 
 object.helo = function(){
     console.log(this);
@@ -9,6 +12,16 @@ object.helo = function(){
 }
 
 object.helo();
-/* { helo: [Function (anonymous)] }
-Helo
- */
+/* { name: 'Bob', choose: false, helo: [Function (anonymous)] }
+*/
+
+
+// ==== CONSTRUCTOR FUNCTION ===
+
+function Helo(){
+    console.log(this);
+    console.log('helo');
+    
+}
+
+new Helo();
