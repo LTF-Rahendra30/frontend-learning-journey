@@ -14,3 +14,20 @@ const result = products.find(product => product.id === 4)
 console.log(result);
 
 // { id: 4, name: 'Shoes', price: 200, stock: 15, category: 'Fashion' }
+
+// ==== By Function ====
+function findProductById(id){
+    const result = products.find(product => product.id === id);
+
+    return result ? result :"Not found";
+}
+
+console.log(findProductById(1));
+/* {
+  id: 1,
+  name: 'Laptop',
+  price: 1500,
+  stock: 0,
+  category: 'Electronics'
+}
+ */
