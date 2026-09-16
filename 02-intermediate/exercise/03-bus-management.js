@@ -11,10 +11,19 @@ const addPassager = function(name,psgr){
                 psgr[i] = name;
                 return psgr
             }
+            else if(psgr[i] === name){
+                console.log("name has add!")
+                return psgr;
+            }
+            else if(i === psgr.length -1){
+                psgr.push(name);
+                return psgr;
+            }
         }
     }
 }
 
+console.log(addPassager("Bob",passenger));
 console.log(addPassager("Bob",passenger));
 // console.log(addPassager(undefined,passenger));
 // console.log(addPassager("Bb",passenger));
