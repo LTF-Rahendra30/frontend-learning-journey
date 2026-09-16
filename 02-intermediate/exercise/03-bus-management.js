@@ -1,6 +1,8 @@
 // ============= bus passenger ============
 
 let passenger = ['chloe',undefined, 'dody'];
+
+// ==== add passager ====
 const addPassager = function(name,psgr){
     if(psgr.length === 0){
         psgr.push(name)
@@ -20,6 +22,13 @@ const addPassager = function(name,psgr){
                 return psgr;
             }
         }
+    }
+}
+
+// ==== delete passager =====
+const deletePasseger = function(name,psgr){
+    if(psgr.length === 0){
+        console.log("Bus is empty");
     }
 }
 
