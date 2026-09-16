@@ -29,28 +29,28 @@ const addPassager = function(name,psgr){
 const deletePasseger = function(name,psgr){
     if(psgr.length === 0){
         console.log("Bus is empty");
-        return psgr;
     } else{
         for(let i = 0; i <psgr.length; i++){
-            if(name !== psgr[i]){
-                console.log("Name not found");
-                return psgr;
-            }
-            else{
+            if(psgr[i] === name){
                 psgr[i] = undefined;
-                return psgr;
+            }
+            else if(i === psgr.length -1){
+                console.log("Name not found");
             }
         }
     }
+    return psgr;
+
 }
 
-console.log(addPassager("Bob",passenger));
-console.log(addPassager("Chloe",passenger));
+// console.log(addPassager("Bob",passenger));
+// console.log(addPassager("Chloe",passenger));
+// console.log(addPassager("Joy",passenger));
 // console.log(addPassager(undefined,passenger));
 // console.log(addPassager("Bb",passenger));
 
 
-console.log(deletePasseger("Bo",passenger));
+console.log(deletePasseger("Joy",passenger));
 
 
 
