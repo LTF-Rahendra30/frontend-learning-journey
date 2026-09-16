@@ -1,23 +1,23 @@
 // ============= bus passenger ============
 
-let passenger = [];
+let passenger = ['chloe',undefined, 'dody'];
 const addPassager = function(name,psgr){
-    if(psgr){
+    if(psgr.length === 0){
         psgr.push(name)
-        console.log(psgr);
+        return psgr;
     } else{
         for(let i = 0; i < psgr.length; i++){
             if(psgr[i] === undefined){
-                psgr[i].push(name);
-                console.log(psgr);
-                
+                psgr[i] = name;
+                return psgr
             }
         }
     }
 }
 
-addPassager("Bob",passenger);
-addPassager(undefined,passenger);
-addPassager("B",passenger);
-// console.log(passenger);
+console.log(addPassager("Bob",passenger));
+// console.log(addPassager(undefined,passenger));
+// console.log(addPassager("Bb",passenger));
+
+
 
