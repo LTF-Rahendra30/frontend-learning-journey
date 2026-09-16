@@ -1,6 +1,6 @@
 // ============= bus passenger ============
 
-let passenger = ['chloe',undefined, 'dody'];
+let passenger = [];
 
 // ==== add passager ====
 const addPassager = function(name,psgr){
@@ -29,13 +29,28 @@ const addPassager = function(name,psgr){
 const deletePasseger = function(name,psgr){
     if(psgr.length === 0){
         console.log("Bus is empty");
+        return psgr;
+    } else{
+        for(let i = 0; i <psgr.length; i++){
+            if(name !== psgr[i]){
+                console.log("Name not found");
+                return psgr;
+            }
+            else{
+                psgr[i] = undefined;
+                return psgr;
+            }
+        }
     }
 }
 
 console.log(addPassager("Bob",passenger));
-console.log(addPassager("Bob",passenger));
+console.log(addPassager("Chloe",passenger));
 // console.log(addPassager(undefined,passenger));
 // console.log(addPassager("Bb",passenger));
+
+
+console.log(deletePasseger("Bo",passenger));
 
 
 
