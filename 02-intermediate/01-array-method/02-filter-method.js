@@ -32,7 +32,7 @@ const filterCategoryProducts = products.filter(product => product.category === '
 function filterCategory(category){
     const result = products.filter(product => product.category === category);
 
-    return result.length > 0 ? result: "Not found";
+    return result.length > 0 ? result : "Not found";
 }
 console.log(products);
 console.log(validStockProduct);
