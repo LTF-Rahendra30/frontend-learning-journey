@@ -1,0 +1,13 @@
+// : Exercise: Mini E-Commerce Cart
+
+const products = [
+    {id:1,name:"Basic Tee",category:"clothing",price:50,stock:10},
+    {id:2,name:"Overzied Hoodie",category:"clothing",price:150,stock:0},
+    {id:3,name:"Pants",category:"clothing",price:200,stock:4},
+    {id:4,name:"Running Shoes",category:"footwear",price:400,stock:5},
+    {id:5,name:"Casual Shoes",category:"footwear",price:300,stock:0},
+    {id:6,name:"Canvas Bag",category:"accessories",price:100,stock:8},
+    {id:7,name:"Digital Watch",category:"accessories",price:300,stock:2},
+    {id:7,name:"Baseball Cap",category:"accessories",price:80,stock:3},
+]
+
