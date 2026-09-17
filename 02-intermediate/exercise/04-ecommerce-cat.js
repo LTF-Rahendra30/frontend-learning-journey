@@ -8,6 +8,15 @@ const products = [
     {id:5,name:"Casual Shoes",category:"footwear",price:300,stock:0},
     {id:6,name:"Canvas Bag",category:"accessories",price:100,stock:8},
     {id:7,name:"Digital Watch",category:"accessories",price:300,stock:2},
-    {id:7,name:"Baseball Cap",category:"accessories",price:80,stock:3},
+    {id:8,name:"Baseball Cap",category:"accessories",price:80,stock:3},
 ]
 
+// ==== GET ALREDY PRODUCT ====
+function getAvailableProducts(porduct){
+    const result = porduct.filter(item => {
+        return item.stock > 0;
+    })
+    return result;
+}
+
+console.log(getAvailableProducts(products));
