@@ -11,6 +11,25 @@ const products = [
     {id:8,name:"Baseball Cap",category:"accessories",price:80,stock:3},
 ]
 
+// ===== cart =====
+const cart = [
+    {
+        productId: 1,
+        quantity: 2
+    },
+    {
+        productId: 3,
+        quantity: 1
+    },
+    {
+        productId: 5,
+        quantity: 2
+    },
+    {
+        productId: 6,
+        quantity: 1
+    }
+];
 // ==== GET ALREDY PRODUCT ====
 function getAvailableProducts(porduct){
     const result = porduct.filter(item => {
