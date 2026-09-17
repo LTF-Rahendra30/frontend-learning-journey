@@ -19,4 +19,13 @@ function getAvailableProducts(porduct){
     return result;
 }
 
-console.log(getAvailableProducts(products));
+
+// ====== FILTER BY CATEGORY =======
+function getProductsByCategory(category,product){
+    const result = product.filter((validProduct) => {
+        return validProduct.category === category;
+    })
+    return result;
+}
+
+console.log(getProductsByCategory('footwear',products));
