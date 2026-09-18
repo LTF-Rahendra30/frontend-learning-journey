@@ -48,3 +48,13 @@ function getProductsByCategory(category,product){
 }
 
 console.log(getProductsByCategory('footwear',products));
+
+
+// ====== GET DETAILS CART FUNCION ======
+
+function getCartDetails(cart, products) {
+    const result = products.find((product) => {
+        return product.id === cart.id
+    })
+    return result;
+}
