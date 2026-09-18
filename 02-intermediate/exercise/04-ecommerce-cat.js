@@ -47,14 +47,19 @@ function getProductsByCategory(category,product){
     return result;
 }
 
-console.log(getProductsByCategory('footwear',products));
+// console.log(getProductsByCategory('footwear',products));
 
 
 // ====== GET DETAILS CART FUNCION ======
 
 function getCartDetails(cart, products) {
-    const result = products.find((product) => {
-        return product.id === cart.id
+    const result = cart.map((item) => {
+        const product = products.find((validProduct) => {
+            return validProduct.id === item.productId;
+        })
+        return {...product,...item}
     })
     return result;
 }
+
+console.log(getCartDetails(cart,products));
