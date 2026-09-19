@@ -22,7 +22,7 @@ const cart = [
         quantity: 1
     },
     {
-        productId: 5,
+        productId: 4,
         quantity: 2
     },
     {
@@ -62,4 +62,20 @@ function getCartDetails(cart, products) {
     return result;
 }
 
-console.log(getCartDetails(cart,products));
+
+
+// ========= CALCULATE SUBTOTAL =========
+function calculateSubtotals(cartDetails) {
+    const result = cartDetails.map((item) => {
+        const subtotal = item.price * item.quantity;
+        return{
+            ...item,
+            subtotal: subtotal
+        }
+    })
+    return result;
+}
+
+const cartDetails = getCartDetails(cart,products);
+
+console.log(calculateSubtotals(cartDetails));
