@@ -119,3 +119,50 @@ function checkout(cart,product){
 
 const result = checkout(cart,products);
 console.log(result);
+/* {
+  items: [
+    {
+      id: 1,
+      name: 'Basic Tee',
+      category: 'clothing',
+      price: 50,
+      stock: 10,
+      productId: 1,
+      quantity: 2,
+      subtotal: 100
+    },
+    {
+      id: 3,
+      name: 'Pants',
+      category: 'clothing',
+      price: 200,
+      stock: 4,
+      productId: 3,
+      quantity: 1,
+      subtotal: 200
+    },
+    {
+      id: 4,
+      name: 'Running Shoes',
+      category: 'footwear',
+      price: 400,
+      stock: 5,
+      productId: 4,
+      quantity: 2,
+      subtotal: 800
+    },
+    {
+      id: 6,
+      name: 'Canvas Bag',
+      category: 'accessories',
+      price: 100,
+      stock: 8,
+      productId: 6,
+      quantity: 1,
+      subtotal: 100
+    }
+  ],
+  total: 1200,
+  discount: 120,
+  finaltotal: 1080
+} */
