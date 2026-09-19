@@ -93,3 +93,17 @@ const total = calculateTotal(subtotal);
 console.log(subtotal);
 console.log(total);
 
+
+// ========= CALCULATE DISCOUNT =========
+function calculateDiscount(total){
+    let discount = 0;
+    
+    if(total >= 1000){
+        discount = 0.10;
+    }else if(total >= 500){
+        discount = 0.05;
+    }
+    return total - (total * discount);
+}
+
+console.log(calculateDiscount(total));
