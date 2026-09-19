@@ -103,7 +103,7 @@ function calculateDiscount(total){
     }else if(total >= 500){
         discount = 0.05;
     }
-    return total - (total * discount);
+    return total * discount;
 }
 
 console.log(calculateDiscount(total));
