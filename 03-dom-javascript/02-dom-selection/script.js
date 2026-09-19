@@ -17,3 +17,12 @@ for (let i=0; i < paragraph.length; i++){
     paragraph[i].style.backgroundColor = 'pink';
 
 }
+
+// ===== GET ELEMENTS BY CLASS NAME =====
+
+const itemList = document.getElementsByClassName('item');
+
+// Try change value and Font weight
+for (let i = 0; i < itemList.length; i ++){
+    itemList[i].style.fontSize = '30px'
+}
