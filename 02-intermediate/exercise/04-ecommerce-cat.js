@@ -102,12 +102,12 @@ function calculateDiscount(total){
 
 
 // ========= CHEKOUT =========
-function chekout(cart,product){
+function checkout(cart,product){
     const item = getCartDetails(cart,product);
     const subtotal = calculateSubtotals(item);
     const total = calculateTotal(subtotal);
     const discount = calculateDiscount(total);
-    const finaltotal = total - discount
+    const finaltotal = total - discount;
     return {
         items: subtotal,
         total: total,
@@ -117,5 +117,5 @@ function chekout(cart,product){
 
 }
 
-const result = chekout(cart,products);
+const result = checkout(cart,products);
 console.log(result);
