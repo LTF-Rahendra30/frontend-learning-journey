@@ -76,9 +76,6 @@ function calculateSubtotals(cartDetails) {
     return result;
 }
 
-const cartDetails = getCartDetails(cart,products);
-
-const subtotal = calculateSubtotals(cartDetails);
 
 
 // ============ CALCULATE WHOLE TOTAL IN THE CART ==========
@@ -89,9 +86,6 @@ function calculateTotal(cartDetails){
     return total;
 }
 
-const total = calculateTotal(subtotal);
-console.log(subtotal);
-console.log(total);
 
 
 // ========= CALCULATE DISCOUNT =========
@@ -106,4 +100,22 @@ function calculateDiscount(total){
     return total * discount;
 }
 
-console.log(calculateDiscount(total));
+
+// ========= CHEKOUT =========
+function chekout(cart,product){
+    const item = getCartDetails(cart,product);
+    const subtotal = calculateSubtotals(item);
+    const total = calculateTotal(subtotal);
+    const discount = calculateDiscount(total);
+    const finaltotal = total - discount
+    return {
+        items: subtotal,
+        total: total,
+        discount: discount,
+        finaltotal: finaltotal
+    }
+
+}
+
+const result = chekout(cart,products);
+console.log(result);
