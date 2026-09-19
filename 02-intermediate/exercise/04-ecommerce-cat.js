@@ -64,7 +64,7 @@ function getCartDetails(cart, products) {
 
 
 
-// ========= CALCULATE SUBTOTAL =========
+// ========= CALCULATE SUBTOTAL SINGLE OBJECT OF CART =========
 function calculateSubtotals(cartDetails) {
     const result = cartDetails.map((item) => {
         const subtotal = item.price * item.quantity;
@@ -78,4 +78,18 @@ function calculateSubtotals(cartDetails) {
 
 const cartDetails = getCartDetails(cart,products);
 
-console.log(calculateSubtotals(cartDetails));
+const subtotal = calculateSubtotals(cartDetails);
+
+
+// ============ CALCULATE WHOLE TOTAL IN THE CART ==========
+function calculateTotal(cartDetails){
+    const total = cartDetails.reduce((acc,item) => {
+        return acc + item.subtotal
+    },0)
+    return total;
+}
+
+const total = calculateTotal(subtotal);
+console.log(subtotal);
+console.log(total);
+
