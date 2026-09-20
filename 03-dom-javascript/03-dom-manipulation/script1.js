@@ -38,3 +38,9 @@ a.getAttribute('href');
 
 a.removeAttribute('href');
 // atribbute href has deleted
+
+
+// ======== ADD CLASS WITH CLASS LIST =======
+const p2 = document.querySelector('.p2');
+p2.classList.add('mbg')
+// mbg added to extra class
