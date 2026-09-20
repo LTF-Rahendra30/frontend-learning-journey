@@ -24,3 +24,10 @@ paragraph1.style.color = 'red';
 // Add new atribute in h1
 h1.setAttribute('name', 'WOWO');
 // <h1 id= "judul" name="WOWO">XXXXXXX</h1>
+
+const a = document.querySelector('a');
+a.setAttribute('id', 'LOLOLOLO')
+
+// ---- Get Attribute ------
+a.getAttribute('href');
+// 'http://instagram.com/sandhikagalih'
