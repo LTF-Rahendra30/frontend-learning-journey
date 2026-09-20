@@ -23,3 +23,8 @@ for(let i = 0; i < p.length; i++){
 const paragraph1 = document.getElementsByTagName('p')
 
 paragraph1[0].style.backgroundColor = 'lightGreen';
+
+// --- Specific Section ---
+const sectionB = document.querySelector('#a');
+const p2 = sectionB.getElementsByTagName('p')[1];
+p2.style.backgroundColor = 'lightblue'
