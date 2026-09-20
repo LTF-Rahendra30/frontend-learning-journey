@@ -17,3 +17,10 @@ judul.innerHTML = "HIDUP JOKOWIIIII";
 // Change color of first paragraph
 const paragraph1 = document.querySelectorAll('p')[0];
 paragraph1.style.color = 'red';
+
+
+// ========== MANIPULATION ATRIBBUTE =======
+
+// Add new atribute in h1
+h1.setAttribute('name', 'WOWO');
+// <h1 id= "judul" name="WOWO">XXXXXXX</h1>
