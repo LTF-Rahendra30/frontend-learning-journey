@@ -24,5 +24,5 @@ const itemList = document.getElementsByClassName('item');
 
 // Try change value and Font weight
 for (let i = 0; i < itemList.length; i ++){
-    itemList[i].style.fontSize = '30px'
+    itemList[i].style.fontSize = '25px'
 }
