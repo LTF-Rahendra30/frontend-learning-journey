@@ -17,3 +17,9 @@ const p = document.querySelectorAll('p');
 for(let i = 0; i < p.length; i++){
     p[i].innerHTML = "Lorem, ipsum";
 }
+
+
+// =========== CHANGE NODE ROOT ===========
+const paragraph1 = document.getElementsByTagName('p')
+
+paragraph1[0].style.backgroundColor = 'lightGreen';
