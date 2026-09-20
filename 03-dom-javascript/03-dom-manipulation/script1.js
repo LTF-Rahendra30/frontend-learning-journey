@@ -30,4 +30,11 @@ a.setAttribute('id', 'LOLOLOLO')
 
 // ---- Get Attribute ------
 a.getAttribute('href');
+
 // 'http://instagram.com/sandhikagalih'
+
+
+// ------- REMOVE ATTRIBUTE -------
+
+a.removeAttribute('href');
+// atribbute href has deleted
