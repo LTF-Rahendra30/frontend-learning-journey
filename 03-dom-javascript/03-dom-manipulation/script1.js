@@ -72,3 +72,8 @@ p2.classList.item(0); // Show class that index 0
 // To check if the class is alredy
 p2.classList.contains('dua'); // true
 p2.classList.contains('kopdes'); // false
+
+
+// ======== REPLACE =======
+p2.classList.replace('dua', 'kopdes');
+// replace class dua to kopdes
