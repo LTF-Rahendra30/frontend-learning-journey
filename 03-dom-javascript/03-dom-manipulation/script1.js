@@ -57,4 +57,13 @@ const toggleClass = button.classList.toggle('style');
 
 // Add class Toggle in element HTML 
 const section2 = document.getElementById('b');
-section2.classList.toggle('light-green')
+section2.classList.toggle('light-green');
+
+
+
+// ======= ITEM METHOD =====
+p2.classList.add('mbg');
+p2.classList.add('satu');
+p2.classList.add('dua');
+
+p2.classList.item(0); // Show class that index 0
