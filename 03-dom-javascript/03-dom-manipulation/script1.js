@@ -48,3 +48,13 @@ p2.classList.add('mbg')
 // ---- remove class ---
 p2.classList.remove('mbg');
 // mbg has removed
+
+
+
+// ---- toggle class ---
+const button = document.getElementsByTagName('button')[0];
+const toggleClass = button.classList.toggle('style');
+
+// Add class Toggle in element HTML 
+const section2 = document.getElementById('b');
+section2.classList.toggle('light-green')
