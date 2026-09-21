@@ -67,3 +67,8 @@ p2.classList.add('satu');
 p2.classList.add('dua');
 
 p2.classList.item(0); // Show class that index 0
+
+// ====== CONTAINS =========
+// To check if the class is alredy
+p2.classList.contains('dua'); // true
+p2.classList.contains('kopdes'); // false
