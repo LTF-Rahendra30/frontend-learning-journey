@@ -13,3 +13,17 @@ newParagraph.appendChild(newText);
 // ----- SAVE NEW PARAGRAPH IN ENDING SECTION OF A ---------
 const sectionA = document.getElementById('a');
 sectionA.appendChild(newParagraph);
+
+
+// ====== ADD NEW CONTENT AFTER ITEM 1 AND BEFORE ITEM 2 IN LIST (SECTION 2) ========
+
+const newItem = document.createElement('li');
+const newItemText = document.createTextNode("New Item");
+newItem.appendChild(newItemText);
+
+const ul = document.querySelector('section#b ul');
+const li2 = ul.querySelector('li:nth-child(2)');
+
+
+// Add content 
+ul.insertBefore(newItem,li2);
