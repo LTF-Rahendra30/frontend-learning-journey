@@ -44,3 +44,7 @@ a.removeAttribute('href');
 const p2 = document.querySelector('.p2');
 p2.classList.add('mbg')
 // mbg added to extra class
+
+// ---- remove class ---
+p2.classList.remove('mbg');
+// mbg has removed
