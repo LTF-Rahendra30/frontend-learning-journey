@@ -1,53 +1,67 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Node Manipulation</title>
+    <title>DOM Methods Playground</title>
+
     <style>
-        *{
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        body{
-            font-family: sans-serif;
-            padding: 40px 20px;
-            background-color: #F5F5F5;
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 40px;
         }
-        section{
-            padding: 20px;
-            background-color: #FFFFFF;
-            margin-bottom: 30px;
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 24px;
             border-radius: 12px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .product-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .product {
+            padding: 12px 16px;
+            background: #eeeeee;
+            border-radius: 8px;
         }
     </style>
 </head>
+
 <body>
-    <h1>DOM Node Manipulation Methods</h1>
 
-    <section id="1">
-        <h2>1️⃣ parentNode.append() — Tambah ke Akhir</h2>
-    </section>
+    <main class="container">
 
-    <section id="2">
-        <h2>2️⃣ parentNode.prepend() — Tambah ke Awal</h2>
-    </section>
-    
-    <section id="3">
-        <h2>3️⃣ childNode.before() — Sisipkan Sebelum Node</h2>
-    </section>
+        <h1>Product List</h1>
 
-    <section id="4">
-        <h2>4️⃣ childNode.after() — Sisipkan Sesudah Node</h2>
-    </section>
+        <div class="product-list">
+            <div class="product">Basic Tee</div>
+            <div class="product">Hoodie</div>
+            <div class="product">Pants</div>
+        </div>
 
-    <section id="5">
-        <h2>5️⃣ childNode.remove() — Hapus Node dari DOM</h2>
-    </section>
+    </main>
 
-    <section id="6">
-        <h2>6️⃣ childNode.replaceWith() — Ganti Node dengan Node Lain</h2>
-    </section>
+    <script>
+
+    </script>
+
 </body>
 </html>
