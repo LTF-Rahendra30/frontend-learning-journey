@@ -89,9 +89,15 @@
         const newProduct3 = document.createElement('div');
         newProduct3.setAttribute('class','product');
         newProduct3.textContent = 'Jacket - new 3';
-        before.after(newProduct3);
+        after.after(newProduct3);
+        
+        // Append
+        const appendlast = document.createElement('div');
+        appendlast.setAttribute('class','product');
+        appendlast.textContent = 'Running Shoes - new 4';
+        productList.append(appendlast);
 
-    </script>
+        </script>
 
 </body>
 </html>
