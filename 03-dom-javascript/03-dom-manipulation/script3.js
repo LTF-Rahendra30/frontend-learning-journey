@@ -10,3 +10,9 @@ productList.append(newProduct);
 
 
 
+// ============ PREPEND ============
+const newProduct2 = document.createElement('div');
+newProduct2.setAttribute('class','product');
+newProduct2.textContent = 'Laptop';
+productList.prepend(newProduct2);
+
