@@ -35,3 +35,9 @@ newProduct4.setAttribute('class','product');
 newProduct4.textContent = 'Jacket ← baru';
 
 afterItem.after(newProduct4);
+
+// ======= REMOVE ========
+
+const removeItem = afterItem;
+
+removeItem.remove()
