@@ -23,3 +23,15 @@ const newProduct3 = document.createElement('div');
 newProduct3.setAttribute('class','product');
 newProduct3.textContent = 'T-Shirt ← baru';
 beforeItem.before(newProduct3)
+
+
+
+// ========= AFTER ======
+
+const afterItem = document.getElementsByClassName('product')[3];
+
+const newProduct4 = document.createElement('div');
+newProduct4.setAttribute('class','product');
+newProduct4.textContent = 'Jacket ← baru';
+
+afterItem.after(newProduct4);
