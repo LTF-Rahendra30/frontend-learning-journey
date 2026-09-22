@@ -49,3 +49,6 @@ newProduct5.setAttribute('class','product');
 newProduct5.textContent = 'Mouse ← baru';
 
 removeItem.replaceWith(newProduct5);
+
+
+// ===== COMBINE WHOLE METHOD =====
