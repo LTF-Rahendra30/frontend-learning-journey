@@ -27,3 +27,13 @@ const li2 = ul.querySelector('li:nth-child(2)');
 
 // Add content 
 ul.insertBefore(newItem,li2);
+
+
+
+
+
+// ========= REMOVE LINK IN HTML WITH REMOVE CHILD NODE =========
+
+const link = document.getElementsByTagName('a')[0];
+sectionA.removeChild(link);
+
