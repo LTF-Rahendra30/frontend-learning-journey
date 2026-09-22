@@ -40,4 +40,12 @@ afterItem.after(newProduct4);
 
 const removeItem = afterItem;
 
-removeItem.remove()
+// removeItem.remove()
+
+
+// ====== REPLACE WITH ======
+const newProduct5 = document.createElement('div');
+newProduct5.setAttribute('class','product');
+newProduct5.textContent = 'Mouse ← baru';
+
+removeItem.replaceWith(newProduct5);
