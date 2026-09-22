@@ -16,3 +16,10 @@ newProduct2.setAttribute('class','product');
 newProduct2.textContent = 'Laptop';
 productList.prepend(newProduct2);
 
+// ======= BEFORE ======
+const beforeItem = document.getElementsByClassName('product')[2];
+
+const newProduct3 = document.createElement('div');
+newProduct3.setAttribute('class','product');
+newProduct3.textContent = 'T-Shirt ← baru';
+beforeItem.before(newProduct3)
