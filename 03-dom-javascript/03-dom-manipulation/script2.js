@@ -38,7 +38,8 @@ const link = document.getElementsByTagName('a')[0];
 sectionA.removeChild(link);
 
 
-// ---- CHANGE P4 WITH H2 -----
+// ======== CHANGE P4 WITH H2 USE REPLACECHILD ==========
+
 
 const sectionB = document.getElementById('b');
 
@@ -50,3 +51,10 @@ const h2Text = document.createTextNode('New H2 Lorem ipsum')
 h2New.appendChild(h2Text);
 
 sectionB.replaceChild(h2New,paragraph4);
+
+
+
+// ---- ADD SYLE ----
+newParagraph.style.backgroundColor = 'lightGreen';
+newItem.style.backgroundColor = 'lightGreen';
+h2New.style.backgroundColor = 'lightGreen';
