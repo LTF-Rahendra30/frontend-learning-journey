@@ -37,3 +37,16 @@ ul.insertBefore(newItem,li2);
 const link = document.getElementsByTagName('a')[0];
 sectionA.removeChild(link);
 
+
+// ---- CHANGE P4 WITH H2 -----
+
+const sectionB = document.getElementById('b');
+
+const paragraph4 = sectionB.querySelector('p');
+
+const h2New = document.createElement('h2');
+const h2Text = document.createTextNode('New H2 Lorem ipsum')
+
+h2New.appendChild(h2Text);
+
+sectionB.replaceChild(h2New,paragraph4);
