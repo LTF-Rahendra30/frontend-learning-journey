@@ -71,16 +71,25 @@
     <script>
         const productList = document.getElementById('product-list');
 
+        // prepand
         const newProduct1 = document.createElement('div');
         newProduct1.setAttribute('class','product');
         newProduct1.textContent = 'Laptop - new 1';
         productList.prepend(newProduct1);
         
+        // before
         const before = document.getElementsByClassName('product')[2];
         const newProduct2 = document.createElement('div');
         newProduct2.setAttribute('class','product');
         newProduct2.textContent = 'T-Shirt - new 2';
-        before.prepend(newProduct2);
+        before.before(newProduct2);
+        
+        // After
+        const after = before;
+        const newProduct3 = document.createElement('div');
+        newProduct3.setAttribute('class','product');
+        newProduct3.textContent = 'Jacket - new 3';
+        before.after(newProduct3);
 
     </script>
 
