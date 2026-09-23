@@ -73,26 +73,26 @@
 
         // prepand
         const newProduct1 = document.createElement('div');
-        newProduct1.setAttribute('class','product');
+        newProduct1.classList.add('product');
         newProduct1.textContent = 'Laptop - new 1';
         productList.prepend(newProduct1);
         
         // before
         const hoodie = document.getElementById('hoodie');
         const newProduct2 = document.createElement('div');
-        newProduct2.setAttribute('class','product');
+        newProduct2.classList.add('product');
         newProduct2.textContent = 'T-Shirt - new 2';
         hoodie.before(newProduct2);
         
         // After
         const newProduct3 = document.createElement('div');
-        newProduct3.setAttribute('class','product');
+        newProduct3.classList.add('product');
         newProduct3.textContent = 'Jacket - new 3';
         hoodie.after(newProduct3);
         
         // Append
         const appendlast = document.createElement('div');
-        appendlast.setAttribute('class','product');
+        appendlast.classList.add('product');
         appendlast.textContent = 'Running Shoes - new 4';
         productList.append(appendlast);
 
