@@ -50,3 +50,31 @@ button{
     cursor: pointer;
     border: none;
 }
+
+.empty-state{
+    padding: 40px;
+    font-style: italic;
+    color: #7b7979;
+
+}
+.task-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+/* ====== TASK STYLE ======= */
+.task-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #eae8e8;
+}
+
+.remove-task-button{
+    background-color: rgb(248, 78, 78);
+}
+
+.task-text{
+    font-weight: 700;
+}
