@@ -85,11 +85,10 @@
         hoodie.before(newProduct2);
         
         // After
-        const after = before;
         const newProduct3 = document.createElement('div');
         newProduct3.setAttribute('class','product');
         newProduct3.textContent = 'Jacket - new 3';
-        after.after(newProduct3);
+        hoodie.after(newProduct3);
         
         // Append
         const appendlast = document.createElement('div');
