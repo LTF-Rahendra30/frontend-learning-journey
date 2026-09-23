@@ -8,8 +8,8 @@ taskButton.addEventListener('click', function(event){
     event.preventDefault();
 
     const newtask = document.createElement('div');
-    const nameValue = nameTask.value.trim();
-
+    const nameValue = nameTask.value;
+    
     newtask.innerHTML = `
         <span class="task-text">${nameValue}</span>
         <button class="remove-task-button">Hapus Tugas</button>
@@ -19,4 +19,10 @@ taskButton.addEventListener('click', function(event){
 
     taskList.append(newtask);
     
+})
+// === DELETE TASK ====
+taskList.addEventListener('click',function(event){
+    if(event.target.classList.contains('remove-task-button')){
+        event.target.parentElement.remove();
+    }
 })
