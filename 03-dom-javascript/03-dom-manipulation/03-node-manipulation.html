@@ -53,7 +53,7 @@
 
         <div id="product-list" class="product-list">
             <div class="product">Basic Tee</div>
-            <div class="product">Hoodie</div>
+            <div id="hoodie" class="product">Hoodie</div>
             <div class="product">Pants</div>
         </div>
 
@@ -78,11 +78,11 @@
         productList.prepend(newProduct1);
         
         // before
-        const before = document.getElementsByClassName('product')[2];
+        const hoodie = document.getElementById('hoodie');
         const newProduct2 = document.createElement('div');
         newProduct2.setAttribute('class','product');
         newProduct2.textContent = 'T-Shirt - new 2';
-        before.before(newProduct2);
+        hoodie.before(newProduct2);
         
         // After
         const after = before;
