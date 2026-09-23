@@ -52,7 +52,7 @@
         <h1>Product List</h1>
 
         <div id="product-list" class="product-list">
-            <div class="product">Basic Tee</div>
+            <div class="product basic-tee">Basic Tee</div>
             <div id="hoodie" class="product">Hoodie</div>
             <div class="product">Pants</div>
         </div>
@@ -100,7 +100,17 @@
 
         // Remove 
 
-        newProduct3.remove()
+        newProduct3.remove();
+
+        // Replace with
+        const basicTee = document.querySelector('.basic-tee');
+        const newProduct5 = document.createElement('div');
+        newProduct5.classList.add('product');
+        newProduct5.textContent = 'Premium Tee';
+        
+        basicTee.replaceWith(newProduct5);
+
+
         </script>
 
 </body>
