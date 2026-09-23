@@ -68,29 +68,38 @@
     Running Shoes -->
     <script>
         const productList = document.getElementById('product-list');
-        // prepand
-        const newProduct1 = document.createElement('div');
-        newProduct1.classList.add('product');
-        newProduct1.textContent = 'Laptop';
-        productList.prepend(newProduct1);
-        
         const hoodie = document.getElementById('hoodie');
-        const newProduct2 = document.createElement('div');
-        newProduct2.classList.add('product');
-        newProduct2.textContent = 'T-Shirt';
-        hoodie.before(newProduct2);
-        
-        // After
-        const newProduct3 = document.createElement('div');
-        newProduct3.classList.add('product');
-        newProduct3.textContent = 'Jacket';
-        hoodie.after(newProduct3);
 
-        // Append
-        const appendlast = document.createElement('div');
-        appendlast.classList.add('product');
-        appendlast.textContent = 'Running Shoes';
-        productList.append(appendlast);
+        // Remove 
+        // hoodie.remove();
+        
+        const runningShoes = document.createElement('div');
+        runningShoes.classList.add('product');
+        runningShoes.textContent = 'Running Shoes';
+        hoodie.replaceWith(runningShoes);
+
+        // prepand
+        // const newProduct1 = document.createElement('div');
+        // newProduct1.classList.add('product');
+        // newProduct1.textContent = 'Laptop';
+        // productList.prepend(newProduct1);
+        
+        // const newProduct2 = document.createElement('div');
+        // newProduct2.classList.add('product');
+        // newProduct2.textContent = 'T-Shirt';
+        // hoodie.before(newProduct2);
+        
+        // // After
+        // const newProduct3 = document.createElement('div');
+        // newProduct3.classList.add('product');
+        // newProduct3.textContent = 'Jacket';
+        // hoodie.after(newProduct3);
+
+        // // Append
+        // const appendlast = document.createElement('div');
+        // appendlast.classList.add('product');
+        // appendlast.textContent = 'Running Shoes';
+        // productList.append(appendlast);
     </script>
 
 </body>
