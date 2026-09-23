@@ -31,4 +31,11 @@ body{
 }
 input{
     flex: 1;
+    border-radius: 6px;
+    padding: 6px;
+    border: 1.5px solid rgb(183, 181, 179);
+}
+input:focus{
+    border-color: rgb(71, 134, 251);
+    outline: none;
 }
