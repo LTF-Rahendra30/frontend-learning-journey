@@ -55,6 +55,8 @@ button{
     padding: 40px;
     font-style: italic;
     color: #7b7979;
+    background-color: #eae8e8;
+    border-radius: 12px;
 
 }
 .task-list{
@@ -70,6 +72,7 @@ button{
     padding: 12px;
     border-radius: 10px;
     background-color: #eae8e8;
+
 }
 
 .remove-task-button{

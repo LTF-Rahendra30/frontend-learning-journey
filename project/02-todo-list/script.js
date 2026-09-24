@@ -8,14 +8,14 @@ taskButton.addEventListener('click', function(event){
     event.preventDefault();
 
     const newtask = document.createElement('div');
+    newtask.classList.add('task-item');
     const nameValue = nameTask.value;
     
     newtask.innerHTML = `
         <span class="task-text">${nameValue}</span>
         <button class="remove-task-button">Hapus Tugas</button>
     `
-    newtask.classList.add('task-item')
-    emptyStete.remove()
+    emptyStete.style.display = 'none';
 
     taskList.append(newtask);
     
@@ -24,5 +24,9 @@ taskButton.addEventListener('click', function(event){
 taskList.addEventListener('click',function(event){
     if(event.target.classList.contains('remove-task-button')){
         event.target.parentElement.remove();
+
+        if(taskList.children.length === 0){
+            emptyStete.style.display = 'block';
+        }
     }
 })
