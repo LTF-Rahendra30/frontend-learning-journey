@@ -66,6 +66,7 @@ button{
 .task-item{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 12px;
     border-radius: 10px;
     background-color: #eae8e8;
