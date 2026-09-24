@@ -33,6 +33,8 @@ randomBtn.addEventListener('click', () => {
 // EXERCISE 3, SLIDER INPUT FOR CHANGE COLOR
 
 const sMerah = document.querySelector('input[name=sMerah]');
+const sHijau = document.querySelector('input[name=sHijau]');
+const sBiru = document.querySelector('input[name=sBiru]');
 
 sMerah.addEventListener('change', () => {
     // get value of slider input
