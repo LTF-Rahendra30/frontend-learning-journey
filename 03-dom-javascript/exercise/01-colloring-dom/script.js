@@ -65,3 +65,21 @@ sBiru.addEventListener('input', () => {
     // Change red of rgb in body bgColor
     document.body.style.backgroundColor = 'rgb('+ red+','+green+','+blue+')'
 });
+
+
+// EXERCISE 4, CHANGE COLOR WITH MOTION CURSOR
+
+document.body.addEventListener('mousemove', (event)=> {
+    // mouse posistion 
+    // event.clientX;
+    // event.clientY;
+
+    // Size of browser
+    // window.innerWidth
+    const xPos = Math.round((event.clientX / window.innerWidth) * 255)
+    const yPos = Math.round((event.clientY / window.innerHeight) * 255)
+
+
+    document.body.style.backgroundColor = 'rgb('+xPos+', '+yPos+', 100)'
+
+})
