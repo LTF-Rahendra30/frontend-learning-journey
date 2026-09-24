@@ -1,8 +1,8 @@
 const button = document.getElementById('ubahWarna');
-const bodyBackground = document.getElementById('body');
+// const bodyBackground = document.getElementById('body');
 
 
 button.addEventListener('click', ()=> {
-    bodyBackground.classList.toggle('bg-color')
+    document.body.classList.toggle('bg-color')
 
 })
