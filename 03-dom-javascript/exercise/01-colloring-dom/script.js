@@ -36,9 +36,32 @@ const sMerah = document.querySelector('input[name=sMerah]');
 const sHijau = document.querySelector('input[name=sHijau]');
 const sBiru = document.querySelector('input[name=sBiru]');
 
-sMerah.addEventListener('change', () => {
+sMerah.addEventListener('input', () => {
     // get value of slider input
-    const red = sMerah.value;
+    const red = sHijau.value;
+    const green = sHijau.value
+    const blue = sBiru.value
+
     // Change red of rgb in body bgColor
-    document.body.style.backgroundColor = 'rgb('+ red+',100,200)'
-})
+    document.body.style.backgroundColor = 'rgb('+ red+','+green+','+blue+')'
+});
+
+sHijau.addEventListener('input', () => {
+    // get value of slider input
+    const red = sHijau.value;
+    const green = sHijau.value
+    const blue = sBiru.value
+
+    // Change red of rgb in body bgColor
+    document.body.style.backgroundColor = 'rgb('+ red+','+green+','+blue+')'
+});
+
+sBiru.addEventListener('input', () => {
+    // get value of slider input
+    const red = sHijau.value;
+    const green = sHijau.value
+    const blue = sBiru.value
+
+    // Change red of rgb in body bgColor
+    document.body.style.backgroundColor = 'rgb('+ red+','+green+','+blue+')'
+});
