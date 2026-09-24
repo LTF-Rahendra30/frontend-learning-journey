@@ -27,4 +27,16 @@ randomBtn.addEventListener('click', () => {
     
     document.body.style.backgroundColor = 'rgb('+ red+','+green+','+blue+')'
 
+});
+
+
+// EXERCISE 3, SLIDER INPUT FOR CHANGE COLOR
+
+const sMerah = document.querySelector('input[name=sMerah]');
+
+sMerah.addEventListener('change', () => {
+    // get value of slider input
+    const red = sMerah.value;
+    // Change red of rgb in body bgColor
+    document.body.style.backgroundColor = 'rgb('+ red+',100,200)'
 })
