@@ -13,5 +13,16 @@ button.addEventListener('click', ()=> {
 
 const randomBtn = document.createElement('button');
 randomBtn.textContent = 'Random Bg Warna';
+randomBtn.type = 'button';
 
-containerButton.append(randomBtn);
+button.after(randomBtn);
+
+
+randomBtn.addEventListener('click', () => {
+    const red = Math.round(Math.random() * 255 *1);
+    const green = Math.round(Math.random() * 255 *1);
+    const blue = Math.round(Math.random() * 255 *1);
+    
+    document.body.style.backgroundColor = 'rgb('+ red+','+green+','+blue+')'
+
+})
