@@ -1,3 +1,5 @@
+// EXERCISE 1, ADD BUTTON THAT CHANGE COLOR OF BODY (BG COLOR)
+
 const button = document.getElementById('ubahWarna');
 const body = document.getElementById('body');
 const containerButton = document.querySelector('.container')
@@ -9,7 +11,7 @@ button.addEventListener('click', ()=> {
 
 
 
-// ==== RANDOM BUTTON TO CHANGE BG COLOR OF BODY ====
+// ==== EXERCISE 2, ADD RANDOM BUTTON TO CHANGE BG COLOR OF BODY BY RANDOM WITH RANDOM MATH AND RGB  ====
 
 const randomBtn = document.createElement('button');
 randomBtn.textContent = 'Random Bg Warna';
