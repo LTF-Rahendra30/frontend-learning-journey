@@ -1,6 +1,6 @@
 
 
-function randomChoose(){
+function getRandomChoose(){
     const komputerChose = ['gajah','orang','semut'];
     
     const indeksAcak = Math.floor(Math.random() * komputerChose.length);
@@ -11,9 +11,22 @@ function randomChoose(){
     return randomChoose;
 }
 
-console.log(randomChoose());
-console.log(randomChoose());
-console.log(randomChoose());
 
 // const komputerUI = document.querySelector('.komputer');
 // komputer.textContent += 'Semut'
+
+function getResult(randomChoose,user){
+    if (user === randomChoose) return 'SERI';
+    if(user === 'gajah') 
+        return (randomChoose === 'orang') ? 'MENANG' : 'KALAH';
+
+    if(user === 'orang')
+        return (randomChoose === 'gajah') ? 'KALAH' : 'MENANG';
+    if(user === 'semut')
+        return (randomChoose === 'orang') ? 'KALAH' : 'MENANG';
+    
+    return 'salah, gak ada pilihanya wok'
+    
+}
+
+console.log(getResult(getRandomChoose(),"wowok"));
