@@ -29,9 +29,6 @@ function getResult(randomChoose,user){
     
 }
 
-console.log(getResult(getRandomChoose(),"wowok"));
-
-
 // === EVENTS FOR CLICK ====
 const pGajah = document.querySelector(".gajah");
 const pOrang = document.querySelector(".orang");
@@ -41,18 +38,28 @@ const infoArea = document.querySelector('.info');
 const compArea = document.querySelector('.komputer');
 
 
+// ==== handle chooise ===
+const userChooise = document.querySelectorAll('li span');
 
-pGajah.addEventListener('click', () => {
-    const computerChoose = getRandomChoose();
-    const playerChoose = pGajah.className;
+userChooise.forEach((choise) => {
+    // Event 
+    choise.addEventListener('click',() =>{
+        const computerChoose = getRandomChoose();
+        const playerChoose = choise.className;
+        
+        const result = getResult(computerChoose,playerChoose);
+        
+        // Result 
+        compArea.textContent = `Computer choose: ${computerChoose.toUpperCase()}`;
+        
+        infoArea.textContent = result;
+    })
+})
 
-    const result = getResult(computerChoose,playerChoose);
 
-    // Result 
-    compArea.textContent = `Computer choose: ${computerChoose.toUpperCase()}`;
-    infoArea.textContent = result;
-});
 
+
+/* 
 pOrang.addEventListener('click', () => {
     const computerChoose = getRandomChoose();
     const playerChoose = pOrang.className;
@@ -73,4 +80,4 @@ pSemut.addEventListener('click', () => {
     // Result 
     compArea.textContent = `Computer choose: ${computerChoose.toUpperCase()}`;
     infoArea.textContent = result;
-});
+}); */
