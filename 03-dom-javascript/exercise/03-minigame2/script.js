@@ -30,3 +30,23 @@ function getResult(randomChoose,user){
 }
 
 console.log(getResult(getRandomChoose(),"wowok"));
+
+
+// === EVENTS FOR CLICK ====
+const pGajah = document.querySelector(".gajah");
+const pOrang = document.querySelector(".orang");
+const pSemut = document.querySelector(".semut");
+
+const infoArea = document.querySelector('.info');
+const compArea = document.querySelector('.komputer');
+
+pGajah.addEventListener('click', () => {
+    const computerChoose = getRandomChoose();
+    const playerChoose = pGajah.className;
+
+    const result = getResult(computerChoose,playerChoose);
+
+    // Result 
+    compArea.textContent += computerChoose;
+    infoArea.textContent = result;
+})
