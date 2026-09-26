@@ -47,6 +47,6 @@ pGajah.addEventListener('click', () => {
     const result = getResult(computerChoose,playerChoose);
 
     // Result 
-    compArea.textContent += computerChoose;
+    compArea.textContent = `Computer choose: ${computerChoose.toUpperCase()}`;
     infoArea.textContent = result;
 })
