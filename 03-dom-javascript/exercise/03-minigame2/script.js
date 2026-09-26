@@ -40,6 +40,8 @@ const pSemut = document.querySelector(".semut");
 const infoArea = document.querySelector('.info');
 const compArea = document.querySelector('.komputer');
 
+
+
 pGajah.addEventListener('click', () => {
     const computerChoose = getRandomChoose();
     const playerChoose = pGajah.className;
@@ -49,4 +51,26 @@ pGajah.addEventListener('click', () => {
     // Result 
     compArea.textContent = `Computer choose: ${computerChoose.toUpperCase()}`;
     infoArea.textContent = result;
-})
+});
+
+pOrang.addEventListener('click', () => {
+    const computerChoose = getRandomChoose();
+    const playerChoose = pOrang.className;
+
+    const result = getResult(computerChoose,playerChoose);
+
+    // Result 
+    compArea.textContent = `Computer choose: ${computerChoose.toUpperCase()}`;
+    infoArea.textContent = result;
+});
+
+pSemut.addEventListener('click', () => {
+    const computerChoose = getRandomChoose();
+    const playerChoose = pSemut.className;
+
+    const result = getResult(computerChoose,playerChoose);
+
+    // Result 
+    compArea.textContent = `Computer choose: ${computerChoose.toUpperCase()}`;
+    infoArea.textContent = result;
+});
