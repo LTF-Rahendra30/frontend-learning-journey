@@ -19,6 +19,7 @@ closeButton.forEach((close) => {
         event.target.parentElement.style.display = 'none';
 
         // ----- TO HANDLE EVENT BUBBLING -----
+        event.preventDefault()
         event.stopPropagation();
     })
 })
