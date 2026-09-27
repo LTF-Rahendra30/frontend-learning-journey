@@ -18,5 +18,9 @@ closeButton.forEach((close) => {
     close.addEventListener('click', (event) => {
         // close.parentElement.style.display = 'none';
         event.target.parentElement.style.display = 'none';
+
+        // ==== TO STOPED DEFAULT BEHAVIOR OF TAG A WITH EVENT METHOD ====
+
+        event.preventDefault();
     })
 })
