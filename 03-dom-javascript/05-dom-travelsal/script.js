@@ -14,7 +14,8 @@ closeButton.addEventListener('click', () => {
 const closeButton = document.querySelectorAll('.close');
 
 closeButton.forEach((close) => {
-    close.addEventListener('click', () => {
-        close.parentElement.style.display = 'none';
+    close.addEventListener('click', (event) => {
+        // close.parentElement.style.display = 'none';
+        event.target.parentElement.style.display = 'none';
     })
 })
