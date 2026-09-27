@@ -17,6 +17,9 @@ closeButton.forEach((close) => {
     close.addEventListener('click', (event) => {
         // close.parentElement.style.display = 'none';
         event.target.parentElement.style.display = 'none';
+
+        // ----- TO HANDLE EVENT BUBBLING -----
+        event.stopPropagation();
     })
 })
 // ---- EVENT FOR CARD ----
