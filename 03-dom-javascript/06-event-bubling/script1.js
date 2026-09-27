@@ -19,8 +19,14 @@ closeButton.forEach((close) => {
         event.target.parentElement.style.display = 'none';
     })
 })
+// ---- EVENT FOR CARD ----
+const cards = document.querySelectorAll('.card');
 
-
+cards.forEach((card) => {
+    card.addEventListener('clcik',() => {
+        alert('ok wok');
+    })
+})
 
 // ========== DOM TRAVELSAL METHOD =======
 
