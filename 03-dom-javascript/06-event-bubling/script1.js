@@ -23,7 +23,7 @@ closeButton.forEach((close) => {
 const cards = document.querySelectorAll('.card');
 
 cards.forEach((card) => {
-    card.addEventListener('clcik',() => {
+    card.addEventListener('click',() => {
         alert('ok wok');
     })
 })
