@@ -32,3 +32,7 @@ console.log(nama.parentElement);
 
 // Sibling
 console.log(nama.nextElementSibling);
+
+
+// Previous sibling
+console.log(nama.previousElementSibling);
