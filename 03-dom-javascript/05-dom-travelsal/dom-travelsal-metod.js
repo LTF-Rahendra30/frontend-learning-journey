@@ -19,3 +19,16 @@ closeButton.forEach((close) => {
         event.target.parentElement.style.display = 'none';
     })
 })
+
+
+
+// ========== DOM TRAVELSAL METHOD =======
+
+const nama = document.querySelector('.nama');
+
+// Perent element
+console.log(nama.parentElement);
+
+
+// Sibling
+console.log(nama.nextElementSibling);
