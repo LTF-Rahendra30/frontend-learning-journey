@@ -11,7 +11,7 @@ closeButton.addEventListener('click', () => {
 
 
 // ==== DOM TRAVELSAL ====
-const closeButton = document.querySelectorAll('.close');
+/* const closeButton = document.querySelectorAll('.close');
 
 closeButton.forEach((close) => {
     close.addEventListener('click', (event) => {
@@ -32,17 +32,14 @@ cards.forEach((card) => {
     })
 })
 
-// ========== DOM TRAVELSAL METHOD =======
+ */
 
-const nama = document.querySelector('.nama');
+// ==== STORED EVENTS IN COTAINERS ====
 
-// Perent element
-console.log(nama.parentElement);
+const container = document.querySelector('.container');
 
-
-// Sibling
-console.log(nama.nextElementSibling);
-
-
-// Previous sibling
-console.log(nama.previousElementSibling);
+container.addEventListener('click', (event)=> {
+    if(event.target.className === 'close') {
+        event.target.perentElement.style.display = 'none'
+    }
+})
