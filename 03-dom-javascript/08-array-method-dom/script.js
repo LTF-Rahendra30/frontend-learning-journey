@@ -12,3 +12,13 @@ paragraphs.map((p) => {
     p.style.color = 'coral';
     p.style.fontFamily = 'sans-serif'
 })
+
+// --- Add Index in Html ---
+
+paragraphs.map((p,index) => {
+    p.innerHTML = `<span class="index-span">Index ke - ${index + 1}</span>. ${p.textContent}`;
+
+    const spanTextIndex = document.querySelectorAll('.index-span');
+
+    spanTextIndex.forEach(text => text.style.color = 'blue')
+})
