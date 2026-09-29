@@ -11,6 +11,13 @@ container.addEventListener('click', (event)=> {
     // Check click when Image Select
     if(event.target.className === 'image-select'){
         mainImage.src = event.target.src
+
+        // Add animation
+        mainImage.classList.add('fade');
+
+        setTimeout(() => {
+            mainImage.classList.remove('fade')
+        },800)
     }
 
 });

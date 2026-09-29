@@ -45,3 +45,19 @@ img{
     cursor: pointer;
     transform: translateY(-3px);
 }
+
+
+/* ====== ADD ANIMATION WHEN SELECT IMAGE =====
+ */
+
+
+ @keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
+ }
+
+.fade{
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
