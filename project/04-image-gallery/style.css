@@ -61,3 +61,8 @@ img{
     opacity: 0;
     animation: fadeIn 0.3s forwards;
 }
+
+/* ---- ADD EFECT WHEN IMAGE WAS CLICK ----- */
+.active{
+    opacity: 0.5;
+}

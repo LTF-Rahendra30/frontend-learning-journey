@@ -5,6 +5,7 @@
 const container = document.querySelector('.container')
 const mainImage = document.querySelector('.main-image');
 
+const imageGrid = document.querySelectorAll('.image-grid')
 
 container.addEventListener('click', (event)=> {
 
@@ -17,7 +18,15 @@ container.addEventListener('click', (event)=> {
 
         setTimeout(() => {
             mainImage.classList.remove('fade')
-        },800)
+        },800);
+
+        // Add active style when image was click 
+
+        imageGrid.forEach((img) => {
+            img.className = 'image-select'
+        });
+
+        event.target.classList.add('active')
     }
 
 });
