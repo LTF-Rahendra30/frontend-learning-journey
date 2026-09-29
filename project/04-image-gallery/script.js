@@ -5,7 +5,7 @@
 const container = document.querySelector('.container')
 const mainImage = document.querySelector('.main-image');
 
-const imageGrid = document.querySelectorAll('.image-grid')
+const imageGrid = document.querySelectorAll('.image-select')
 
 container.addEventListener('click', (event)=> {
 
