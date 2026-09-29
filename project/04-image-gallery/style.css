@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    margin: 40px auto;
+    background-color: rgb(221, 221, 221);
+    font-family: sans-serif;
+}
+
+.container{
+    padding: 20px;
+    margin: auto;
+    background-color: #fff;
+    max-width: 650px;
+    border-radius: 10px;
+}
+.tag-line{
+    font-weight: 700;
+}
+.main-image, .image-grid{
+    margin: 20px 0;
+}
