@@ -9,11 +9,9 @@ const paragraphs2 = Array.from(document.querySelectorAll('p'));
 
 const filterContainer = document.querySelector('.filter-konten');
 
-const newH2 = document.createElement('h2');
-newH2.textContent = 'DOM manipulation with Filter Method';
-
-filterContainer.prepend(newH2);
-
+filterContainer.innerHTML = `
+    <h2>DOM manipulation with Filter Method</h2>
+    <p>Filter patargaph that have > 150 char</p>`
 // ---- Manipulation DOM With filter any condition ----
 
 const eligibleP = paragraphs2.filter((p) => p.textContent.length > 150 )
