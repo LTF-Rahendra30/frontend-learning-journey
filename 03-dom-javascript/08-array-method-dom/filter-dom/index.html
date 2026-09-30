@@ -8,14 +8,29 @@
         div{
             border-radius: 1rem;
         }
-        button{
+        #ready-button{
             font-weight: bold;
             outline: none;
             border: none;
             border-radius: 1rem;
-            background-color: rgb(98, 93, 250);
-            color: #fff;
+            border: 1.5px solid rgb(98, 93, 250);
+            background-color: rgba(145, 141, 251, 0.311);
+            color: #424242;
             padding: 6px 12px;
+        }
+        #not-ready-button{
+            font-weight: bold;
+            outline: none;
+            border: none;
+            border-radius: 1rem;
+            border: 1.5px solid rgb(250, 93, 140);
+            background-color:  #fbc4c464;
+            color: #424242;
+            padding: 6px 12px;
+        }
+
+        button:hover{
+            cursor: pointer;
         }
     </style>
 </head>
@@ -56,7 +71,8 @@
             (<span class="status" style="color: red;">Habis</span>)
         </div>
 
-        <button id="filter-button">Cari Produk Ready</button>
+        <button id="ready-button">Cari Produk Ready</button>
+        <button id="not-ready-button">Cari Produk yang Habis</button>
     </div>
 </div>
 <script src="script.js"></script>
