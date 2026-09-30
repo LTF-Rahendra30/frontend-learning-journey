@@ -7,8 +7,10 @@ const resultContainer = document.querySelector('.product-result');
 
 readyBtn.addEventListener('click', (event) => {
     item.filter((itm) => {
-        itm.dataset.status === 'ready';
-    }).forEach((itm) => {
+        return itm.dataset.status === 'ready';
+    }).map((itm) => {
+        console.log(itm);
+        
         resultContainer.append(itm);
     })
     
