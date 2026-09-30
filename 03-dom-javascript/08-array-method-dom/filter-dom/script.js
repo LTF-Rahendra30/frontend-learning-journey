@@ -6,9 +6,11 @@ const notRedyButton = document.getElementById('not-ready-button');
 const resultContainer = document.querySelector('.product-result');
 
 readyBtn.addEventListener('click', (event) => {
+    resultContainer.replaceChildren();
+    
     resultContainer.innerHTML = `
     <p>Ready Product Selected!</p>`;
-    
+
     const readyItem = item.filter((itm) => {
         return itm.dataset.status === 'ready';
     });
