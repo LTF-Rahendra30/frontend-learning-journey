@@ -6,12 +6,16 @@ const notRedyButton = document.getElementById('not-ready-button');
 const resultContainer = document.querySelector('.product-result');
 
 readyBtn.addEventListener('click', (event) => {
-    item.filter((itm) => {
+    const readyItem = item.filter((itm) => {
         return itm.dataset.status === 'ready';
-    }).map((itm) => {
+    });
+    
+    readyItem.forEach(itm => {
         console.log(itm);
         
-        resultContainer.append(itm);
-    })
+        const itemCopy = itm.cloneNode(true);
+        resultContainer.append(itemCopy)
+        
+    });
     
 })
