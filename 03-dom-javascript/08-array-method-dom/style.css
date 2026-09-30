@@ -1,0 +1,11 @@
+
+body{
+    background-color: #f0f0f0;
+}
+/* ===== FILTER METHOD SECTION =====*/
+.filter-box{
+    padding: 20px;
+    border-radius: 1rem;
+    border: 1px solid rgb(78, 77, 77);
+    background-color: #fff;
+}
