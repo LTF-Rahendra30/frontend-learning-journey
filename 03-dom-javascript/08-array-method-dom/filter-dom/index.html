@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Kontainer Utama -->
+<div id="app-container" style="padding: 20px; font-family: sans-serif;">
+    <h2>Daftar Produk Toko</h2>
+    
+    <!-- Area Produk -->
+    <div id="product-list">
+        <div class="product-item" data-price="15000" data-status="ready" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 8px;">
+            <span class="name">Buku Tulis</span> - 
+            <span class="price">Rp 15.000</span> 
+            (<span class="status" style="color: green;">Stok Ready</span>)
+        </div>
+        
+        <div class="product-item" data-price="75000" data-status="ready" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 8px;">
+            <span class="name">Tas Sekolah</span> - 
+            <span class="price">Rp 75.000</span> 
+            (<span class="status" style="color: green;">Stok Ready</span>)
+        </div>
+        
+        <div class="product-item" data-price="5000" data-status="empty" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 8px; opacity: 0.5;">
+            <span class="name">Pensil 2B</span> - 
+            <span class="price">Rp 5.000</span> 
+            (<span class="status" style="color: red;">Habis</span>)
+        </div>
+        
+        <div class="product-item" data-price="120000" data-status="ready" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 8px;">
+            <span class="name">Sepatu Kanvas</span> - 
+            <span class="price">Rp 120.000</span> 
+            (<span class="status" style="color: green;">Stok Ready</span>)
+        </div>
+
+        <div class="product-item" data-price="25000" data-status="empty" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 8px; opacity: 0.5;">
+            <span class="name">Kotak Pensil</span> - 
+            <span class="price">Rp 25.000</span> 
+            (<span class="status" style="color: red;">Habis</span>)
+        </div>
+        
+        <button id="filter-button">Cari Produk Ready</button>
+    </div>
+</div>
+</body>
+</html>
