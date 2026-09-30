@@ -1,2 +1,6 @@
-const h1 = document.querySelector('h1');
-h1.style.color = 'red'
+
+// Mengambil semua elemen <p> di halaman dan mengubahnya menjadi array
+const paragraphs = Array.from(document.querySelectorAll('p'));
+
+//  Try Filter to get paragraph > 50 caracter
+const logParagraph = paragraphs.filter((p) => p.textContent.length > 50 );
