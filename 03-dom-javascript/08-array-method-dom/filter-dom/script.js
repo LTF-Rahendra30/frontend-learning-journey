@@ -29,13 +29,13 @@ notRedyButton.addEventListener('click', (event) => {
     resultContainer.replaceChildren();
     
     resultContainer.innerHTML = `
-    <p>Ready Product Selected!</p>`;
+    <p>Not Ready Product Selected!</p>`;
 
-    const readyItem = item.filter((itm) => {
+    const notReadyItem = item.filter((itm) => {
         return itm.dataset.status === 'empty';
     });
     
-    readyItem.forEach(itm => {
+    notReadyItem.forEach(itm => {
         console.log(itm);
         
         const itemCopy = itm.cloneNode(true);
