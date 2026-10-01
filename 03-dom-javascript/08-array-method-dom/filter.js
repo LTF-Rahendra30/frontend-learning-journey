@@ -14,8 +14,10 @@ filterContainer.innerHTML = `
     <p>Filter patargaph that have > 150 char</p>`
 // ---- Manipulation DOM With filter any condition ----
 
-const eligibleP = paragraphs2.filter((p) => p.textContent.length > 150 )
-.forEach((p) => {
-    p.classList = 'filter-box'
-    filterContainer.append(p);
-})
+const eligibleP = paragraphs2.filter((p) => p.textContent.length > 150 );
+
+eligibleP.forEach((p) => {
+    const pCopy = p.cloneNode(true);
+    pCopy.classList = 'filter-box'
+    filterContainer.append(pCopy);
+});
