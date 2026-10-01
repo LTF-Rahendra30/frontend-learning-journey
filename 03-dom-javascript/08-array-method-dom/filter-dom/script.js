@@ -24,3 +24,23 @@ readyBtn.addEventListener('click', (event) => {
     });
     
 })
+
+notRedyButton.addEventListener('click', (event) => {
+    resultContainer.replaceChildren();
+    
+    resultContainer.innerHTML = `
+    <p>Ready Product Selected!</p>`;
+
+    const readyItem = item.filter((itm) => {
+        return itm.dataset.status === 'empty';
+    });
+    
+    readyItem.forEach(itm => {
+        console.log(itm);
+        
+        const itemCopy = itm.cloneNode(true);
+        resultContainer.append(itemCopy)
+        
+    });
+    
+})
