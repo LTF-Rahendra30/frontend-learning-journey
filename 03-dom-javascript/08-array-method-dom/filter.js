@@ -18,6 +18,6 @@ const eligibleP = paragraphs2.filter((p) => p.textContent.length > 150 );
 
 eligibleP.forEach((p) => {
     const pCopy = p.cloneNode(true);
-    pCopy.classList = 'filter-box'
+    pCopy.classList = 'filter-box';
     filterContainer.append(pCopy);
 });
