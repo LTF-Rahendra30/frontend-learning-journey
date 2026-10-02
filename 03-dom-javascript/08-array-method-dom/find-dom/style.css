@@ -8,7 +8,12 @@ body{
     font-family: sans-serif;
     background-color: #e9eaf9;
 }
-
+main{
+    padding: 25px;
+}
+section{
+    margin-bottom: 25px;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -29,4 +34,54 @@ header{
 }
 .text-info{
     color: #9b9b9d;
+}
+
+
+/* ======= USER CONTAINER =====
+ */
+
+.user-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.user-card{
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0,0 ,0 ,0.2 );
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ---- CARD SECTION ----- */
+.profile-section{
+    display: flex;
+    gap: 1rem;
+}
+.profile-icon{
+    background-color: rgba(111, 138, 245, 0.437);
+    border-radius: 50%;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    align-items: center;
+}
+
+.profile-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-icon svg{
+    color: rgb(88, 88, 248);
 }
