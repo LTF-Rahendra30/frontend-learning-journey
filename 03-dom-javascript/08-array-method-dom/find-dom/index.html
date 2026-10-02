@@ -19,10 +19,10 @@
     </header>
 
     <main>
-        <div class="head-title">
+        <section class="head-title">
             <h1>Cari user Berdasarkan ID</h1>
             <p>Massukan ID user yg ingin kamu cari</p>
-        </div>
+        </section>
 
         <section class="search-section">
             <input type="text" name="" id="user-id" placeholder="Masukkan ID user">
@@ -30,33 +30,31 @@
         </section>
 
             <!-- Result Container -->
-        <div class="result-container"></div>
+        <section class="result-container"></section>
 
             <!-- User Container -->
         <section class="user-container">
             <h2>Daftar User Terdaftar</h2>
+            <div class="user-grid">
 
-            <article class="user-card">
-                <div class="profile-section">
-                    <div class="profile-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <article class="user-card">
+                    <div class="profile-section">
+                        <div class="profile-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                        </svg>
+                            </svg>
+                        </div>
+                        <div class="profile-content">
+                            <p class="id-section">ID: 001</p>
+                            <h4>Andi</h4>
+                        </div>
                     </div>
-                    <p class="id-section">ID: 001</p>
-                </div>
-                <h4>Andi</h4>
                 <p>andi@gmail.com</p>
                 <span class="role">Admin</span>
             </article>
+        </div>
 
-            <article class="user-card"></article>
-            <article class="user-card"></article>
-            <article class="user-card"></article>
-            <article class="user-card"></article>
-            <article class="user-card"></article>
-            <article class="user-card"></article>
-            <article class="user-card"></article>
+            
         </section>
 
     </main>
