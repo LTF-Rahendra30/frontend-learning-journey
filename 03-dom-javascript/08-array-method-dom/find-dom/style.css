@@ -6,4 +6,27 @@
 
 body{
     font-family: sans-serif;
+    background-color: #e9eaf9;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: rgb(35, 35, 61);
+    font-weight: bold;
+}
+
+.title{
+    display: flex;
+    gap: 10px;
+}
+.bi-people-fill{
+    color: #fff;
+}
+.title-text{
+    color: rgb(124, 124, 247);
+}
+.text-info{
+    color: #9b9b9d;
 }
