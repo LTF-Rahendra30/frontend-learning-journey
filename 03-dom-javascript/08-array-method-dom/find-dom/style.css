@@ -36,6 +36,41 @@ header{
     color: #9b9b9d;
 }
 
+/* ======= SEARCH SECTION ====== */
+
+.search-section{
+    display: flex;
+    gap: 1rem;
+}
+
+.search-section input{
+    padding: 10px;
+    outline: none;
+    border-radius: 8px;
+    border: 1.5px solid grey;
+}
+.search-section input:focus{
+    border: 1.5px solid rgb(85, 85, 255);
+}
+
+.search-section button{
+    color: #fff;
+    background-color: rgb(85, 85, 255);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.search-section button:hover{
+    cursor: pointer;
+}
+.search-section button svg{
+    margin-right: 5px;
+}
+
 
 /* ======= USER CONTAINER =====
  */
