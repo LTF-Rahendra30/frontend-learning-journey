@@ -1,123 +1,363 @@
-*{
-    padding: 0;
+/* =========================
+   RESET
+========================= */
+
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: sans-serif;
-    background-color: #e9eaf9;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f9fc;
+    color: #1e293b;
 }
-main{
-    padding: 25px;
-}
-section{
-    margin-bottom: 25px;
-}
-header{
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    height: 66px;
+    padding: 0 48px;
+
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: rgb(35, 35, 61);
-    font-weight: bold;
+
+    background-color: #172333;
+    color: white;
 }
 
-.title{
+.title {
     display: flex;
-    gap: 10px;
-}
-.bi-people-fill{
-    color: #fff;
-}
-.title-text{
-    color: rgb(124, 124, 247);
-}
-.text-info{
-    color: #9b9b9d;
+    align-items: center;
+    gap: 12px;
+
+    color: #4f9cff;
 }
 
-/* ======= SEARCH SECTION ====== */
+.title svg {
+    width: 24px;
+    height: 24px;
+}
 
-.search-section{
+.title-text {
+    font-size: 21px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.text-info {
+    font-size: 14px;
+    color: #b8c4d4;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+    padding: 48px 0 70px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.head-title {
+    margin-bottom: 28px;
+}
+
+.head-title h1 {
+    margin-bottom: 10px;
+
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #1d2d42;
+}
+
+.head-title p {
+    font-size: 16px;
+    color: #718096;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-section {
     display: flex;
-    gap: 1rem;
+    gap: 14px;
+
+    margin-bottom: 30px;
 }
 
-.search-section input{
-    padding: 10px;
-    outline: none;
+#user-id {
+    flex: 1;
+
+    height: 52px;
+    padding: 20px;
+
+    border: 1px solid #d5e1ef;
     border-radius: 8px;
-    border: 1.5px solid grey;
-}
-.search-section input:focus{
-    border: 1.5px solid rgb(85, 85, 255);
+
+    outline: none;
+
+    background-color: white;
+    color: #1e293b;
+
+    font-size: 16px;
+
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.search-section button{
-    color: #fff;
-    background-color: rgb(85, 85, 255);
-    outline: none;
+#user-id::placeholder {
+    color: #9aabc0;
+}
+
+#user-id:focus {
+    border-color: #3984f6;
+    box-shadow: 0 0 0 3px rgba(57, 132, 246, 0.12);
+}
+
+#search-btn {
+    height: 52px;
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
     border: none;
     border-radius: 8px;
-    padding: 6px 12px;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-.search-section button:hover{
+
+    background-color: #287df0;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
     cursor: pointer;
-}
-.search-section button svg{
-    margin-right: 5px;
-}
 
-
-/* ======= USER CONTAINER =====
- */
-
-.user-container{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    transition: background-color 0.2s, transform 0.15s;
 }
 
-.user-grid{
+#search-btn:hover {
+    background-color: #1769d8;
+}
+
+#search-btn:active {
+    transform: translateY(1px);
+}
+
+#search-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* =========================
+   SEARCH RESULT
+========================= */
+
+.result-container {
+    min-height: 0;
+    margin-bottom: 40px;
+}
+
+
+/*
+   Nanti ketika JS memasukkan
+   hasil pencarian ke sini,
+   styling hasilnya bisa lo
+   lanjutkan dari sini.
+*/
+
+
+/* =========================
+   USER LIST
+========================= */
+
+.user-container h2 {
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d2d42;
+}
+
+.user-grid {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 1.5rem;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
 }
 
-.user-card{
-    background-color: #fff;
-    box-shadow: 0 0 8px rgba(0,0 ,0 ,0.2 );
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+/* =========================
+   USER CARD
+========================= */
+
+.user-card {
+    min-height: 190px;
+    padding: 22px;
+
+    background-color: white;
+
+    border: 1px solid #e1eaf4;
+    border-radius: 9px;
+
+    box-shadow: 0 3px 10px rgba(30, 60, 90, 0.04);
+
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* ---- CARD SECTION ----- */
-.profile-section{
-    display: flex;
-    gap: 1rem;
+.user-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(30, 60, 90, 0.08);
 }
-.profile-icon{
-    background-color: rgba(111, 138, 245, 0.437);
-    border-radius: 50%;
-    padding: 10px;
-    width: 70px;
-    height: 70px;
-    text-align: center;
+
+
+/* =========================
+   PROFILE SECTION
+========================= */
+
+.profile-section {
+    display: flex;
     align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
 }
 
-.profile-content{
+.profile-icon {
+    width: 58px;
+    height: 58px;
+
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: #dceaff;
+    color: #2778df;
 }
 
-.profile-icon svg{
-    color: rgb(88, 88, 248);
+.profile-icon svg {
+    width: 36px;
+    height: 36px;
+}
+
+.profile-content {
+    min-width: 0;
+}
+
+.id-section {
+    margin-bottom: 5px;
+
+    font-size: 13px;
+    color: #7b8da4;
+}
+
+.profile-content h4 {
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #1d2d42;
+}
+
+
+/* =========================
+   EMAIL
+========================= */
+
+.user-card > p {
+    margin-bottom: 16px;
+
+    font-size: 14px;
+    color: #718096;
+}
+
+
+/* =========================
+   ROLE
+========================= */
+
+.role {
+    display: inline-block;
+
+    padding: 6px 13px;
+
+    border-radius: 999px;
+
+    background-color: #e3efff;
+    color: #2878df;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .user-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 20px;
+    }
+    #user-id{
+        padding: 10px;
+    }
+    .text-info {
+        display: none;
+    }
+
+    main {
+        width: 92%;
+        padding-top: 35px;
+    }
+
+    .head-title h1 {
+        font-size: 27px;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    #search-btn {
+        width: 100%;
+    }
+
+    .user-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
