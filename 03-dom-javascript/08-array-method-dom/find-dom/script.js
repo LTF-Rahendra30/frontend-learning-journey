@@ -35,7 +35,11 @@ function renderUsers(){
         `).join('');
 }
 
+// Render users
 renderUsers();
+
+
+
 
 //  ==== EVENTS =======
 button.addEventListener("click", () => {
@@ -55,20 +59,26 @@ button.addEventListener("click", () => {
         console.log("User ketemu");
         console.log(foundUsers);
         resultContainer.innerHTML = `
-        <article class="user-card">
-            <div class="profile-section">
-                <div class="profile-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+        <article class="ready-usr-card">
+            <div class="result-info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>
+                <p>User Ditemukan!</p>
+            </div>
+            <div class="profile-info-result">
+                <div class="profile-icon-result">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
                     </svg>
                 </div>
-                <div class="profile-content">
+                <div class="profile-content-result">
                         <p class="id-section">ID: ${foundUsers.id}</p>
                         <h4>${foundUsers.name}</h4>
-                    </div>
+                        <p>${foundUsers.email}</p>
+                        <span class="role">${foundUsers.role}</span>
                 </div>
-            <p>${foundUsers.email}</p>
-            <span class="role">${foundUsers.role}</span>
+            </div>
         </article>
         `
         
