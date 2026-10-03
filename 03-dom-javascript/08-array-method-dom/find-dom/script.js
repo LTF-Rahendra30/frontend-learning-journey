@@ -1,7 +1,7 @@
 const resultContainer = document.querySelector('.result-container');
 const button = document.getElementById('search-btn');
 const idInput = document.getElementById('user-id');
-
+const userGrid = document.querySelector('.user-grid');
 
 const users = [
     { id: "001", name: "Andi", email: "andi@gmail.com", role: "Admin" },
@@ -14,8 +14,30 @@ const users = [
     { id: "008", name: "Wowok", email: "wowok@gmail.com", role: "User" },
 ];
 
+// ====== USERS GRID RENDER =====
+function renderUsers(){
+    userGrid.innerHTML = users.map(usr => `
+        <article class="user-card">
+            <div class="profile-section">
+                <div class="profile-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                    </svg>
+                </div>
+                <div class="profile-content">
+                        <p class="id-section">ID: ${usr.id}</p>
+                        <h4>${usr.name}</h4>
+                    </div>
+                </div>
+            <p>${usr.email}</p>
+            <span class="role">${usr.role}</span>
+        </article>
+        `).join('');
+}
 
+renderUsers();
 
+//  ==== EVENTS =======
 button.addEventListener("click", () => {
     const userId = idInput.value;
     const foundUsers = users.find(usr => usr.id === userId);
