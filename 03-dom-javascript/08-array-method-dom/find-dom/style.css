@@ -130,8 +130,8 @@ main {
 }
 
 #search-btn {
-    height: 52px;
-    padding: 0 28px;
+    /* height: 52px; */
+    padding: 0 20px;
 
     display: flex;
     align-items: center;
@@ -354,6 +354,7 @@ main {
 
     #search-btn {
         width: 100%;
+        padding: 15px;
     }
 
     .user-grid {
