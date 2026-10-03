@@ -8,7 +8,7 @@ const users = [
     { id: "002", name: "Siti", email: "siti@gmail.com", role: "User" },
     { id: "003", name: "Budi", email: "budi@gmail.com", role: "User" },
     { id: "003", name: "Budi", email: "budi@gmail.com", role: "User" },
-    { id: "004", name: "Dewi", email: "dewi@gmail.com", role: "User" },
+    { id: "004", name: "Dewi", email: "dewi@gmail.com", role: "Moderator" },
     { id: "005", name: "Rizky", email: "rizky@gmail.com", role: "User" },
     { id: "006", name: "Lina", email: "lina@gmail.com", role: "User" },
     { id: "007", name: "Fajar", email: "fajar@gmail.com", role: "User" },
