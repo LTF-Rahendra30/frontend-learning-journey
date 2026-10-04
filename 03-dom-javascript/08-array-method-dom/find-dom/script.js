@@ -39,7 +39,19 @@ function renderUsers(){
 renderUsers();
 
 
+// ==== FOR EACH FOR ADD CLASS BY ROLE ====
+const userCards = document.querySelectorAll('.user-card');
 
+userCards.forEach(card => {
+    const roleElement = document.querySelector('.role');
+
+    if (roleElement.textContent.includes('Admin')){
+        card.classList.add('role-admin');
+    }
+    // if (roleElement.textContent.includes('moderator')){
+    //     card.classList.add('role-moderator');
+    // }
+})
 
 //  ==== EVENTS =======
 button.addEventListener("click", () => {
