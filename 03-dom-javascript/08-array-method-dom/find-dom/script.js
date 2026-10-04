@@ -43,14 +43,17 @@ renderUsers();
 const userCards = document.querySelectorAll('.user-card');
 
 userCards.forEach(card => {
-    const roleElement = document.querySelector('.role');
+    const roleElement = card.querySelector('.role');
 
     if (roleElement.textContent.includes('Admin')){
-        card.classList.add('role-admin');
+        roleElement.classList.add('role-admin');
     }
-    // if (roleElement.textContent.includes('moderator')){
-    //     card.classList.add('role-moderator');
-    // }
+    else if (roleElement.textContent.includes('Moderator')){
+        roleElement.classList.add('role-moderator');
+    }
+    else if (roleElement.textContent.includes('User')){
+        roleElement.classList.add('role-user');
+    }
 })
 
 //  ==== EVENTS =======
