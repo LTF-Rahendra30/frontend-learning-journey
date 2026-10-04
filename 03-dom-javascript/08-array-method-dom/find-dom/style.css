@@ -359,6 +359,7 @@ main {
 }
 
 
+
 /* =========================
    EMAIL
 ========================= */
@@ -390,7 +391,14 @@ main {
     max-width: max-content;
 }
 
-
+.role-admin{
+    background-color: #E6DAFC;
+    color: rgb(172, 14, 172);
+}
+.role-moderator{
+    background-color: #fc9d383e;
+    color: orange;
+}
 /* =========================
    RESPONSIVE
 ========================= */
