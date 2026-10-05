@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase - Cart</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#" aria-label="ShopEase">
+    <span aria-hidden="true">🛍️</span><strong>Shop</strong>Ease
+  </a>
+  <nav aria-label="Navigasi utama"><a class="nav-link" href="#">Cart</a></nav>
+  <button class="profile-button" type="button" aria-label="Profil pengguna">◯</button>
+</header>
+
+<main class="cart-page">
+  <section class="cart-intro" aria-labelledby="cart-title">
+    <div class="cart-title-row">
+      <span aria-hidden="true">🛒</span>
+      <div>
+        <h1 id="cart-title">Keranjang Belanja</h1>
+        <p>Cek kembali barang pesanan kamu sebelum melanjutkan checkout.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cart-layout">
+    <section class="cart-section" aria-labelledby="items-title">
+      <header class="section-heading">
+        <h2 id="items-title">Barang yang Dipilih</h2>
+        <span class="item-count">4 item</span>
+      </header>
+
+      <div class="cart-list">
+        <article class="cart-item">
+          <div class="product-info"><div class="product-image" aria-hidden="true">👕</div><div><h3>Basic Tee</h3><p class="category">Clothing</p><p class="stock available">Stok: 10</p></div></div>
+          <div><span class="mobile-label">Harga</span><strong>Rp 50.000</strong></div>
+          <div><span class="mobile-label">Jumlah</span><div class="quantity"><button type="button" aria-label="Kurangi Basic Tee">−</button><span>2</span><button type="button" aria-label="Tambah Basic Tee">+</button></div></div>
+          <div><span class="mobile-label">Total</span><strong>Rp 100.000</strong></div>
+          <button class="remove" type="button" aria-label="Hapus Basic Tee">×</button>
+        </article>
+
+        <article class="cart-item">
+          <div class="product-info"><div class="product-image" aria-hidden="true">🧥</div><div><h3>Oversized Hoodie</h3><p class="category">Clothing</p><p class="stock unavailable">Stok: 0 (Habis)</p></div></div>
+          <div><span class="mobile-label">Harga</span><strong>Rp 150.000</strong></div>
+          <div><span class="mobile-label">Jumlah</span><div class="quantity disabled"><button type="button" disabled aria-label="Kurangi Oversized Hoodie">−</button><span>1</span><button type="button" disabled aria-label="Tambah Oversized Hoodie">+</button></div></div>
+          <div><span class="mobile-label">Total</span><strong>Rp 150.000</strong></div>
+          <button class="remove" type="button" aria-label="Hapus Oversized Hoodie">×</button>
+        </article>
+
+        <article class="cart-item">
+          <div class="product-info"><div class="product-image" aria-hidden="true">👖</div><div><h3>Pants</h3><p class="category">Clothing</p><p class="stock available">Stok: 4</p></div></div>
+          <div><span class="mobile-label">Harga</span><strong>Rp 200.000</strong></div>
+          <div><span class="mobile-label">Jumlah</span><div class="quantity"><button type="button" aria-label="Kurangi Pants">−</button><span>1</span><button type="button" aria-label="Tambah Pants">+</button></div></div>
+          <div><span class="mobile-label">Total</span><strong>Rp 200.000</strong></div>
+          <button class="remove" type="button" aria-label="Hapus Pants">×</button>
+        </article>
+
+        <article class="cart-item">
+          <div class="product-info"><div class="product-image" aria-hidden="true">👟</div><div><h3>Running Shoes</h3><p class="category">Footwear</p><p class="stock available">Stok: 5</p></div></div>
+          <div><span class="mobile-label">Harga</span><strong>Rp 400.000</strong></div>
+          <div><span class="mobile-label">Jumlah</span><div class="quantity"><button type="button" aria-label="Kurangi Running Shoes">−</button><span>1</span><button type="button" aria-label="Tambah Running Shoes">+</button></div></div>
+          <div><span class="mobile-label">Total</span><strong>Rp 400.000</strong></div>
+          <button class="remove" type="button" aria-label="Hapus Running Shoes">×</button>
+        </article>
+      </div>
+    </section>
+
+    <aside class="sidebar" aria-label="Ringkasan checkout">
+      <section class="summary-card" aria-labelledby="summary-title">
+        <h2 id="summary-title">🏷️ Ringkasan Belanja</h2>
+        <dl>
+          <div><dt>Subtotal <span>(4 item)</span></dt><dd>Rp 850.000</dd></div>
+          <div><dt>Diskon <b>10%</b></dt><dd class="discount">− Rp 85.000</dd></div>
+          <div><dt>Ongkos Kirim</dt><dd>Rp 25.000</dd></div>
+        </dl>
+        <div class="grand-total"><span>Total</span><strong>Rp 790.000</strong></div>
+        <button class="checkout" type="button">Checkout Sekarang <span aria-hidden="true">→</span></button>
+        <p class="security">🔒 Transaksi aman &amp; terpercaya</p>
+      </section>
+
+      <section class="promo-card" aria-labelledby="promo-title">
+        <h2 id="promo-title">% &nbsp; Gunakan Kode Promo</h2>
+        <p>Masukkan kode promo untuk mendapatkan diskon tambahan.</p>
+        <form class="promo-form">
+          <label class="sr-only" for="promo-code">Kode promo</label>
+          <input id="promo-code" name="promo-code" type="text" placeholder="Masukkan kode promo">
+          <button type="submit" aria-label="Gunakan kode promo">→</button>
+        </form>
+      </section>
+    </aside>
+  </div>
+
+  <section class="service-highlights" aria-label="Layanan ShopEase">
+    <article><span>🚚</span><div><h2>Pengiriman Cepat</h2><p>Pesanan sampai dalam 1–3 hari</p></div></article>
+    <article><span>🛡️</span><div><h2>Pembayaran Aman</h2><p>Berbagai metode pembayaran</p></div></article>
+    <article><span>🎧</span><div><h2>Layanan Pelanggan</h2><p>Siap membantu 24/7</p></div></article>
+  </section>
+</main>
+</body>
+</html>
