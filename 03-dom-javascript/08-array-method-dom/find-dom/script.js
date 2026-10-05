@@ -132,13 +132,40 @@ function renderStats(){
                 </div>
             </div>
 
-            <div class="stats-counts">
-                
+            <div class="stats-counts-wrapper">
+                <div class="stats-item">
+                    <div class="stats-item-icon"></div>
+                    <div>
+                        <p>Total User</p>
+                        <span>${users.length}</span>
+                    </div>
+                </div>
 
+                <div class="stats-item">
+                    <div class="stats-item-icon"></div>
+                    <div>
+                        <p>Admin</p>
+                        <span> ${totalRole.admin}</span>
+                    </div>
+                </div>
+
+                <div class="stats-item">
+                    <div class="stats-item-icon"></div>
+                    <div>
+                        <p>User</p>
+                        <span>${totalRole.user}</span>
+                    </div>
+                </div>
+
+                <div class="stats-item">
+                    <div class="stats-item-icon"></div>
+                    <div>
+                        <p>Moderator</p>
+                        <span>${totalRole.moderator}</span>
+                    </div>
+                </div>
             </div>
-            <p>Total User: ${totalRole.user}</p>
-            <p>Admin: ${totalRole.admin}</p>
-            <p>Moderator: ${totalRole.moderator}</p>
+            
         </article>
     `
 }

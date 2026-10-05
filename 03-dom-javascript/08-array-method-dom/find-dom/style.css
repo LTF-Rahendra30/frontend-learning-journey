@@ -412,6 +412,45 @@ main {
 }
 
 
+/* ---- ITEMS STATS ICON ---- */
+.stats-item-icon{
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: #dceaff;
+    color: #2778df;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* =========================
    RESPONSIVE
