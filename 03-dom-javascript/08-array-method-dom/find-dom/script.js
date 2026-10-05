@@ -141,7 +141,7 @@ function renderStats(){
                     </div>
                 </div>
 
-                <div class="stats-item">
+                <div class="stats-item admin-stats">
                     <div class="stats-item-icon"></div>
                     <div>
                         <p>Admin</p>
@@ -149,7 +149,7 @@ function renderStats(){
                     </div>
                 </div>
 
-                <div class="stats-item">
+                <div class="stats-item user-stats">
                     <div class="stats-item-icon"></div>
                     <div>
                         <p>User</p>
@@ -157,7 +157,7 @@ function renderStats(){
                     </div>
                 </div>
 
-                <div class="stats-item">
+                <div class="stats-item moderator-stats">
                     <div class="stats-item-icon"></div>
                     <div>
                         <p>Moderator</p>

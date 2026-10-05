@@ -464,12 +464,35 @@ main {
     color: #2778df;
 }
 
+.admin-stats{
+    background-color: #f1dcf94b;
+    border: 1px solid #fad2fc;
+}
+.admin-stats p{
+    color: rgb(171, 2, 171);
+}
+.admin-stats .stats-item-icon{
+    background-color: #DACEFC;
+}
+.user-stats{
+    background-color: #EBF9F3;
+}
+.user-stats .stats-item-icon{
+    background-color: #C7EDDB;
+}
+.user-stats p{
+    color: rgb(1, 170, 1);
+}
+.moderator-stats{
+    background-color: #ffded380;
+}
+.moderator-stats p{
+    color: rgb(255, 111, 0);
+}
 
-
-
-
-
-
+.moderator-stats .stats-item-icon{
+    background-color: #f4cbb98d;
+}
 
 
 
