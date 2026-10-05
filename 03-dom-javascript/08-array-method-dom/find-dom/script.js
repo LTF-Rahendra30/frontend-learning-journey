@@ -110,7 +110,7 @@ button.addEventListener("click", () => {
 
 
 // ===== RENDER DATA UI ====
-const dataUserContainer = document.querySelector('.data-user');
+const statsUserContainer = document.querySelector('.statistik-user');
 
 const totalRole = users.reduce((acc,usr) => { 
    const roleKey = usr.role.toLocaleLowerCase();
@@ -118,7 +118,7 @@ const totalRole = users.reduce((acc,usr) => {
    return acc;
 },{});
 
-dataUserContainer.innerHTML = `
+statsUserContainer.innerHTML = `
     <p>Total User: ${totalRole.user}</p>
     <p>Admin: ${totalRole.admin}</p>
     <p>User: ${totalRole.user}</p>
