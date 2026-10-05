@@ -261,7 +261,9 @@ main {
 /* =========================
    USER LIST
 ========================= */
-
+.user-container{
+    margin-bottom: 40px;
+}
 .user-container h2 {
     margin-bottom: 20px;
 
@@ -399,6 +401,18 @@ main {
     background-color: #fc9d383e;
     color: orange;
 }
+
+
+
+
+
+/* ========== STATS CONTAINER STYLE ====== */
+.stats-content{
+    padding: 20px;
+}
+
+
+
 /* =========================
    RESPONSIVE
 ========================= */

@@ -123,9 +123,23 @@ function renderStats(){
     },{});
     
     statsUserContainer.innerHTML = `
-        <p>Total User: ${totalRole.user}</p>
-        <p>Admin: ${totalRole.admin}</p>
-        <p>Moderator: ${totalRole.moderator}</p>
+        <article class="stats-content">
+            <div class="resume-content">
+                <div class="stats-icon profile-icon"></div>
+                <div class="resume-text">
+                    <h3>Ringkasan Data User</h3>
+                    <p>Data berikut berisi hasil perhitungan jumlah user berdasarkan role</p>
+                </div>
+            </div>
+
+            <div class="stats-counts">
+                
+
+            </div>
+            <p>Total User: ${totalRole.user}</p>
+            <p>Admin: ${totalRole.admin}</p>
+            <p>Moderator: ${totalRole.moderator}</p>
+        </article>
     `
 }
 
