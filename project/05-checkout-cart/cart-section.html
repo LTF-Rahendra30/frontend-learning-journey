@@ -10,54 +10,55 @@
 
 <body>
     <main>
+        <section class="cart-header">
+            <h1>🛒Keranjang Belanja</h1>
+            <p>Cek kembali barang pesanan kamu sebelum melanjutkan checkout.</p>
+        </section>
 
-        <section id="cart-section">
-            <div class="cart-wrapper">
-                <!-- MAIN: Product Items -->
-                <div class="cart-main">
-                    <h2>Keranjang Belanja</h2>
-                    <ul id="product-list" class="product-list">
-                    </ul>
+        <section id="cart-section" class="cart-wrapper">
+
+            <!-- MAIN: Product Items -->
+            <div class="cart-main">
+                <ul id="product-list" class="product-list">
+                </ul>
+            </div>
+
+            <!-- SIDEBAR: Summary -->
+            <aside class="sidebar">
+                <div class="cart-summary">
+                    <h3>Ringkasan Belanja</h3>
+                    <div class="summary-content">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">Rp 0</span>
+                        </div>
+                        <div class="summary-row discount">
+                            <span>Diskon</span>
+                            <span id="discount-amount">- Rp 0</span>
+                        </div>
+                        <div class="summary-row shipping">
+                            <span>Ongkos Kirim</span>
+                            <span id="shipping-cost">Rp 0</span>
+                        </div>
+                        <div class="summary-row total">
+                            <strong>Total</strong>
+                            <strong id="total-price">Rp 0</strong>
+                        </div>
+                        <button id="checkout-btn">Checkout Sekarang</button>
+                    </div>
                 </div>
 
-                <!-- SIDEBAR: Summary -->
-                <aside class="sidebar">
-                    <div class="cart-summary">
-                        <h3>Ringkasan Belanja</h3>
-                        <div class="summary-content">
-                            <div class="summary-row">
-                                <span>Subtotal</span>
-                                <span id="subtotal">Rp 0</span>
-                            </div>
-                            <div class="summary-row discount">
-                                <span>Diskon</span>
-                                <span id="discount-amount">- Rp 0</span>
-                            </div>
-                            <div class="summary-row shipping">
-                                <span>Ongkos Kirim</span>
-                                <span id="shipping-cost">Rp 0</span>
-                            </div>
-                            <div class="summary-row total">
-                                <strong>Total</strong>
-                                <strong id="total-price">Rp 0</strong>
-                            </div>
-                            <button id="checkout-btn">Checkout Sekarang</button>
-                        </div>
-                    </div>
-
-                    <div class="discount-apply">
-                        <h2 class="promo-title">% &nbsp; Gunakan Kode Promo</h2>
-                        <p>Masukkan kode promo untuk mendapatkan diskon tambahan.</p>
-                        <form class="discount-form">
-                            <input type="text" name="discount-input" id="discount-input"
-                                placeholder="Masukkan kode promo">
-                            <button type="submit">→</button>
-                        </form>
-                    </div>
-                </aside>
-
-            </div>
+                <div class="discount-apply">
+                    <h2 class="promo-title">% &nbsp; Gunakan Kode Promo</h2>
+                    <p>Masukkan kode promo untuk mendapatkan diskon tambahan.</p>
+                    <form class="discount-form">
+                        <input type="text" name="discount-input" id="discount-input" placeholder="Masukkan kode promo">
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </aside>
         </section>
+
 
         <!-- Service Highlight -->
         <section class="service-highlights">
