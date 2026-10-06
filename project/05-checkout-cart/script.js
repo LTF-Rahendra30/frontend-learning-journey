@@ -22,12 +22,12 @@ function renderCart() {
 
         <div class="product-qty">
             <button class="qty-btn decrease" data-action="decrease">−</button>
-            <input type="number" class="qty-input" value="[quantity]" readonly>
+            <input type="number" class="qty-input" value="${product.quantity}" readonly>
             <button class="qty-btn increase" data-action="increase">+</button>
         </div>
 
         <div class="product-total">
-            <span id="item-total-[id]">Rp ${product.price * product.quantity}</span>
+            <span id="item-total-${product.id}">Rp ${product.price * product.quantity}</span>
         </div>
 
         <button class="delete-btn" data-action="delete">🗑️</button>
