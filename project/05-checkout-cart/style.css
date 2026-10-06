@@ -25,7 +25,7 @@ main{
 
 }
 #cart-section {
-    
+
 }
 
 .cart-wrapper {
@@ -194,7 +194,7 @@ main{
 
 /* Cart Summary (dark box) */
 .cart-summary {
-    background: #1a1a2e;
+    background-color: #192940;
     color: #fff;
     border-radius: 12px;
     padding: 1.75rem;
