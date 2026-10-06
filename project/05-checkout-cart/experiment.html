@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Wadah untuk merender item -->
+<ul id="daftar-item"></ul>
+
+<script>
+  // 1. Data Array of Object awal
+  let dataItem = [
+    { id: 1, nama: "Buku Tulis" },
+    { id: 2, nama: "Pulpen" },
+    { id: 3, nama: "Penghapus" }
+  ];
+
+  const wadah = document.getElementById("daftar-item");
+
+  // 2. Fungsi untuk merender array ke UI
+  function renderUI() {
+    wadah.innerHTML = ""; // Kosongkan wadah terlebih dahulu
+    
+    dataItem.forEach(item => {
+      // Buat elemen <li>
+      const li = document.createElement("li");
+      li.id = `item-${item.id}`; // Berikan ID unik pada elemen HTML
+      li.textContent = `${item.nama} `;
+
+      // Buat button hapus
+      const btnHapus = document.createElement("button");
+      btnHapus.textContent = "Hapus";
+      
+      // 3. Pasang event listener klik pada button
+      btnHapus.addEventListener("click", () => {
+        hapusItem(item.id);
+      });
+
+      li.appendChild(btnHapus);
+      wadah.appendChild(li);
+    });
+  }
+
+  // 4. Fungsi untuk menghapus di array DAN di UI
+  function hapusItem(idYangDicari) {
+    // A. Hapus data dari array asli
+    dataItem = dataItem.filter(item => item.id !== idYangDicari);
+
+    // B. Hapus elemen langsung dari UI (DOM)
+    const elemenHTML = document.getElementById(`item-${idYangDicari}`);
+    if (elemenHTML) {
+      elemenHTML.remove();
+    }
+
+    console.log("Isi array sekarang:", dataItem); // Cek konsol untuk memastikan array terupdate
+  }
+
+  // Jalankan fungsi render pertama kali saat halaman dimuat
+  renderUI();
+</script>
+
+</body>
+</html>

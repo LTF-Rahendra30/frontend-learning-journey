@@ -6,9 +6,9 @@ let cart = [
     { id: 3, name: 'Pants', price: 200000, quantity: 1 },
     { id: 4, name: 'Running Shoes', price: 400000, quantity: 1 },
 ];
+const productList = document.getElementById('product-list');
 
 function renderCart() {
-    const productList = document.getElementById('product-list');
     productList.innerHTML = ``;
 
     cart.forEach(item => {
