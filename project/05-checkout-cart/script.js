@@ -7,4 +7,11 @@ const cart = [
     { id: 4, name: 'Running Shoes', price: 400000, quantity: 1 },
 ];
 
-console.log(cart);
+function renderCart() {
+    const productList = document.getElementById('product-list');
+    productList.innerHTML = ``;
+
+    cart.forEach(item => {
+        
+    })
+}
