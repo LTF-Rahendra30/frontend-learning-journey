@@ -43,6 +43,5 @@ function renderHeaderCart(){
         <span>${cart.length}Item</span>`
 }
 
-
 renderHeaderCart();
 renderCart();

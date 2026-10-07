@@ -134,7 +134,8 @@ main{
 
 .product-info .price {
     font-size: 0.9rem;
-    color: #4a5568;
+    color: #3b82f6;
+    font-weight: 600;
     margin-top: 0.35rem;
 }
 
