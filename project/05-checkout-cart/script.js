@@ -36,4 +36,11 @@ function renderCart() {
 
 }
 
+const cartHeader = document.querySelector('#cart-section .cart-header')
+function renderHeaderCart(){
+    cartHeader.innerHTML = `
+        <h2>Produk</h2>
+        <span>${cart.length}Item</span>`
+}
+renderHeaderCart();
 renderCart();
