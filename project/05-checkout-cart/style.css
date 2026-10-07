@@ -153,6 +153,14 @@ main{
     font-size: 0.9rem;
     color: #1a1a2e;
     background: #fff;
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.qty-input::-webkit-inner-spin-button,
+.qty-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Item Total */
