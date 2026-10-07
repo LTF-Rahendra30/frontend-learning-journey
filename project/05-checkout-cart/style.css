@@ -296,10 +296,10 @@ main{
 
 /* Discount Apply Box */
 .discount-apply {
-    background: #fff;
+    background: #d9f7ea;
     border-radius: 12px;
     padding: 1.5rem;
-    border: 1px solid #e4e7ec;
+    border: 1px solid #ceffdb;
 }
 
 .promo-title {
@@ -337,8 +337,8 @@ main{
 
 .discount-form button {
     padding: 0.65rem 1rem;
-    background: #1a1a2e;
-    color: #fff;
+    background: #96dcb9;
+    color: #006f38;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -347,7 +347,7 @@ main{
 }
 
 .discount-form button:hover {
-    background: #3b82f6;
+    background: #2ec173;
 }
 
 /* ============================
