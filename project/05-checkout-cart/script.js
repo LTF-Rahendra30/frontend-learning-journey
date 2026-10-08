@@ -35,12 +35,15 @@ function renderCart() {
     `).join('');
 
 }
+// ------ Calculate item count -----
+const itemCount = cart.reduce((total,product) => total + product.quantity,0);
+
 // ====== Header Cart =====
 const cartHeader = document.querySelector('#cart-section .cart-header')
 function renderHeaderCart(){
     cartHeader.innerHTML = `
         <h2>Produk</h2>
-        <span>${cart.length}Item</span>`
+        <span>${itemCount}Item</span>`
 }
 
 
@@ -64,5 +67,11 @@ productList.addEventListener('click', (event) => {
 
 })
 
-renderHeaderCart();
-renderCart();
+// ==== RENDER PAGE FUNCTION ======
+function renderCartPage(){
+    renderHeaderCart();
+    renderCart();
+}
+
+
+renderCartPage();
