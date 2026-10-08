@@ -7,6 +7,9 @@ let cart = [
     { id: 4, name: 'Running Shoes', price: 400000, quantity: 1 , category: 'Footwear'},
 ];
 const productList = document.getElementById('product-list');
+const  emptySteteContainer = document.getElementById('empty-stete-container');
+
+
 
 function renderCart() {
     productList.innerHTML = cart.map(product => /* html*/ `
@@ -41,7 +44,7 @@ const cartHeader = document.querySelector('#cart-section .cart-header')
 function renderHeaderCart(){
     cartHeader.innerHTML = `
         <h2>Produk</h2>
-        <span>${itemCount}Item</span>`
+        <span>${itemCount} Item</span>`
 }
 
 
@@ -64,7 +67,16 @@ productList.addEventListener('click', (event) => {
     }
 
 })
+// ====== EMPTY STETE =====
 
+function emptyStetePage(){
+    emptySteteContainer.innerHTML= `
+        <div class="empty-stete">
+            <p>Cart Anda Kosong!</p>
+            <p>Silahkan tambahkan product yang ingin anda beli!</p>
+        </div>
+    `
+}
 // ==== RENDER PAGE FUNCTION ======
 function renderCartPage(){
     // ------ Calculate item count -----
@@ -72,6 +84,10 @@ function renderCartPage(){
 
     renderHeaderCart();
     renderCart();
+    
+    if(cart.length === 0){
+        emptyStetePage();
+    }
 }
 
 // ----- Render When Load Web ----
