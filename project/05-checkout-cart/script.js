@@ -43,5 +43,26 @@ function renderHeaderCart(){
         <span>${cart.length}Item</span>`
 }
 
+
+
+// ======= EVENTS DELEATION FOR DELETE ITEM PRODUCT =======
+
+productList.addEventListener('click', (event) => {
+    if(event.target.classList.contains('delete-btn')){
+        const liTarget = event.target.closest('li');
+        const idThatDelete = parseInt(liTarget.getAttribute('data-product-id'));
+
+        // Delete from Array JS
+        cart = cart.filter(item => item.id !== idThatDelete);
+
+        // Delete from ui
+        liTarget.remove();
+
+        console.log(cart);
+        
+    }
+
+})
+
 renderHeaderCart();
 renderCart();
