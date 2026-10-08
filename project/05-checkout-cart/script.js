@@ -35,9 +35,7 @@ function renderCart() {
     `).join('');
 
 }
-// ------ Calculate item count -----
-const itemCount = cart.reduce((total,product) => total + product.quantity,0);
-
+let itemCount;
 // ====== Header Cart =====
 const cartHeader = document.querySelector('#cart-section .cart-header')
 function renderHeaderCart(){
@@ -58,8 +56,8 @@ productList.addEventListener('click', (event) => {
         // Delete from Array JS
         cart = cart.filter(item => item.id !== idThatDelete);
 
-        // Delete from ui
-        liTarget.remove();
+        // Update Render Page UI
+        renderCartPage();
 
         console.log(cart);
         
@@ -69,9 +67,12 @@ productList.addEventListener('click', (event) => {
 
 // ==== RENDER PAGE FUNCTION ======
 function renderCartPage(){
+    // ------ Calculate item count -----
+    itemCount = cart.length;
+
     renderHeaderCart();
     renderCart();
 }
 
-
+// ----- Render When Load Web ----
 renderCartPage();
