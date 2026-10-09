@@ -54,6 +54,7 @@ function renderHeaderCart(){
 function cartSummaryRender(){
     const subtotal = cart.reduce((acc,item) => acc + item.price * item.quantity, 0);
     const shippingCost = subtotal * 0.01;
+    const totalPayment = subtotal + shippingCost;
 
     cartSummaryContainer.innerHTML = `
         <h3>Ringkasan Belanja</h3>
@@ -75,7 +76,7 @@ function cartSummaryRender(){
             </div>
             <div class="summary-row total">
                 <strong>Total</strong>
-                <strong id="total-price">Rp 0</strong>
+                <strong id="total-price">Rp ${totalPayment}</strong>
             </div>
             <button id="checkout-btn">Checkout Sekarang</button>
         </div>
