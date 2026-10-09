@@ -52,32 +52,19 @@ function renderHeaderCart(){
 
 
 
-// ======= EVENTS DELEATION FOR GET DISCOUNT  =======
-const subtotal = cart.reduce((acc,item) => acc + item.price * item.quantity, 0);
-const discount = 0.10;
-let discountPrice = 0;
-
-
-const discountApply = document.getElementById('discount-input');
-const claimDiscountButton = document.getElementById('discount-apply-button');
-
-claimDiscountButton.addEventListener('click', (event) =>{
-    event.preventDefault();
-
-    if(discountApply.value === 'WOWOK123'){
-        discountPrice = subtotal * discount;
-        
-    }
-})
-
 
 
 // ========== RENDER CART SUMMARY SIDEBAR =======
 
-const shippingCost = subtotal * 0.01;
-const totalPayment = subtotal + shippingCost;
+const discount = 0.10;
+let discountApplied = false;
 
 function cartSummaryRender(){
+    const subtotal = cart.reduce((acc,item) => acc + item.price * item.quantity, 0);
+    const shippingCost = subtotal * 0.01;
+    const discountPrice = discountApplied ? subtotal * discount : 0;
+    const totalPayment = subtotal + shippingCost - discountPrice;
+
     cartSummaryContainer.innerHTML = `
         <h3>Ringkasan Belanja</h3>
         <div class="summary-content">
@@ -133,19 +120,40 @@ function emptyStetePage(){
     <p>Silahkan tambahkan product yang ingin anda beli!</p>
         </div>
         `
+}
+
+
+// ======= EVENTS DELEATION FOR GET DISCOUNT  =======
+
+const discountApply = document.getElementById('discount-input');
+const claimDiscountButton = document.getElementById('discount-apply-button');
+
+claimDiscountButton.addEventListener('click', (event) =>{
+    event.preventDefault();
+
+    if(discountApply.value.trim() === 'WOWOK123'){
+        discountApplied = true;
+        renderPage();
+        
     }
-    // ==== RENDER PAGE FUNCTION ======
-    function renderPage(){
-        // ------ Calculate item count -----
-        itemCount = cart.length;
-        
-        renderHeaderCart();
-        renderCart();
-        
-        if(cart.length === 0){
-            emptyStetePage();
-        }
-        cartSummaryRender();
+})
+
+
+
+
+
+// ==== RENDER PAGE FUNCTION ======
+function renderPage(){
+    // ------ Calculate item count -----
+    itemCount = cart.length;
+    
+    renderHeaderCart();
+    renderCart();
+    
+    if(cart.length === 0){
+        emptyStetePage();
+    }
+    cartSummaryRender();
 }
 
 // ----- Render When Load Web ----
