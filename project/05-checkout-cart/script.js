@@ -9,7 +9,6 @@ let cart = [
 const productList = document.getElementById('product-list');
 const  emptySteteContainer = document.getElementById('empty-stete-container');
 const cartSummaryContainer = document.querySelector('.sidebar .cart-summary');
-const discountApplyContainer = document.querySelector('.sidebar .discount-apply');
 
 
 function renderCart() {
@@ -128,7 +127,7 @@ function emptyStetePage(){
 const discountApply = document.getElementById('discount-input');
 const claimDiscountButton = document.getElementById('discount-apply-button');
 
-claimDiscountButton.addEventListener('click', (event) =>{
+claimDiscountButton.addEventListener('submit', (event) =>{
     event.preventDefault();
 
     if(discountApply.value.trim() === 'WOWOK123'){
