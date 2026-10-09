@@ -125,15 +125,18 @@ function emptyStetePage(){
 // ======= EVENTS DELEATION FOR GET DISCOUNT  =======
 
 const discountApply = document.getElementById('discount-input');
-const claimDiscountButton = document.getElementById('discount-apply-button');
+const discountForm = document.querySelector('.discount-form');
 
-claimDiscountButton.addEventListener('submit', (event) =>{
+discountForm.addEventListener('submit', (event) =>{
     event.preventDefault();
 
     if(discountApply.value.trim() === 'WOWOK123'){
         discountApplied = true;
         renderPage();
         
+    }else{
+        discountApplied = false;
+        renderPage();
     }
 })
 
