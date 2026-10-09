@@ -299,6 +299,18 @@ main{
     background: #2563eb;
 }
 
+.shipping-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.shipping-info p{
+    font-size: 0.7rem ;
+    background-color: #8a94a6bc;
+    color: #192940;
+    padding: 2px 6px;
+    border-radius: 25px;
+}
 /* Discount Apply Box */
 .discount-apply {
     background: #d9f7ea;
