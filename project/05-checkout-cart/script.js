@@ -50,12 +50,34 @@ function renderHeaderCart(){
         <span>${itemCount} Item</span>`
 }
 
-// ========== RENDER CART SUMMARY SIDEBAR =======
-function cartSummaryRender(){
-    const subtotal = cart.reduce((acc,item) => acc + item.price * item.quantity, 0);
-    const shippingCost = subtotal * 0.01;
-    const totalPayment = subtotal + shippingCost;
 
+
+// ======= EVENTS DELEATION FOR GET DISCOUNT  =======
+const subtotal = cart.reduce((acc,item) => acc + item.price * item.quantity, 0);
+const discount = 0.10;
+let discountPrice = 0;
+
+
+const discountApply = document.getElementById('discount-input');
+const claimDiscountButton = document.getElementById('discount-apply-button');
+
+claimDiscountButton.addEventListener('click', (event) =>{
+    event.preventDefault();
+
+    if(discountApply.value === 'WOWOK123'){
+        discountPrice = subtotal * discount;
+        
+    }
+})
+
+
+
+// ========== RENDER CART SUMMARY SIDEBAR =======
+
+const shippingCost = subtotal * 0.01;
+const totalPayment = subtotal + shippingCost;
+
+function cartSummaryRender(){
     cartSummaryContainer.innerHTML = `
         <h3>Ringkasan Belanja</h3>
         <div class="summary-content">
@@ -65,7 +87,7 @@ function cartSummaryRender(){
             </div>
             <div class="summary-row discount">
                 <span>Diskon</span>
-                <span id="discount-amount">- Rp 0</span>
+                <span id="discount-amount">- Rp ${discountPrice}</span>
             </div>
             <div class="summary-row shipping">
                 <div class="shipping-info"
@@ -83,7 +105,6 @@ function cartSummaryRender(){
     `
 }
 
-// ======= EVENTS DELEATION FOR GET DISCOUNT  =======
 
 // ======= EVENTS DELEATION FOR DELETE ITEM PRODUCT =======
 
