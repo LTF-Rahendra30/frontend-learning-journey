@@ -82,18 +82,8 @@ function cartSummaryRender(){
         </div>
     `
 }
-// ============ RENDER DISCOUNT APPLY CARD =========
-function discountApplyRender(){
-    discountApplyContainer.innerHTML = `
-       <h2 class="promo-title">% &nbsp; Gunakan Kode Promo</h2>
-        <p>Masukkan kode promo untuk mendapatkan diskon tambahan.</p>
-        <form class="discount-form">
-            <input type="text" name="discount-input" id="discount-input" placeholder="Masukkan kode promo">
-            <button type="submit">→</button>
-        </form> 
-    `
-}
 
+// ======= EVENTS DELEATION FOR GET DISCOUNT  =======
 
 // ======= EVENTS DELEATION FOR DELETE ITEM PRODUCT =======
 
@@ -101,41 +91,40 @@ productList.addEventListener('click', (event) => {
     if(event.target.classList.contains('delete-btn')){
         const liTarget = event.target.closest('li');
         const idThatDelete = parseInt(liTarget.getAttribute('data-product-id'));
-
+        
         // Delete from Array JS
         cart = cart.filter(item => item.id !== idThatDelete);
 
         // Update Render Page UI
         renderPage();
-
+        
         console.log(cart);
         
     }
-
+    
 })
 // ====== EMPTY STETE =====
 
 function emptyStetePage(){
     emptySteteContainer.innerHTML= `
-        <div class="empty-stete">
-            <p>Cart Anda Kosong!</p>
-            <p>Silahkan tambahkan product yang ingin anda beli!</p>
+    <div class="empty-stete">
+    <p>Cart Anda Kosong!</p>
+    <p>Silahkan tambahkan product yang ingin anda beli!</p>
         </div>
-    `
-}
-// ==== RENDER PAGE FUNCTION ======
-function renderPage(){
-    // ------ Calculate item count -----
-    itemCount = cart.length;
-
-    renderHeaderCart();
-    renderCart();
-    
-    if(cart.length === 0){
-        emptyStetePage();
+        `
     }
-    cartSummaryRender();
-    discountApplyRender();
+    // ==== RENDER PAGE FUNCTION ======
+    function renderPage(){
+        // ------ Calculate item count -----
+        itemCount = cart.length;
+        
+        renderHeaderCart();
+        renderCart();
+        
+        if(cart.length === 0){
+            emptyStetePage();
+        }
+        cartSummaryRender();
 }
 
 // ----- Render When Load Web ----
