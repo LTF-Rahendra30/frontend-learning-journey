@@ -116,9 +116,9 @@ productList.addEventListener('click', (event) => {
 function emptyStetePage(){
     emptySteteContainer.innerHTML= `
     <div class="empty-stete">
-    <p>Cart Anda Kosong!</p>
-    <p>Silahkan tambahkan product yang ingin anda beli!</p>
-        </div>
+        <p>Cart Anda Kosong!</p>
+        <p>Silahkan tambahkan product yang ingin anda beli!</p>
+    </div>
         `
 }
 
@@ -152,6 +152,8 @@ function renderPage(){
     
     if(cart.length === 0){
         emptyStetePage();
+    }else{
+        emptySteteContainer.inert = ``
     }
     cartSummaryRender();
 }
