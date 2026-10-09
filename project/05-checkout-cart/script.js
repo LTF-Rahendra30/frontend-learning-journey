@@ -52,12 +52,13 @@ function renderHeaderCart(){
 
 // ========== RENDER CART SUMMARY SIDEBAR =======
 function cartSummaryRender(){
+    const subtotal = cart.reduce((acc,item) => acc + item.price * item.quantity, 0);
     cartSummaryContainer.innerHTML = `
         <h3>Ringkasan Belanja</h3>
         <div class="summary-content">
             <div class="summary-row">
                 <span>Subtotal</span>
-                <span id="subtotal">Rp 0</span>
+                <span id="subtotal">Rp ${subtotal}</span>
             </div>
             <div class="summary-row discount">
                 <span>Diskon</span>
