@@ -354,7 +354,21 @@ main{
 .discount-form button:hover {
     background: #2ec173;
 }
+/* ---- discount code ------ */
+.code-discount{
+    background-color: #EAF3FF;
+    padding: 6px 10px;
+    font-weight: 400;
+    font-size: 0.7rem;
+    border-radius: 25px;
+    margin-top: 0.6rem;
+    text-align: center;
 
+}
+.code-discount span{
+    color: #2563eb;
+    font-weight: bold;
+}
 /* ============================
    EMPTY STETE
    ============================ */
