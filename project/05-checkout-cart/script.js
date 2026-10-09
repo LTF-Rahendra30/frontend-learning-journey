@@ -8,6 +8,7 @@ let cart = [
 ];
 const productList = document.getElementById('product-list');
 const  emptySteteContainer = document.getElementById('empty-stete-container');
+const cartSummaryContainer = document.querySelector('.sidebar .cart-summary');
 
 
 
@@ -49,7 +50,31 @@ function renderHeaderCart(){
         <span>${itemCount} Item</span>`
 }
 
-
+// ========== RENDER CART SUMMARY SIDEBAR =======
+function cartSummaryRender(){
+    cartSummaryContainer.innerHTML = `
+        <h3>Ringkasan Belanja</h3>
+        <div class="summary-content">
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">Rp 0</span>
+            </div>
+            <div class="summary-row discount">
+                <span>Diskon</span>
+                <span id="discount-amount">- Rp 0</span>
+            </div>
+            <div class="summary-row shipping">
+                <span>Ongkos Kirim</span>
+                <span id="shipping-cost">Rp 0</span>
+            </div>
+            <div class="summary-row total">
+                <strong>Total</strong>
+                <strong id="total-price">Rp 0</strong>
+            </div>
+            <button id="checkout-btn">Checkout Sekarang</button>
+        </div>
+    `
+}
 
 // ======= EVENTS DELEATION FOR DELETE ITEM PRODUCT =======
 
@@ -94,3 +119,4 @@ function renderCartPage(){
 
 // ----- Render When Load Web ----
 renderCartPage();
+cartSummaryRender();
