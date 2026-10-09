@@ -94,7 +94,12 @@ main{
 .product-item:last-child {
     border-bottom: none;
 }
-
+/* ---- QTY PRODUCT WRAP ---- */
+.product-qty-wrapper{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
 .product-item:hover {
     background: #fafbfc;
 }
