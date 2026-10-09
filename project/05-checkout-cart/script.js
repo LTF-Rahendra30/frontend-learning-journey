@@ -53,6 +53,8 @@ function renderHeaderCart(){
 // ========== RENDER CART SUMMARY SIDEBAR =======
 function cartSummaryRender(){
     const subtotal = cart.reduce((acc,item) => acc + item.price * item.quantity, 0);
+    const shippingCost = subtotal * 0.01;
+
     cartSummaryContainer.innerHTML = `
         <h3>Ringkasan Belanja</h3>
         <div class="summary-content">
@@ -65,8 +67,11 @@ function cartSummaryRender(){
                 <span id="discount-amount">- Rp 0</span>
             </div>
             <div class="summary-row shipping">
-                <span>Ongkos Kirim</span>
-                <span id="shipping-cost">Rp 0</span>
+                <div class="shipping-info"
+                    <span>Ongkos Kirim</span>
+                    <p>Ongkir 1% dari subtotal belanjaan</p>
+                </div>
+                <span id="shipping-cost">Rp ${shippingCost}</span>
             </div>
             <div class="summary-row total">
                 <strong>Total</strong>
@@ -88,7 +93,7 @@ productList.addEventListener('click', (event) => {
         cart = cart.filter(item => item.id !== idThatDelete);
 
         // Update Render Page UI
-        renderCartPage();
+        renderPage();
 
         console.log(cart);
         
@@ -106,7 +111,7 @@ function emptyStetePage(){
     `
 }
 // ==== RENDER PAGE FUNCTION ======
-function renderCartPage(){
+function renderPage(){
     // ------ Calculate item count -----
     itemCount = cart.length;
 
@@ -116,8 +121,8 @@ function renderCartPage(){
     if(cart.length === 0){
         emptyStetePage();
     }
+    cartSummaryRender();
 }
 
 // ----- Render When Load Web ----
-renderCartPage();
-cartSummaryRender();
+renderPage();
