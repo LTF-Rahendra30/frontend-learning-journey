@@ -77,7 +77,7 @@ function cartSummaryRender(){
                 <span id="discount-amount">- Rp ${discountPrice}</span>
             </div>
             <div class="summary-row shipping">
-                <div class="shipping-info"
+                <div class="shipping-info">
                     <span>Ongkos Kirim</span>
                     <p>Ongkir 1% dari subtotal belanjaan</p>
                 </div>
