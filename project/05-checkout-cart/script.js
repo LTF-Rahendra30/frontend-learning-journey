@@ -9,7 +9,7 @@ let cart = [
 const productList = document.getElementById('product-list');
 const  emptySteteContainer = document.getElementById('empty-stete-container');
 const cartSummaryContainer = document.querySelector('.sidebar .cart-summary');
-
+const discountApplyContainer = document.querySelector('.sidebar .discount-apply');
 
 
 function renderCart() {
@@ -82,6 +82,18 @@ function cartSummaryRender(){
         </div>
     `
 }
+// ============ RENDER DISCOUNT APPLY CARD =========
+function discountApplyRender(){
+    discountApplyContainer.innerHTML = `
+       <h2 class="promo-title">% &nbsp; Gunakan Kode Promo</h2>
+        <p>Masukkan kode promo untuk mendapatkan diskon tambahan.</p>
+        <form class="discount-form">
+            <input type="text" name="discount-input" id="discount-input" placeholder="Masukkan kode promo">
+            <button type="submit">→</button>
+        </form> 
+    `
+}
+
 
 // ======= EVENTS DELEATION FOR DELETE ITEM PRODUCT =======
 
@@ -123,6 +135,7 @@ function renderPage(){
         emptyStetePage();
     }
     cartSummaryRender();
+    discountApplyRender();
 }
 
 // ----- Render When Load Web ----
