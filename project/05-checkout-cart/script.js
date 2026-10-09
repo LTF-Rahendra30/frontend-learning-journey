@@ -23,17 +23,19 @@ function renderCart() {
             <p class="price">Rp ${product.price}</p>
         </div>
 
-        <div class="product-qty">
+        <div class="product-qty-wrapper">
+            <div class="product-qty">
             <button class="qty-btn decrease" data-action="decrease">−</button>
             <input type="number" class="qty-input" value="${product.quantity}" readonly>
             <button class="qty-btn increase" data-action="increase">+</button>
-        </div>
-
-        <div class="product-total">
+            </div>
+            
+            <div class="product-total">
             <span id="item-total-${product.id}">Rp ${product.price * product.quantity}</span>
+            </div>
+            
+            <button class="delete-btn" data-action="delete">🗑️</button>
         </div>
-
-        <button class="delete-btn" data-action="delete">🗑️</button>
     </li>
     `).join('');
 
