@@ -10,7 +10,20 @@
 
     </div>
     <script>
-        const wrap
+        const wrap = document.querySelector('.wrap');
+
+        const mediaQuery = window.matchMedia('(max-width: 600px)');
+
+        function hendleChange(e){
+            if(e.matches){
+                wrap.innerHTML = `<p>Hello Mobile</p>`;
+            }
+            else{
+                wrap.innerHTML = `<p>Hello Dekstop</p>`;
+            }
+        }
+        hendleChange(mediaQuery);
+        mediaQuery.addEventListener('change',hendleChange);
     </script>
 </body>
 </html>
