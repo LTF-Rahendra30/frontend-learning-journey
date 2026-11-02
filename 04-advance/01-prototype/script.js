@@ -12,3 +12,21 @@ let student = {
         
     }
 }
+
+
+
+// ===== FUNCTION DECLARATION ======
+function Person(name,age,eat){
+    let person = {}
+    person.name = name;
+    person.age = age;
+    person.eat = eat;
+
+    person.eat = function(amnt){
+        this.eat += amnt;
+        console.log(`Your eat ${this.eat} times`);
+        
+    }
+}
+
+console.log(pe);
