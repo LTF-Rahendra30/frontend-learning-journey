@@ -16,22 +16,53 @@ let student = {
 
 
 // ===== FUNCTION DECLARATION ======
-function Person(name,age,eat){
+function Person(name,age,energy){
     let person = {}
     person.name = name;
     person.age = age;
-    person.amntEat = eat;
+    person.energy = energy;
 
     person.eat = function(amnt){
-        this.amntEat += amnt;
-        console.log(`Your eat ${this.amntEat} times`);
+        this.energy += amnt;
+        console.log(`Your eat ${this.energy} times`);
         
     }
-
+    person.play = function(hours){
+        this.energy -= hours;
+        console.log(`You're play ${hours}`);
+        
+    }
     return person;
 }
 
 const person1 = Person('Joko',18,3);
 console.log(person1);
+// {
+    //   name: 'Joko',
+    //   age: 18,
+    //   energy: 3,
+    //   eat: [Function (anonymous)],
+    //   play: [Function (anonymous)]
+    // }
 console.log(person1.eat(7));
 
+console.log(person1);
+/*{
+    name: 'Joko',
+    age: 18,
+  energy: 10,
+  eat: [Function (anonymous)],
+  play: [Function (anonymous)]
+  }
+  */
+ 
+ console.log(person1.play(5));
+ console.log(person1);
+/*  {
+  name: 'Joko',
+  age: 18,
+  energy: 5,
+  eat: [Function (anonymous)],
+  play: [Function (anonymous)]
+}
+ */
