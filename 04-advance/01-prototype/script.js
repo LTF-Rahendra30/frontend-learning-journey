@@ -20,13 +20,18 @@ function Person(name,age,eat){
     let person = {}
     person.name = name;
     person.age = age;
-    person.eat = eat;
+    person.amntEat = eat;
 
     person.eat = function(amnt){
-        this.eat += amnt;
-        console.log(`Your eat ${this.eat} times`);
+        this.amntEat += amnt;
+        console.log(`Your eat ${this.amntEat} times`);
         
     }
+
+    return person;
 }
 
-console.log(pe);
+const person1 = Person('Joko',18,3);
+console.log(person1);
+console.log(person1.eat(7));
+
