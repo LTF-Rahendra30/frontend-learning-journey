@@ -13,25 +13,29 @@ let student = {
     }
 }
 
-
-
-// ===== FUNCTION DECLARATION ======
-function Person(name,age,energy){
-    let person = {}
-    person.name = name;
-    person.age = age;
-    person.energy = energy;
-
-    person.eat = function(amnt){
+const personMethod = {
+    eat : function(amnt){
         this.energy += amnt;
         console.log(`Your eat ${this.energy} times`);
         
-    }
-    person.play = function(hours){
+    },
+    play : function(hours){
         this.energy -= hours;
         console.log(`You're play ${hours}`);
         
     }
+}
+
+// ===== FUNCTION DECLARATION ======
+function Person(name,age,energy){
+    let person = {}
+
+    person.name = name;
+    person.age = age;
+    person.energy = energy;
+    person.eat = personMethod.eat;
+    person.play = personMethod.play;
+    
     return person;
 }
 
