@@ -35,4 +35,7 @@ Person.prototype.play = function(hours){
 const person1 = new Person('Bob',12,100);
 // Person { name: 'Bob', age: 12, energy: 100 }
 
+console.log(person1.eat(10));
+console.log(person1.play(60));
 console.log(person1);
+// Person { name: 'Bob', age: 12, energy: 50 }
