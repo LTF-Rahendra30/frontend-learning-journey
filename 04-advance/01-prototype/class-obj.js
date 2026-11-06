@@ -19,3 +19,7 @@ class Person{
         return `You're play ${hours}`;
     }
 }
+
+
+const person1 = new Person('Bob',12,70);
+const person2 = new Person('Jack',80,100);
