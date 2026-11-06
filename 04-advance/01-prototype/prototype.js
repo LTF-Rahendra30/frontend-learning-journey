@@ -26,6 +26,11 @@ Person.prototype.eat = function(amnt){
     return `Your eat ${this.energy} times`
 }
 
+Person.prototype.play = function(hours){
+    this.energy -= hours;
+    return `You're play ${hours}`;
+
+}
 
 const person1 = new Person('Bob',12,100);
 // Person { name: 'Bob', age: 12, energy: 100 }
