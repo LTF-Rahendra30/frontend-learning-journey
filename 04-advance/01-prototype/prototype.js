@@ -20,6 +20,12 @@ function Person(name,age,energy){
     
     // return person;
 }
+// ==== CREATE METHOD WITH PROTOTYPE ====
+Person.prototype.eat = function(amnt){
+    this.energy += amnt;
+    return `Your eat ${this.energy} times`
+}
+
 
 const person1 = new Person('Bob',12,100);
 // Person { name: 'Bob', age: 12, energy: 100 }
