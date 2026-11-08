@@ -11,3 +11,13 @@ console.log(name);
 // Hoisting
 // window = global object
 // this = window
+
+
+const name1 = "Bob";
+const age = 11;
+
+console.log(sayHello());
+function sayHello(){
+    return `Helo my name ${name1}, Age ${age}`;
+    
+}
