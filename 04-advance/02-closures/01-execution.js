@@ -21,3 +21,15 @@ function sayHello(){
     return `Helo my name ${name1}, Age ${age}`;
     
 }
+
+
+// === EXAMPLE ===
+const name2 = "WOWOWO"
+const username = "wowo123"
+
+function createUrl(username){
+    const urlText = 'http://jomok123.com/'
+    return urlText + username;
+}
+console.log(createUrl(username));
+// http://jomok123.com/wowo123
