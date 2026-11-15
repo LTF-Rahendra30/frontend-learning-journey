@@ -13,3 +13,4 @@ function init(){
 
 let callName = init();
 callName('BOWOK');
+callName('BOWOK');
