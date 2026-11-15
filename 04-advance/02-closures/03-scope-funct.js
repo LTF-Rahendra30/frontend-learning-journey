@@ -3,13 +3,13 @@
 function init(){
     // ========== LOCAL Scope =========
     // Local var
-    let name = 'Bob';
+    // let name = 'Bob';
 
-    function showName(){ // Innner Function
+    return function(name){ // Innner Function
         console.log(name);
     }
 
-    return showName;
 }
 
-init();
+let callName = init();
+callName('BOWOK');
