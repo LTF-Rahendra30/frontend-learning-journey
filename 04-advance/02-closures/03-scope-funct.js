@@ -1,4 +1,7 @@
+
+// ======== Global Scope ==========
 function init(){
+    // ========== LOCAL Scope =========
     // Local var
     let name = 'Bob';
 
@@ -6,7 +9,7 @@ function init(){
         console.log(name);
     }
 
-    showName()
+    return showName;
 }
 
-init()
+init();
