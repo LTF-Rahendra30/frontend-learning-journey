@@ -28,6 +28,22 @@ const Person = function(){
     },1000);
 }
 
-const andrew = new Person();
+// const andrew = new Person();
 
 // The age will increase every 1 second
+
+
+
+// ========= DOM FOR CASE STUDY =======
+
+const box = document.querySelector('.box');
+box.addEventListener('click', function() {
+    // console.log(this);
+
+    this.classList.toggle('size');
+    
+    setTimeout(() => {
+        this.classList.toggle('caption');
+    },1000);
+    
+})
