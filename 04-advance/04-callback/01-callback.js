@@ -11,6 +11,8 @@ function runCallBack(run){
 
 runCallBack(thisCallBack);
 
+// This is callback
+// Callback running...
 
 
 
@@ -22,3 +24,4 @@ function runCallBack2(run){
 
 runCallBack2(() => console.log("Callback run 2")
 )
+// Callback run 2
