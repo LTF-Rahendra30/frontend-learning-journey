@@ -10,3 +10,15 @@ function runCallBack(run){
 }
 
 runCallBack(thisCallBack);
+
+
+
+
+// Make simple
+
+function runCallBack2(run){
+    run();
+}
+
+runCallBack2(() => console.log("Callback run 2")
+)
