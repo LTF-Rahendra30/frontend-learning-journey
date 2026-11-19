@@ -15,3 +15,10 @@ console.log(multiple);
   -10, -8,  6, 4, 18
 ]
  */
+
+
+// ---- REDUCE -----
+// Calculate whole element of the array
+const calculate = number.reduce((acc,n) => acc + n,0)
+console.log(calculate);
+// 26
