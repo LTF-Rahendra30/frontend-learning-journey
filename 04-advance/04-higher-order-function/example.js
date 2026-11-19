@@ -22,3 +22,18 @@ console.log(multiple);
 const calculate = number.reduce((acc,n) => acc + n,0)
 console.log(calculate);
 // 26
+
+
+// ----- Chaining Method -------
+
+// Search number > 5
+// Multiple the result with 3
+// Calculate whole element after multiple
+
+const result = number.filter(a => a > 5)
+    .map(a => a * 3)
+    .reduce((acc,curr) => acc + curr, 0);
+
+
+console.log(result);
+//78 
