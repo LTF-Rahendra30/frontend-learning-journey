@@ -30,9 +30,9 @@ console.log(calculate);
 // Multiple the result with 3
 // Calculate whole element after multiple
 
-const result = number.filter(a => a > 5)
-    .map(a => a * 3)
-    .reduce((acc,curr) => acc + curr, 0);
+const result = number.filter(a => a > 5) // 8,9,9
+    .map(a => a * 3) // 24, 27,27
+    .reduce((acc,curr) => acc + curr, 0); // 78
 
 
 console.log(result);
