@@ -29,3 +29,6 @@ const pTotalVideo = document.querySelector('.jumlah-video');
 
 
 pDuration.textContent = `${hours} Jam , ${minute}  Menit, ${seconds} Detik`
+
+const totalVideo = videos.filter(vid => vid.textContent.includes('JAVASCRIPT LANJUTAN')).length;
+pTotalVideo.textContent = `${totalVideo}`
