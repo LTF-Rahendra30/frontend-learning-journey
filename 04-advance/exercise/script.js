@@ -2,7 +2,12 @@
 const videos = Array.from(document.querySelectorAll('[data-duration]'));
 
 const jsLanjutan = videos.filter(vid => vid.textContent.includes('JAVASCRIPT LANJUTAN'))
-    .map(item => item.dataset.duration);
+    .map(item => item.dataset.duration)
+    .map(duration => {
+        // 10:30 -> [10,30]
+        const parts = duration.split(':').map(part => parseFloat(part))
+        return parts[0] * 60 + parts[1] ;
+    })
 // ===== SELECT ONLY 'JAVASCRIPT LANJUTAN' ========
 // GET VIDEO
 // CHANGE DURATION TO BE INTEGER
