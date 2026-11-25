@@ -21,3 +21,11 @@ jsLanjutan = jsLanjutan - hours * 3600;
 const minute = Math.floor(jsLanjutan / 60);
 const seconds = jsLanjutan - minute * 60;
 
+
+// ======= UI DOM ======
+
+const pDuration = document.querySelector('.total-durasi');
+const pTotalVideo = document.querySelector('.jumlah-video');
+
+
+pDuration.textContent = `${hours} Jam , ${minute}  Menit, ${seconds} Detik`
